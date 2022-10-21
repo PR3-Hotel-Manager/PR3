@@ -57,7 +57,8 @@ namespace Hotel_Management__Beta_1._0_
 
                     // Save to Log File
                     string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
-                    File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out|  " + customer.FirstName.PadRight(15, ' ') + " " + customer.LastName.PadRight(20, ' ') + " " + customer.Age.PadLeft(2) + "  #" + Room_Selector.Value.ToString().PadRight(2) + "\n");
+                    // Not Working
+                    //File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out|  " + customer.FirstName.PadRight(15, ' ') + " " + customer.LastName.PadRight(20, ' ') + " " + customer.Age.PadLeft(2) + "\n");
 
                 }
                 catch (Exception)

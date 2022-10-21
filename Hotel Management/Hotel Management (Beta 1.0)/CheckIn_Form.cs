@@ -19,6 +19,8 @@ namespace Hotel_Management__Beta_1._0_
 {
     public partial class CheckIn_Form : Form
     {
+        private Guest customer;
+
         public CheckIn_Form()
         {
             InitializeComponent();
@@ -38,6 +40,7 @@ namespace Hotel_Management__Beta_1._0_
             checkConnection();
 
         }
+
         async private void checkConnection()
         {
 
@@ -53,7 +56,7 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
-        bool verifyInputs()  // returns false if conditions are not met.
+        private bool verifyInputs()  // returns false if conditions are not met.
         {
             if (LastName_TextBox.Text == "" || Name_TextBox.Text == "")
             {
@@ -70,12 +73,14 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
+        // Generate Hash 
         public static byte[] GetHash(string inputString)
         {
             using (HashAlgorithm algorithm = SHA256.Create())
                 return algorithm.ComputeHash(Encoding.UTF8.GetBytes(inputString));
         }
-
+        
+        // Get Hash
         public static string getHashString(string inputString)
         {
             StringBuilder sb = new StringBuilder();
@@ -86,12 +91,7 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
-        string transactionTime()
-        {
-            return DateTime.Now.ToString("mm/dd/yyyy h:mm:ss tt"); 
-
-        }
-        string retrievePaymentMethod()
+        private string retrievePaymentMethod()
         {
             if (Cash_RadioButton.Checked == true) {
                 return "Cash";
@@ -99,6 +99,7 @@ namespace Hotel_Management__Beta_1._0_
             else
                 return "Credit/Debit";
         }
+
         public string pmtMethodLabel(string text)
         {
             if (text == "Credit/Debit")
@@ -107,33 +108,33 @@ namespace Hotel_Management__Beta_1._0_
             else
                 return "C";
         }
+
         public void performCheckIn()
         {
-            // Prepare Confirmation Number
-            string guestDetails = Name_TextBox.Text + LastName_TextBox.Text + transactionTime();
-            string temp = getHashString(guestDetails);
-            string confNumber = temp.Substring(temp.Length - (temp.Length / 4));
-
-
             // Get Payment Method
             string pmtMethod;
             pmtMethod = retrievePaymentMethod();
 
             // Get Name, Last Name, Age, Bed, Price, Room#, Stay Length
             // Add fields to Database
-            Guest customer = new Guest()
-            {
-                FirstName = Name_TextBox.Text,
-                LastName = LastName_TextBox.Text,
-                Age = Age_Selector.Value.ToString(),
-                BedConfiguration = BedConfig_Selector.Value.ToString(),
-                Occupied = true
-            };
+            customer = new Guest(
+                Name_TextBox.Text,
+                LastName_TextBox.Text,
+                Age_Selector.Value.ToString(),
+                StayLength_Selector.Value.ToString(),
+                new Room(Room_Selector.Value.ToString(), BedConfig_Selector.Value.ToString(), true),
+                new Payment(((int)Price_Selector.Value), pmtMethod));
+
+            // Prepare Confirmation Number
+            string guestDetails = customer.FirstName + customer.LastName + customer.payment.transactionTime();
+            string temp = getHashString(guestDetails);
+            string confNumber = temp.Substring(temp.Length - (temp.Length / 4));
+
 
             try
             {
-                var setter = client.Set("Room/" + Room_Selector.Value.ToString(), customer);
-
+                //var setter = client.Set("Room/" + customer.room.RoomNumber, (customer.FirstName, customer.LastName, customer.Age, customer.room.RoomNumber, customer.Stay, customer.payment.price));
+                var setter = client.Set("Room/" + customer.room.RoomNumber, customer);
                 CheckInConfirmation_Form form = new();  // pass confirmation number to the label in #CheckInConfirmation_Form 
                 form.changeLabel(confNumber);
                 this.Hide();
@@ -149,10 +150,12 @@ namespace Hotel_Management__Beta_1._0_
 
             // Save to Log File
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
-            File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-in|  " + customer.FirstName.PadRight(15,' ') + " " + customer.LastName.PadRight(20,' ') + " " + customer.Age.PadLeft(2) + "  #" + Room_Selector.Value.ToString().PadRight(2) + " - " + pmtMethodLabel(pmtMethod) + "\n");
-
+            File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-in|  " + customer.FirstName.PadRight(15,' ') + " " + customer.LastName.PadRight(20,' ') + " " + customer.Age.PadLeft(2) + "  #" + customer.room.RoomNumber.PadRight(2) + " - " + pmtMethodLabel(pmtMethod) + "\n");
+            Console.WriteLine(filePath);
         }
 
+
+        // Buttons -------------------
         private void Cancel_Button_Click(object sender, EventArgs e)
         {
             this.Close(); // Cancel & Exit CheckIn Form

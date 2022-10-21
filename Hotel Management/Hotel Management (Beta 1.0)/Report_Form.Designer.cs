@@ -39,6 +39,7 @@
             this.find_textBox = new System.Windows.Forms.TextBox();
             this.Find_Button = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Report_TextBox
@@ -147,11 +148,22 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "pmt:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(378, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Delete Log File";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Report_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 338);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Find_Button);
             this.Controls.Add(this.find_textBox);
@@ -189,5 +201,6 @@
         private TextBox find_textBox;
         private Button Find_Button;
         private Label label6;
+        private Button button1;
     }
 }
