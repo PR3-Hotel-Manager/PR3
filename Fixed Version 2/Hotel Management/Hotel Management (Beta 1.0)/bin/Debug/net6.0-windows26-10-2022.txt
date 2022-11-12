@@ -1,9 +1,0 @@
-16:52:20|Chk-in|  mike            jones                18  #1  - Credit/Debit
-16:52:38|Chk-in|  nick            lee                  18  #2  - Credit/Debit
-16:54:23|Chk-in|  Justin          Beans                18  #17 - Cash
-16:55:19|Chk-in|  Justin          James                18  #6  - Credit/Debit
-16:56:17|Chk-Out| Justin          James                18  #6  - Credit/Debit
-17:29:17|Chk-in|  Jason           jone                 18  #4  - Credit/Debit
-19:03:08|Chk-Out| mike            jones                18  #1  - Credit/Debit
-19:03:38|Chk-in|  hgjgv           hgjh                 18  #18 - Credit/Debit
-19:04:14|Chk-in|  bh              bhbh                 18  #1  - Cash

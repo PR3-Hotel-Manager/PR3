@@ -1,7 +1,0 @@
-17:32:16|Chk-in|  Khosro          Kalantari            18  #System.Windows.Forms.NumericUpDown, Minimum = 1, Maximum = 40 - C/D
-17:33:09|Chk-in|  Khosro          Kalantari            18  #1  - C/D
-17:33:36|Chk-in|  Tim             Cook                 18  #14 - C/D
-18:14:35|Chk-in|  Khosro          Kalantari            18  #1  - C/D
-18:15:12|Chk-in|  Tim             Cook                 18  #1  - C/D
-18:23:25|Chk-in|  Tim             Cook                 18  #1  - C/D
-21:05:42|Chk-in|  Tim             Cook                 18  #1  - C/D
