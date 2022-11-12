@@ -1,1 +1,0 @@
-# Hotel Management (Beta 1.0)
