@@ -72,10 +72,13 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void DeleteLog_button_Click(object sender, EventArgs e)
         {
             string fileDate = dateTimePicker1.Value.ToString("dd-MM-yyyy");
-            File.Delete(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + fileDate + ".txt");
+
+            string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + fileDate + ".txt";
+
+            File.Delete(filePath);
         }
     }
 }

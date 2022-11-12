@@ -50,7 +50,7 @@
             // 
             this.Title_Holder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Title_Holder.Image = ((System.Drawing.Image)(resources.GetObject("Title_Holder.Image")));
-            this.Title_Holder.Location = new System.Drawing.Point(-2, -1);
+            this.Title_Holder.Location = new System.Drawing.Point(0, 0);
             this.Title_Holder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Title_Holder.Name = "Title_Holder";
             this.Title_Holder.Size = new System.Drawing.Size(604, 46);
@@ -73,7 +73,8 @@
             // 
             // CheckIn_Button
             // 
-            this.CheckIn_Button.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.CheckIn_Button.AutoSize = true;
+            this.CheckIn_Button.BackColor = System.Drawing.Color.LightGray;
             this.CheckIn_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckIn_Button.BackgroundImage")));
             this.CheckIn_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.CheckIn_Button.Enabled = false;
@@ -89,6 +90,7 @@
             // 
             // CheckOut_Button
             // 
+            this.CheckOut_Button.AutoSize = true;
             this.CheckOut_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckOut_Button.BackgroundImage")));
             this.CheckOut_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.CheckOut_Button.Enabled = false;
@@ -104,6 +106,7 @@
             // 
             // Capacity_Button
             // 
+            this.Capacity_Button.AutoSize = true;
             this.Capacity_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Capacity_Button.BackgroundImage")));
             this.Capacity_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Capacity_Button.Enabled = false;
@@ -119,8 +122,10 @@
             // 
             // LookUp_Button
             // 
+            this.LookUp_Button.AutoSize = true;
             this.LookUp_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LookUp_Button.BackgroundImage")));
             this.LookUp_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LookUp_Button.Enabled = false;
             this.LookUp_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LookUp_Button.Location = new System.Drawing.Point(28, 239);
             this.LookUp_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -133,8 +138,10 @@
             // 
             // Report_Button
             // 
+            this.Report_Button.AutoSize = true;
             this.Report_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Report_Button.BackgroundImage")));
             this.Report_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Report_Button.Enabled = false;
             this.Report_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Report_Button.Location = new System.Drawing.Point(220, 239);
             this.Report_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -189,10 +196,10 @@
             this.databaseConnectionStatus_Panel.Controls.Add(this.RetryConnecting_Button);
             this.databaseConnectionStatus_Panel.Controls.Add(this.pictureBox1);
             this.databaseConnectionStatus_Panel.Controls.Add(this.connectionStatus_Label);
-            this.databaseConnectionStatus_Panel.Location = new System.Drawing.Point(1, 270);
+            this.databaseConnectionStatus_Panel.Location = new System.Drawing.Point(-2, 270);
             this.databaseConnectionStatus_Panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.databaseConnectionStatus_Panel.Name = "databaseConnectionStatus_Panel";
-            this.databaseConnectionStatus_Panel.Size = new System.Drawing.Size(595, 148);
+            this.databaseConnectionStatus_Panel.Size = new System.Drawing.Size(598, 148);
             this.databaseConnectionStatus_Panel.TabIndex = 10;
             this.databaseConnectionStatus_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.databaseConnectionStatus_Panel_Paint);
             // 

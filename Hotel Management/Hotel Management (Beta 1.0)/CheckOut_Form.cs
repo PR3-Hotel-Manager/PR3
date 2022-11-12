@@ -1,5 +1,7 @@
 ﻿using FireSharp.Config;
 using FireSharp.Interfaces;
+using FireSharp.Response;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,34 +52,43 @@ namespace Hotel_Management__Beta_1._0_
         {
             try
             {
-                try // check if room is occupied 
+
+                FirebaseResponse res = client.Get(@"FlattenGuest");
+                if (res.Body.ToString() == "null")
                 {
-                    var result = client.Get("Room/" + Room_Selector.Value.ToString());
-                    Guest customer = result.ResultAs<Guest>();
-
-                    // Save to Log File
-                    string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
-                    // Not Working
-                    //File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out|  " + customer.FirstName.PadRight(15, ' ') + " " + customer.LastName.PadRight(20, ' ') + " " + customer.Age.PadLeft(2) + "\n");
-
+                    MessageBox.Show("No one is Check-in.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                catch (Exception)
+                else
                 {
-                    MessageBox.Show("This room is not occupied.");
-
+                    Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
+                    if (data.ContainsKey("R" + Room_Selector.Value.ToString()))
+                    {
+                        FlattenGuest guest = data["R" + Room_Selector.Value.ToString()];
+                        deleteGuest(guest);
+                    }
+                    else
+                    {
+                        MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-
-                var delete = client.Delete("Room/" + Room_Selector.Value.ToString());
-
             }
             catch (Exception)
             {
-            
-                MessageBox.Show("Connection Error.");
+                    MessageBox.Show("Connection Error.");
             }
+        }
 
-          
+        private void deleteGuest(FlattenGuest guest)
+        {
+            // Save to Log File
+            string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
+            File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out| " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.RoomNumber.PadRight(2) + " - " + guest.PaymentType + "\n");
 
+            var delete = client.Delete("FlattenGuest/" + ("R"+Room_Selector.Value).ToString());
+
+            this.Close();
+
+            MessageBox.Show("Check out successful. Room: " + Room_Selector.Value.ToString() + " is now availabe.", " ", MessageBoxButtons.OK);
         }
 
         private void CheckOut_Form_Load(object sender, EventArgs e)

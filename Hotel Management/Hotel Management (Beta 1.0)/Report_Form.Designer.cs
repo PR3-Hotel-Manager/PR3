@@ -39,7 +39,7 @@
             this.find_textBox = new System.Windows.Forms.TextBox();
             this.Find_Button = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DeleteLog_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Report_TextBox
@@ -64,10 +64,10 @@
             // 
             // View_Button
             // 
-            this.View_Button.Location = new System.Drawing.Point(259, 9);
+            this.View_Button.Location = new System.Drawing.Point(254, 9);
             this.View_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.View_Button.Name = "View_Button";
-            this.View_Button.Size = new System.Drawing.Size(113, 26);
+            this.View_Button.Size = new System.Drawing.Size(99, 26);
             this.View_Button.TabIndex = 2;
             this.View_Button.Text = "View";
             this.View_Button.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(488, 44);
+            this.label5.Location = new System.Drawing.Point(486, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 15);
             this.label5.TabIndex = 7;
@@ -148,22 +148,22 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "pmt:";
             // 
-            // button1
+            // DeleteLog_button
             // 
-            this.button1.Location = new System.Drawing.Point(378, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Delete Log File";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.DeleteLog_button.Location = new System.Drawing.Point(357, 9);
+            this.DeleteLog_button.Name = "DeleteLog_button";
+            this.DeleteLog_button.Size = new System.Drawing.Size(89, 26);
+            this.DeleteLog_button.TabIndex = 11;
+            this.DeleteLog_button.Text = "Delete Log";
+            this.DeleteLog_button.UseVisualStyleBackColor = true;
+            this.DeleteLog_button.Click += new System.EventHandler(this.DeleteLog_button_Click);
             // 
             // Report_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 338);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.DeleteLog_button);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Find_Button);
             this.Controls.Add(this.find_textBox);
@@ -175,7 +175,7 @@
             this.Controls.Add(this.View_Button);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.Report_TextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -201,6 +201,6 @@
         private TextBox find_textBox;
         private Button Find_Button;
         private Label label6;
-        private Button button1;
+        private Button DeleteLog_button;
     }
 }

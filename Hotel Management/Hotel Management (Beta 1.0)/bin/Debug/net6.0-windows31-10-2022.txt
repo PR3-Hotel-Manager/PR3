@@ -1,0 +1,3 @@
+17:11:52|Chk-in|  m               j                    18  #1  - Credit/Debit
+17:12:03|Chk-in|  h               g                    18  #3  - Credit/Debit
+17:12:10|Chk-in|  f               t                    18  #5  - Credit/Debit

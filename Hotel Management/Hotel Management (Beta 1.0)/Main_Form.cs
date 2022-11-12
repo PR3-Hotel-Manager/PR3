@@ -5,6 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using FireSharp.Config;
 using FireSharp.Response;
 using FireSharp.Interfaces;
+using Microsoft.VisualBasic;
 
 namespace Hotel_Management__Beta_1._0_
 {
@@ -19,22 +20,21 @@ namespace Hotel_Management__Beta_1._0_
         };
 
         public IFirebaseClient client;
-
         public Main_Form()
         {
             InitializeComponent();
-           // Use .ShowDialog() method to only keep the new Form active and prevent interference.
-        }
-        async private void checkConnection() {
+            // Use .ShowDialog() method to only keep the new Form active and prevent interference.
+        }           
+        async private void checkConnection()
+        {
 
             try
             {
                 client = new FireSharp.FirebaseClient(config);
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Unable to establish connection.");
-                
             }
 
             Ping pingSignal = new Ping();
@@ -88,7 +88,7 @@ namespace Hotel_Management__Beta_1._0_
             Title_Label.BackColor = Color.Transparent;
 
             checkConnection();
-       
+
         }
 
         private void CheckIn_Button_Click(object sender, EventArgs e)

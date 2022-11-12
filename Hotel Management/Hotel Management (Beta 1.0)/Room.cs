@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hotel_Management__Beta_1._0_
 {
-    public class Room 
+    public class Room
     {
         // Attributes -------------------------
         public string RoomNumber { get; set; }
@@ -15,7 +15,7 @@ namespace Hotel_Management__Beta_1._0_
         public bool Occupied { get; set; }
 
         // Conctrustors -------------------------------
-        public Room (string roomNumber, string bedConfiguration, bool occupied)
+        public Room(string roomNumber, string bedConfiguration, bool occupied)
         {
             this.RoomNumber = roomNumber;
             this.BedConfiguration = bedConfiguration;

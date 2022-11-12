@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hotel_Management__Beta_1._0_
 {
-    public class Guest 
+    public class Guest
     {
         // Attributes -------------------------
         public string FirstName { get; set; }

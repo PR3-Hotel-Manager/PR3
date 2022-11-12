@@ -80,7 +80,7 @@
             this.OK_Button.Name = "OK_Button";
             this.OK_Button.Size = new System.Drawing.Size(135, 30);
             this.OK_Button.TabIndex = 9;
-            this.OK_Button.Text = "Check-In";
+            this.OK_Button.Text = "OK";
             this.OK_Button.UseVisualStyleBackColor = true;
             this.OK_Button.Click += new System.EventHandler(this.OK_Button_Click);
             // 
@@ -155,7 +155,7 @@
             0,
             0});
             this.Age_Selector.Name = "Age_Selector";
-            this.Age_Selector.Size = new System.Drawing.Size(53, 27);
+            this.Age_Selector.Size = new System.Drawing.Size(70, 27);
             this.Age_Selector.TabIndex = 2;
             this.Age_Selector.Value = new decimal(new int[] {
             18,
@@ -219,16 +219,18 @@
             0,
             0});
             this.BedConfig_Selector.Name = "BedConfig_Selector";
-            this.BedConfig_Selector.Size = new System.Drawing.Size(53, 27);
+            this.BedConfig_Selector.ReadOnly = true;
+            this.BedConfig_Selector.Size = new System.Drawing.Size(70, 27);
             this.BedConfig_Selector.TabIndex = 3;
             this.BedConfig_Selector.Value = new decimal(new int[] {
-            2,
+            1,
             0,
             0,
             0});
             // 
             // Price_Selector
             // 
+            this.Price_Selector.DecimalPlaces = 2;
             this.Price_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Price_Selector.Location = new System.Drawing.Point(128, 262);
             this.Price_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -243,7 +245,7 @@
             0,
             0});
             this.Price_Selector.Name = "Price_Selector";
-            this.Price_Selector.Size = new System.Drawing.Size(53, 27);
+            this.Price_Selector.Size = new System.Drawing.Size(70, 27);
             this.Price_Selector.TabIndex = 4;
             this.Price_Selector.Value = new decimal(new int[] {
             50,
@@ -267,13 +269,14 @@
             0,
             0});
             this.Room_Selector.Name = "Room_Selector";
-            this.Room_Selector.Size = new System.Drawing.Size(53, 27);
+            this.Room_Selector.Size = new System.Drawing.Size(70, 27);
             this.Room_Selector.TabIndex = 5;
             this.Room_Selector.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.Room_Selector.ValueChanged += new System.EventHandler(this.Room_Selector_ValueChanged);
             // 
             // Payment_Label
             // 
