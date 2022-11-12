@@ -94,7 +94,7 @@ namespace Hotel_Management__Beta_1._0_
             }
             else
             {
-                MessageBox.Show("Firebase has already been initialized.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Firebase database has been previously initialized with rooms. Press OK to continue.", "Notification:", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
