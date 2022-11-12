@@ -36,7 +36,7 @@ namespace Hotel_Management__Beta_1._0_
 
             
             bool match = false;
-            FirebaseResponse res = db.client.Get(@"FlattenGuest");
+            FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
             if (res.Body.ToString() == "null")
             {
                 MessageBox.Show("No one is Check-in.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);

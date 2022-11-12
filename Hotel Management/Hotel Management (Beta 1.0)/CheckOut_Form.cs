@@ -38,7 +38,7 @@ namespace Hotel_Management__Beta_1._0_
             try
             {
 
-                FirebaseResponse res = db.client.Get(@"FlattenGuest");
+                FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
                 if (res.Body.ToString() == "null")
                 {
                     MessageBox.Show("No one is Check-in.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -47,7 +47,7 @@ namespace Hotel_Management__Beta_1._0_
                 {
                     Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
                     var roomNumber = Room_Selector.Value.ToString();
-                    var firebaseKey = Constants.FirebaseKey(roomNumber);
+                    var firebaseKey = K.FirebaseKey(roomNumber);
                     if (data[firebaseKey].Occupied)
                     {
                         FlattenGuest guest = data[firebaseKey];
@@ -72,7 +72,7 @@ namespace Hotel_Management__Beta_1._0_
             File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out| " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.RoomNumber.PadRight(2) + " - " + guest.PaymentType + "\n");
             
             FlattenGuest flattenGuest = new FlattenGuest(roomNumber);
-            db.client.Set("FlattenGuest/" + firebaseKey, flattenGuest);
+            db.client.Set(K.FirebaseTopFolder+"/" + firebaseKey, flattenGuest);
 
             this.Close();
 

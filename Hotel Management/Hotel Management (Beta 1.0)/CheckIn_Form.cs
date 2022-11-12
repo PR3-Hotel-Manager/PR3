@@ -116,7 +116,7 @@ namespace Hotel_Management__Beta_1._0_
 
             try
             {
-                FirebaseResponse res = db.client.Get(@"FlattenGuest");
+                FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
                 if (res.Body.ToString() == "null")
                 {
                     insertGuest(flattenGuest, confNumber);
@@ -124,7 +124,7 @@ namespace Hotel_Management__Beta_1._0_
                 else
                 {
                     Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
-                    var firebaseKey = Constants.FirebaseKey(flattenGuest.RoomNumber);
+                    var firebaseKey = K.FirebaseKey(flattenGuest.RoomNumber);
                     if (data[firebaseKey].Occupied)
                     {
                         MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -144,8 +144,8 @@ namespace Hotel_Management__Beta_1._0_
 
         private void insertGuest(FlattenGuest flattenGuest, string confNumber)
         {
-            var firebaseKey = Constants.FirebaseKey(flattenGuest.RoomNumber);
-            db.client.Set("FlattenGuest/" + firebaseKey, flattenGuest);
+            var firebaseKey = K.FirebaseKey(flattenGuest.RoomNumber);
+            db.client.Set(K.FirebaseTopFolder + "/" + firebaseKey, flattenGuest);
             CheckInConfirmation_Form form = new();  // pass confirmation number to the label in #CheckInConfirmation_Form 
             form.changeLabel(confNumber);
             this.Hide();

@@ -42,7 +42,7 @@ namespace Hotel_Management__Beta_1._0_
 
             try
             {
-                FirebaseResponse res = db.client.Get(@"FlattenGuest");
+                FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
                 if (res.Body.ToString() == "null")
                 {
                     MessageBox.Show("No one is Check-in.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -50,15 +50,15 @@ namespace Hotel_Management__Beta_1._0_
                 else
                 {
                     Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
-                    FlattenGuest[] sortedRooms = new FlattenGuest[Constants.NumberOfRooms];
-                    for (var i = 0; i < Constants.NumberOfRooms; i++)
+                    FlattenGuest[] sortedRooms = new FlattenGuest[K.NumberOfRooms];
+                    for (var i = 0; i < K.NumberOfRooms; i++)
                     {
-                        string firebaseKey = Constants.FirebaseKey((i+1).ToString());
+                        string firebaseKey = K.FirebaseKey((i+1).ToString());
                         int index = Convert.ToInt32(data[firebaseKey].RoomNumber)-1;
                         FlattenGuest guest = data[firebaseKey];
                         sortedRooms[index] = guest;
                     }
-                    var available = Constants.NumberOfRooms;
+                    var available = K.NumberOfRooms;
                     progressBar1.Maximum= available;
                     int progressBarValue = 1;
                     foreach (var room in sortedRooms)
