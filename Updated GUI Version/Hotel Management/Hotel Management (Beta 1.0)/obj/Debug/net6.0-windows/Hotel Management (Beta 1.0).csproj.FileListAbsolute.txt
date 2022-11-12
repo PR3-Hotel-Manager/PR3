@@ -208,3 +208,35 @@ C:\Users\zivth\Source\Repos\PR3-Hotel-Manager\PR3\Fixed Version\Hotel Management
 C:\Users\zivth\Source\Repos\PR3-Hotel-Manager\PR3\Fixed Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).pdb
 C:\Users\zivth\Source\Repos\PR3-Hotel-Manager\PR3\Fixed Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).genruntimeconfig.cache
 C:\Users\zivth\Source\Repos\PR3-Hotel-Manager\PR3\Fixed Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\ref\Hotel Management (Beta 1.0).dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).exe
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).deps.json
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).runtimeconfig.json
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).pdb
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\FireSharp.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.Extensions.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\System.Net.Http.Extensions.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\System.Net.Http.Primitives.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).csproj.AssemblyReference.cache
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel_Management__Beta_1._0_.CheckInConfirmation_Form.resources
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel_Management__Beta_1._0_.CheckIn_Form.resources
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel_Management__Beta_1._0_.CheckOut_Form.resources
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel_Management__Beta_1._0_.LookUp_Form.resources
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel_Management__Beta_1._0_.Main_Form.resources
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel_Management__Beta_1._0_.Properties.Resources.resources
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel_Management__Beta_1._0_.Report_Form.resources
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel_Management__Beta_1._0_.Rooms_Form.resources
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).csproj.GenerateResource.cache
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).GeneratedMSBuildEditorConfig.editorconfig
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).AssemblyInfoInputs.cache
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).AssemblyInfo.cs
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).csproj.CopyComplete
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\refint\Hotel Management (Beta 1.0).dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).pdb
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).genruntimeconfig.cache
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Updated GUI Version\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\ref\Hotel Management (Beta 1.0).dll

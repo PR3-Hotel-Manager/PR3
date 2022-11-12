@@ -51,5 +51,4 @@
 21:15:00|Chk-in|  oijli           lkjlk                18  #16 - Credit/Debit
 21:15:04|Chk-Out| j               lkjlkl               18  #7  - Credit/Debit
 21:15:17|Chk-Out| k               lkjlj                18  #6  - Credit/Debit
-21:25:20|Chk-in|  kjjk            kjh                  18  #2  - Credit/Debit
-21:25:23|Chk-Out| kjh             kjhk                 18  #1  - Credit/Debit
+21:24:05|Chk-in|  lkj             kljlk                18  #7  - Credit/Debit

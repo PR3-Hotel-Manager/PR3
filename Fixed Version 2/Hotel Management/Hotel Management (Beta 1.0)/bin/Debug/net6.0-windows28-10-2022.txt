@@ -1,0 +1,2 @@
+08:55:39|Chk-in|  mike            jones                18  #3  - Credit/Debit
+08:55:47|Chk-Out| mike            jones                18  #3  - Credit/Debit

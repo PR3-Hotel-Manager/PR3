@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Fixed Version 2\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj": {}
+  },
+  "projects": {
+    "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Fixed Version 2\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Fixed Version 2\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj",
+        "projectName": "Hotel Management (Beta 1.0)",
+        "projectPath": "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Fixed Version 2\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj",
+        "packagesPath": "C:\\Users\\michaelgranberryii\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Fixed Version 2\\Hotel Management\\Hotel Management (Beta 1.0)\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\michaelgranberryii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "FireSharp": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
+            "JsonFlatten": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

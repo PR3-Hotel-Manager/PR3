@@ -391,24 +391,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zivth\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\michaelgranberryii\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zivth\\source\\repos\\PR3-Hotel-Manager\\PR3\\Updated GUI Version\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj",
+      "projectUniqueName": "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Updated GUI Version\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj",
       "projectName": "Hotel Management (Beta 1.0)",
-      "projectPath": "C:\\Users\\zivth\\source\\repos\\PR3-Hotel-Manager\\PR3\\Updated GUI Version\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj",
-      "packagesPath": "C:\\Users\\zivth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zivth\\source\\repos\\PR3-Hotel-Manager\\PR3\\Updated GUI Version\\Hotel Management\\Hotel Management (Beta 1.0)\\obj\\",
+      "projectPath": "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Updated GUI Version\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj",
+      "packagesPath": "C:\\Users\\michaelgranberryii\\.nuget\\packages\\",
+      "outputPath": "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Updated GUI Version\\Hotel Management\\Hotel Management (Beta 1.0)\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\zivth\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\michaelgranberryii\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -458,7 +453,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
