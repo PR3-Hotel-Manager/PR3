@@ -23,41 +23,17 @@ namespace Hotel_Management__Beta_1._0_
 {
     public partial class CheckIn_Form : Form
     {
-        private Guest customer;
+        FirebaseSingleton db = FirebaseSingleton.Instance;
+        private Guest? customer;
 
         public CheckIn_Form()
         {
             InitializeComponent();
         }
 
-        // Connect using FireSharp
-        static readonly IFirebaseConfig config = new FirebaseConfig()
-        {
-            AuthSecret = Constants.AuthSecret,
-            BasePath = Constants.BasePath
-        };
-
-        public IFirebaseClient client;
         private void CheckIn_Form_Load(object sender, EventArgs e)
         {
-         
-            checkConnection();
-
-        }
-
-        async private void checkConnection()
-        {
-
-            try
-            {
-                client = new FireSharp.FirebaseClient(config);
-            }
-            catch
-            {
-                MessageBox.Show("Unable to establish connection.");
-
-            }
-
+            db.StartFirebase();
         }
 
         private bool verifyInputs()  // returns false if conditions are not met.
@@ -138,43 +114,9 @@ namespace Hotel_Management__Beta_1._0_
             string temp = getHashString(guestDetails);
             string confNumber = temp.Substring(temp.Length - (temp.Length / 4));
 
-            /*
-            try
-            {       
-                FirebaseResponse res = client.Get(@"FlattenGuest");
-                if (res.Body.ToString() == "null")
-                {
-                    insertGuest(flattenGuest, confNumber);
-                }
-                else
-                {
-                    List<FlattenGuest> data = JsonConvert.DeserializeObject<List<FlattenGuest>>(res.Body.ToString());
-                    
-                    try
-                    {
-                        if (data[Convert.ToInt32(Room_Selector.Value)-1] != null)
-                        {
-                            MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            insertGuest(flattenGuest, confNumber);
-
-                        }
-                    } catch (ArgumentOutOfRangeException)
-                    {
-                        insertGuest(flattenGuest, confNumber);
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Connection Error.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            */
             try
             {
-                FirebaseResponse res = client.Get(@"FlattenGuest");
+                FirebaseResponse res = db.client.Get(@"FlattenGuest");
                 if (res.Body.ToString() == "null")
                 {
                     insertGuest(flattenGuest, confNumber);
@@ -182,7 +124,8 @@ namespace Hotel_Management__Beta_1._0_
                 else
                 {
                     Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
-                    if (data.ContainsKey("R"+flattenGuest.RoomNumber))
+                    var firebaseKey = Constants.FirebaseKey(flattenGuest.RoomNumber);
+                    if (data[firebaseKey].Occupied)
                     {
                         MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -201,7 +144,8 @@ namespace Hotel_Management__Beta_1._0_
 
         private void insertGuest(FlattenGuest flattenGuest, string confNumber)
         {
-            client.Set("FlattenGuest/" + ("R"+flattenGuest.RoomNumber), flattenGuest);
+            var firebaseKey = Constants.FirebaseKey(flattenGuest.RoomNumber);
+            db.client.Set("FlattenGuest/" + firebaseKey, flattenGuest);
             CheckInConfirmation_Form form = new();  // pass confirmation number to the label in #CheckInConfirmation_Form 
             form.changeLabel(confNumber);
             this.Hide();
@@ -250,5 +194,7 @@ namespace Hotel_Management__Beta_1._0_
             
             }
         }
+
+
     }
 }

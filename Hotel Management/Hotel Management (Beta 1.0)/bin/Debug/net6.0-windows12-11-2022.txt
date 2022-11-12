@@ -1,0 +1,2 @@
+09:21:21|Chk-in|  mike            jones                18  #1  - Credit/Debit
+09:21:42|Chk-in|  nick            lee                  18  #3  - Credit/Debit

@@ -19,7 +19,23 @@ namespace Hotel_Management__Beta_1._0_
         public double Price { get; set; }
         public string PaymentType { get; set; }
         public string Time { get; set; }
-     
+
+
+
+        public FlattenGuest()
+        {
+            this.FirstName = "";
+            this.LastName = "";
+            this.Age = "";
+            this.Stay = "";
+            this.RoomNumber = "";
+            this.BedConfiguration = "";
+            this.Occupied = false;
+            this.Price = 0;
+            this.PaymentType = "";
+            this.Time = "";
+        }
+
         public FlattenGuest(string firstName, string lastname, string age, string stay, string roomNumber, string bedConfiguration, Boolean occupied, double price, string paymentType, string time)
         {
             this.FirstName = firstName;
@@ -33,7 +49,20 @@ namespace Hotel_Management__Beta_1._0_
             this.PaymentType = paymentType;
             this.Time = time;
         }
+
+        public FlattenGuest(string roomNumber)
+        {
+            this.FirstName = "";
+            this.LastName = "";
+            this.Age = "";
+            this.Stay = "";
+            this.RoomNumber = roomNumber;
+            this.BedConfiguration = "";
+            this.Occupied = false;
+            this.Price = 0;
+            this.PaymentType = "";
+            this.Time = "";
+        }
+
     }
-
-
 }

@@ -11,15 +11,8 @@ namespace Hotel_Management__Beta_1._0_
 {
     public partial class Main_Form : Form
     {
+        FirebaseSingleton db = FirebaseSingleton.Instance;
 
-        // Connect using FireSharp
-        static readonly IFirebaseConfig config = new FirebaseConfig()
-        {
-            AuthSecret = Constants.AuthSecret,
-            BasePath = Constants.BasePath
-        };
-
-        public IFirebaseClient client;
         public Main_Form()
         {
             InitializeComponent();
@@ -27,15 +20,7 @@ namespace Hotel_Management__Beta_1._0_
         }           
         async private void checkConnection()
         {
-
-            try
-            {
-                client = new FireSharp.FirebaseClient(config);
-            }
-            catch
-            {
-                MessageBox.Show("Unable to establish connection.");
-            }
+            db.StartFirebase();
 
             Ping pingSignal = new Ping();
             string hostName = "www.google.com";
@@ -81,6 +66,28 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
+        private void InitGuestData()
+        {
+            FirebaseResponse res = db.client.Get(@"FlattenGuest");
+            if (res.Body.ToString() == "null")
+            {
+                Dictionary<string, FlattenGuest> initGuestData = new Dictionary<string, FlattenGuest>();
+                for (var i = 0; i < Constants.NumberOfRooms; i++)
+                {
+                    int roomNumber = i + 1;
+                    FlattenGuest flattenGuest = new FlattenGuest(roomNumber.ToString());
+                    var firebaseKey = Constants.FirebaseKey(flattenGuest.RoomNumber);
+                    initGuestData.Add(firebaseKey, flattenGuest);
+                }
+                db.client.Set("FlattenGuest/", initGuestData);
+            }
+            else
+            {
+                MessageBox.Show("Firebase has already been initialized.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
         private void Main_Form_Load(object sender, EventArgs e)
         {
             Title_Label.FlatStyle = FlatStyle.Standard;
@@ -88,6 +95,8 @@ namespace Hotel_Management__Beta_1._0_
             Title_Label.BackColor = Color.Transparent;
 
             checkConnection();
+            InitGuestData();
+
 
         }
 
