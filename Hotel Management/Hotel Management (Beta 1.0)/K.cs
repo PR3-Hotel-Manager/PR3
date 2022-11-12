@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Hotel_Management__Beta_1._0_
 {
-    static class Constants
+    static class K
     {
         // Attributes -------------------------
         private static readonly int numberOfRooms = 40;
+        private static readonly string firebaseTopFolder = "FlattenGuest";
 
         // Getters -----------------------------
 
@@ -17,6 +18,11 @@ namespace Hotel_Management__Beta_1._0_
         public static int NumberOfRooms
         {
             get { return numberOfRooms; }
+        }
+
+        public static string FirebaseTopFolder
+        {
+            get { return firebaseTopFolder; }
         }
 
         public static string FirebaseKey (string roomNumber)
