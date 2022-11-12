@@ -11,33 +11,26 @@ using System.DirectoryServices;
 
 namespace Hotel_Management__Beta_1._0_
 {
+    
     public partial class Rooms_Form : Form
     {
+        FirebaseSingleton db = FirebaseSingleton.Instance;
 
-        static readonly IFirebaseConfig config = new FirebaseConfig()
-        {
-            AuthSecret = Constants.AuthSecret,
-            BasePath = Constants.BasePath
-        };
 
-        public IFirebaseClient client;
-        async private void checkConnection()
-        {
-
-            try
-            {
-                client = new FireSharp.FirebaseClient(config);
-            }
-            catch
-            {
-                MessageBox.Show("Unable to establish connection.");
-
-            }
-
-        }
         public Rooms_Form()
         {
             InitializeComponent();
+        }
+        private void Rooms_Form_Load(object sender, EventArgs e)
+        {
+            progressBar1.Visible = true;
+
+            db.StartFirebase();
+            this.BringToFront();
+            this.Show();
+
+            checkRooms();
+
         }
 
         private void OK_Button_Click(object sender, EventArgs e)
@@ -49,26 +42,43 @@ namespace Hotel_Management__Beta_1._0_
 
             try
             {
-                FirebaseResponse res = client.Get(@"FlattenGuest");
-                Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
+                FirebaseResponse res = db.client.Get(@"FlattenGuest");
                 if (res.Body.ToString() == "null")
                 {
                     MessageBox.Show("No one is Check-in.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    foreach (var i in data.Values)
+                    Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
+                    FlattenGuest[] sortedRooms = new FlattenGuest[Constants.NumberOfRooms];
+                    for (var i = 0; i < Constants.NumberOfRooms; i++)
                     {
-                        if (i.Occupied)
+                        string firebaseKey = Constants.FirebaseKey((i+1).ToString());
+                        int index = Convert.ToInt32(data[firebaseKey].RoomNumber)-1;
+                        FlattenGuest guest = data[firebaseKey];
+                        sortedRooms[index] = guest;
+                    }
+                    var available = Constants.NumberOfRooms;
+                    progressBar1.Maximum= available;
+                    int progressBarValue = 1;
+                    foreach (var room in sortedRooms)
+                    {
+                        string roomNumber = room.RoomNumber + "\n";
+                        if (room.Occupied)
                         {
-                            String s = i.RoomNumber + "\n";
-                            Occupied_RichTextBox.Text += s;
+                            
+                            Occupied_RichTextBox.Text += roomNumber;
+                            available--;
                         }
                         else
                         {
-                            Empty_richTextBox.Text += i + "\n";
+                            Empty_richTextBox.Text += roomNumber;
                         }
+                        progressBar1.Value = progressBarValue++;
+                        
                     }
+                    //progressBar1.Visible = false;
+                    AvailableRooms_Label.Text = "Available Rooms: " + available;
                 }
  
             }
@@ -77,16 +87,6 @@ namespace Hotel_Management__Beta_1._0_
                 MessageBox.Show("Connection Error.");
             }
         }
-        private void Rooms_Form_Load(object sender, EventArgs e)
-        {
-            progressBar1.Visible = true;
- 
-            checkConnection();
-            this.BringToFront();
-            this.Show();
 
-            checkRooms();
-      
-        }
     }
 }

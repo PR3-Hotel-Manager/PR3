@@ -14,15 +14,7 @@ namespace Hotel_Management__Beta_1._0_
         private static readonly int numberOfRooms = 10;
 
         // Getters -----------------------------
-        public static string BasePath
-        {
-            get { return basePath; }
-        }
 
-        public static string AuthSecret
-        {
-            get { return authSecret; }
-        }
 
         public static int NumberOfRooms
         {

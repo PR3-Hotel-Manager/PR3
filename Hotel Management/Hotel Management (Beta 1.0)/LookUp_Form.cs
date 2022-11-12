@@ -17,30 +17,12 @@ namespace Hotel_Management__Beta_1._0_
 {
     public partial class LookUp_Form : Form
     {
-        static readonly IFirebaseConfig config = new FirebaseConfig()
-        {
-            AuthSecret = Constants.AuthSecret,
-            BasePath = Constants.BasePath
-        };
+        FirebaseSingleton db = FirebaseSingleton.Instance;
 
-        public IFirebaseClient client;
-        async private void checkConnection()
-        {
-
-            try
-            {
-                client = new FireSharp.FirebaseClient(config);
-            }
-            catch
-            {
-                MessageBox.Show("Unable to establish connection.");
-
-            }
-
-        }
         public LookUp_Form()
         {
             InitializeComponent();
+            
         }
 
         private void Clear_Button_Click(object sender, EventArgs e)
@@ -56,7 +38,7 @@ namespace Hotel_Management__Beta_1._0_
 
             for (int i = 1; i <= 40; i++)
             {
-                var get = client.Get("Room/" + i);
+                var get = db.client.Get("Room/" + i);
                 Guest instance = get.ResultAs<Guest>();
 
                 if (get != null && instance != null)
@@ -84,7 +66,7 @@ namespace Hotel_Management__Beta_1._0_
             result_TextBox.Text = "";
             progressBar.Visible = true;
 
-            checkConnection();
+            db.StartFirebase();
             performSearch();
 
             progressBar.Visible = false;

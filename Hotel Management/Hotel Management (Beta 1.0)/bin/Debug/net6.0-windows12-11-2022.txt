@@ -2,3 +2,7 @@
 09:21:42|Chk-in|  nick            lee                  18  #3  - Credit/Debit
 09:31:15|Chk-Out| mike            jones                18  #1  - Credit/Debit
 09:31:27|Chk-Out| nick            lee                  18  #3  - Credit/Debit
+10:05:25|Chk-in|  mike            jones                18  #1  - Credit/Debit
+10:05:36|Chk-in|  nick            lee                  18  #3  - Credit/Debit
+10:05:54|Chk-Out| nick            lee                  18  #3  - Credit/Debit
+10:06:12|Chk-in|  nick            lee                  18  #3  - Credit/Debit

@@ -14,7 +14,7 @@ namespace Hotel_Management__Beta_1._0_
 {
     public partial class Report_Form : Form
     {
-
+        FirebaseSingleton db = FirebaseSingleton.Instance;
         private int findPosition = 0;
         public Report_Form()
         {
@@ -23,6 +23,7 @@ namespace Hotel_Management__Beta_1._0_
 
         private void Report_Form_Load(object sender, EventArgs e)
         {
+            db.StartFirebase();
             dateTimePicker1.MaxDate = DateTime.Now;
             dateTimePicker1.MinDate = DateTime.Now.AddDays(-4);
 
