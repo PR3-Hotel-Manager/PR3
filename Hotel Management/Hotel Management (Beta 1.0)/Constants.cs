@@ -9,7 +9,7 @@ namespace Hotel_Management__Beta_1._0_
     static class Constants
     {
         // Attributes -------------------------
-        private static readonly int numberOfRooms = 10;
+        private static readonly int numberOfRooms = 40;
 
         // Getters -----------------------------
 

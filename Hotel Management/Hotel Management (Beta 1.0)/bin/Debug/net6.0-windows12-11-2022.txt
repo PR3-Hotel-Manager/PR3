@@ -10,3 +10,6 @@
 11:37:48|Chk-in|  Mike            Lee                  18  #2  - Credit/Debit
 11:56:57|Chk-in|  Mike            G                    18  #1  - Credit/Debit
 11:57:06|Chk-in|  Mike            F                    18  #2  - Credit/Debit
+15:11:17|Chk-in|  mike            jones                18  #1  - Credit/Debit
+15:11:41|Chk-in|  nick            lee                  18  #3  - Credit/Debit
+15:13:26|Chk-in|  James           h                    18  #30 - Credit/Debit
