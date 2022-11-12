@@ -17,7 +17,18 @@ namespace Hotel_Management__Beta_1._0_
         {
             InitializeComponent();
             // Use .ShowDialog() method to only keep the new Form active and prevent interference.
-        }           
+        }
+        private void Main_Form_Load(object sender, EventArgs e)
+        {
+            Title_Label.FlatStyle = FlatStyle.Standard;
+            Title_Label.Parent = Title_Holder;
+            Title_Label.BackColor = Color.Transparent;
+
+            checkConnection();
+            InitGuestData();
+
+
+        }
         async private void checkConnection()
         {
             db.StartFirebase();
@@ -88,17 +99,7 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
-        private void Main_Form_Load(object sender, EventArgs e)
-        {
-            Title_Label.FlatStyle = FlatStyle.Standard;
-            Title_Label.Parent = Title_Holder;
-            Title_Label.BackColor = Color.Transparent;
 
-            checkConnection();
-            InitGuestData();
-
-
-        }
 
         private void CheckIn_Button_Click(object sender, EventArgs e)
         {

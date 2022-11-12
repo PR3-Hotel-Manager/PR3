@@ -17,32 +17,17 @@ namespace Hotel_Management__Beta_1._0_
 {
     public partial class CheckOut_Form : Form
     {
-        static readonly IFirebaseConfig config = new FirebaseConfig()
-        {
-            AuthSecret = Constants.AuthSecret,
-            BasePath = Constants.BasePath
-        };
+        FirebaseSingleton db = FirebaseSingleton.Instance;
 
-        public IFirebaseClient client;
         public CheckOut_Form()
         {
             InitializeComponent();
         }
-
-        async private void checkConnection()
+        private void CheckOut_Form_Load(object sender, EventArgs e)
         {
-
-            try
-            {
-                client = new FireSharp.FirebaseClient(config);
-            }
-            catch
-            {
-                MessageBox.Show("Unable to establish connection.");
-
-            }
-
+            db.StartFirebase();
         }
+
         private void Cancel_Button_Click(object sender, EventArgs e)
         {
             this.Close();  // Exit CheckOut Form
@@ -53,7 +38,7 @@ namespace Hotel_Management__Beta_1._0_
             try
             {
 
-                FirebaseResponse res = client.Get(@"FlattenGuest");
+                FirebaseResponse res = db.client.Get(@"FlattenGuest");
                 if (res.Body.ToString() == "null")
                 {
                     MessageBox.Show("No one is Check-in.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -61,10 +46,12 @@ namespace Hotel_Management__Beta_1._0_
                 else
                 {
                     Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
-                    if (data.ContainsKey("R" + Room_Selector.Value.ToString()))
+                    var roomNumber = Room_Selector.Value.ToString();
+                    var firebaseKey = Constants.FirebaseKey(roomNumber);
+                    if (data[firebaseKey].Occupied)
                     {
-                        FlattenGuest guest = data["R" + Room_Selector.Value.ToString()];
-                        deleteGuest(guest);
+                        FlattenGuest guest = data[firebaseKey];
+                        deleteGuest(guest, firebaseKey, roomNumber);
                     }
                     else
                     {
@@ -78,22 +65,20 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
-        private void deleteGuest(FlattenGuest guest)
+        private void deleteGuest(FlattenGuest guest, string firebaseKey, string roomNumber)
         {
             // Save to Log File
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
             File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out| " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.RoomNumber.PadRight(2) + " - " + guest.PaymentType + "\n");
-
-            var delete = client.Delete("FlattenGuest/" + ("R"+Room_Selector.Value).ToString());
+            
+            FlattenGuest flattenGuest = new FlattenGuest(roomNumber);
+            db.client.Set("FlattenGuest/" + firebaseKey, flattenGuest);
 
             this.Close();
 
             MessageBox.Show("Check out successful. Room: " + Room_Selector.Value.ToString() + " is now availabe.", " ", MessageBoxButtons.OK);
         }
 
-        private void CheckOut_Form_Load(object sender, EventArgs e)
-        {
-            checkConnection();
-        }
+
     }
 }
