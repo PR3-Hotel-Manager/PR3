@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FireSharp.Response;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Hotel_Management__Beta_1._0_
 {
@@ -35,23 +36,25 @@ namespace Hotel_Management__Beta_1._0_
 
             
             bool match = false;
-
-            for (int i = 1; i <= 40; i++)
+            FirebaseResponse res = db.client.Get(@"FlattenGuest");
+            if (res.Body.ToString() == "null")
             {
-                var get = db.client.Get("Room/" + i);
-                Guest instance = get.ResultAs<Guest>();
-
-                if (get != null && instance != null)
+                MessageBox.Show("No one is Check-in.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
+                int progressBarValue = 1;
+                foreach (var guest in data.Values )
                 {
-                    if (instance.FirstName == Name_TextBox.Text || instance.LastName == LastName_TextBox.Text)
+                    if ((guest.FirstName == Name_TextBox.Text && Name_TextBox.Text != "") || (guest.LastName == LastName_TextBox.Text && LastName_TextBox.Text != ""))
                     {
-                        result_TextBox.Text += instance.FirstName + ", " + instance.LastName + ", #" + instance.room.RoomNumber + ", Chk-in time: " + instance.payment.Time + "\n";
+                        result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.RoomNumber + ", Chk-in time: " + guest.Time + "\n";
                         match = true;
                     }
 
                 }
-
-                progressBar.Value = i;
+                progressBar.Value = progressBarValue++;
             }
 
             if (match == false)
