@@ -38,17 +38,24 @@ namespace Hotel_Management__Beta_1._0_
             try
             {
                 FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
-                Dictionary<string, Guest> data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
-                var roomNumber = Room_Selector.Value.ToString();
-                var firebaseKey = K.FirebaseKey(roomNumber);
-                if (data[firebaseKey].room.Occupied)
+                if (res.Body.ToString() == "null")
                 {
-                    Guest guest = data[firebaseKey];
-                    deleteGuest(guest, firebaseKey, roomNumber);
+                    MessageBox.Show("No data in Firebase Realtime database.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Dictionary<string, Guest> data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
+                    var roomNumber = Room_Selector.Value.ToString();
+                    var firebaseKey = K.FirebaseKey(roomNumber);
+                    if (data[firebaseKey].room.Occupied)
+                    {
+                        Guest guest = data[firebaseKey];
+                        deleteGuest(guest, firebaseKey, roomNumber);
+                    }
+                    else
+                    {
+                        MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception)

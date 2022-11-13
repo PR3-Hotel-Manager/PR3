@@ -27,7 +27,6 @@ namespace Hotel_Management__Beta_1._0_
         FirebaseSingleton db = FirebaseSingleton.Instance;
         private Guest? guest;
         Dictionary<string, Guest> data;
-        Guest[] sortedRooms = new Guest[K.NumberOfRooms];
 
         public CheckIn_Form()
         {
@@ -37,7 +36,6 @@ namespace Hotel_Management__Beta_1._0_
         private void CheckIn_Form_Load(object sender, EventArgs e)
         {
             db.StartFirebase();
-            checkRooms();
         }
 
         private bool verifyInputs()  // returns false if conditions are not met.
@@ -99,7 +97,7 @@ namespace Hotel_Management__Beta_1._0_
                 Age_Selector.Value.ToString(),
                 StayLength_Selector.Value.ToString(),
                 new Room(Room_Selector.Value.ToString(), BedConfig_Selector.Value.ToString(), true),
-                new Payment(((int)CalculatePrice()), pmtMethod));          
+                new Payment((double)(Price_Selector.Value), pmtMethod));          
 
             // Prepare Confirmation Number
             string guestDetails = guest.FirstName + guest.LastName + guest.payment.PaymentType;
@@ -109,16 +107,23 @@ namespace Hotel_Management__Beta_1._0_
             try
             {
                 FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
-                data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
-                var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
-                if (data[firebaseKey].room.Occupied)
+                if (res.Body.ToString() == "null")
                 {
-                    MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No data in Firebase Realtime database.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    insertGuest(guest, confNumber);
+                    data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
+                    var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
+                    if (data[firebaseKey].room.Occupied)
+                    {
+                        MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        insertGuest(guest, confNumber);
 
+                    }
                 }
             }
             catch (Exception)
@@ -167,70 +172,17 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
-        private double CalculatePrice()
-        {
-            var b = Convert.ToInt32(sortedRooms[Convert.ToInt32(Room_Selector.Value)-1].room.BedConfiguration);
-            var s = Convert.ToInt32(StayLength_Selector.Value);
-            return Math.Round(100 + Math.Pow(s*b,2),0);
-        }
-
         private void Room_Selector_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private int CalculateNumOfBeds()
         {
             if (Room_Selector.Value <= 15)
             {
-                return 1;
+                BedConfig_Selector.Value = 1;
             }
             else
             {
-                return 2;
+                BedConfig_Selector.Value = 2;
 
             }
-        }
-
-        void checkRooms()
-        {
-
-            try
-            {
-                FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
-                if (res.Body.ToString() == "null")
-                {
-                    MessageBox.Show("No one is Check-in.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
-                    for (var i = 0; i < K.NumberOfRooms; i++)
-                    {
-                        string firebaseKey = K.FirebaseKey((i + 1).ToString());
-                        int index = Convert.ToInt32(data[firebaseKey].room.RoomNumber) - 1;
-                        Guest guest = data[firebaseKey];
-                        sortedRooms[index] = guest;
-                    }
-                    foreach (var g in sortedRooms)
-                    {
-                        string roomNumber = g.room.RoomNumber;
-                        if (!g.room.Occupied)
-                        {
-
-                            string text = ("Room: " + roomNumber + " - Beds: " + g.room.BedConfiguration + "\n");
-                            //AvailiableRooms_TextBox.Text += text;
-                            
-                        }
-                    }
-                }
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Connection Error.");
-            }
-        }
-
+        } 
     }
 }
