@@ -19,6 +19,7 @@ using Newtonsoft.Json.Linq;
 using FireSharp;
 using JsonFlatten;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Security.AccessControl;
 
 namespace Hotel_Management__Beta_1._0_
 {
@@ -86,8 +87,7 @@ namespace Hotel_Management__Beta_1._0_
         public void performCheckIn()
         {
             // Get Payment Method
-            string pmtMethod;
-            pmtMethod = retrievePaymentMethod();
+            string pmtMethod = retrievePaymentMethod();
 
             // Get Name, Last Name, Age, Bed, Price, Room#, Stay Length
             // Add fields to Database
@@ -97,12 +97,9 @@ namespace Hotel_Management__Beta_1._0_
                 Age_Selector.Value.ToString(),
                 StayLength_Selector.Value.ToString(),
                 new Room(Room_Selector.Value.ToString(), BedConfig_Selector.Value.ToString(), true),
-                new Payment((double)(Price_Selector.Value), pmtMethod));          
+                new Payment((double)(Price_Selector.Value), pmtMethod));
 
-            // Prepare Confirmation Number
-            string guestDetails = guest.FirstName + guest.LastName + guest.payment.PaymentType;
-            string temp = getHashString(guestDetails);
-            string confNumber = temp.Substring(temp.Length - (temp.Length / 4));
+            string confNumber = PrepareConfirmationNumber(guest);
 
             data = db.GetData();
             if (data == null)
@@ -119,20 +116,23 @@ namespace Hotel_Management__Beta_1._0_
                 else
                 {
                     db.UpdateRoomStatus(guest);
-                    UpdateLogFile(guest, confNumber);
-
+                    ShowConfirmationForm(confNumber);
+                    UpdateLogFile(guest);
                 }
             }
         }
 
-        private void UpdateLogFile(Guest guest, string confNumber)
+        private string PrepareConfirmationNumber(Guest guest)
         {
-            CheckInConfirmation_Form form = new();  // pass confirmation number to the label in #CheckInConfirmation_Form 
-            form.changeLabel(confNumber);
-            this.Hide();
-            form.ShowDialog(); // Display #CheckInConfirmation_Form
-            this.Close();
+            // Prepare Confirmation Number
+            string guestDetails = guest.FirstName + guest.LastName + guest.payment.PaymentType;
+            string temp = getHashString(guestDetails);
+            string confNumber = temp.Substring(temp.Length - (temp.Length / 4));
+            return confNumber;
+        }
 
+        private void UpdateLogFile(Guest guest)
+        {
             // Save to Log File
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
             File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-in|  " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.room.RoomNumber.PadRight(2) + " - " + guest.payment.PaymentType + "\n");
@@ -141,6 +141,14 @@ namespace Hotel_Management__Beta_1._0_
             File.AppendAllText(filePathRoomList, Room_Selector.Value.ToString() + "\n");
         }
 
+        private void ShowConfirmationForm(string confNumber)
+        {
+            CheckInConfirmation_Form form = new();  // pass confirmation number to the label in #CheckInConfirmation_Form 
+            form.changeLabel(confNumber);
+            this.Hide();
+            form.ShowDialog(); // Display #CheckInConfirmation_Form
+            this.Close();
+        }
 
         // Buttons -------------------
         private void Cancel_Button_Click(object sender, EventArgs e)
