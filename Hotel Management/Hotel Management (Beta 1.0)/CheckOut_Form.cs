@@ -18,6 +18,7 @@ namespace Hotel_Management__Beta_1._0_
     public partial class CheckOut_Form : Form
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
+        Dictionary<string, Guest> data;
 
         public CheckOut_Form()
         {
@@ -35,43 +36,37 @@ namespace Hotel_Management__Beta_1._0_
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
-            try
+
+
+            data = db.GetData();
+            if (data == null)
             {
-                FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
-                if (res.Body.ToString() == "null")
+                MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var roomNumber = Room_Selector.Value.ToString();
+                var firebaseKey = K.FirebaseKey(roomNumber);
+                Guest guest = data[firebaseKey];
+                if (guest.room.Occupied)
                 {
-                    MessageBox.Show("No data in Firebase Realtime database.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Guest Emptyguest = new Guest(roomNumber);
+                    db.UpdateRoomStatus(Emptyguest);
+                    UpdateLogFile(guest);
                 }
                 else
                 {
-                    Dictionary<string, Guest> data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
-                    var roomNumber = Room_Selector.Value.ToString();
-                    var firebaseKey = K.FirebaseKey(roomNumber);
-                    if (data[firebaseKey].room.Occupied)
-                    {
-                        Guest guest = data[firebaseKey];
-                        deleteGuest(guest, firebaseKey, roomNumber);
-                    }
-                    else
-                    {
-                        MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception)
-            {
-                    MessageBox.Show("Connection Error.");
-            }
+
         }
 
-        private void deleteGuest(Guest guest, string firebaseKey, string roomNumber)
+        private void UpdateLogFile(Guest guest)
         {
             // Save to Log File
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
             File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out| " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.room.RoomNumber.PadRight(2) + " - " + guest.payment.PaymentType + "\n");
-
-            Guest Emptyguest = new Guest(roomNumber);
-            db.client.Set(K.FirebaseTopFolder+"/" + firebaseKey, Emptyguest);
 
             this.Close();
 
