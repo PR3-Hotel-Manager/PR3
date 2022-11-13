@@ -10,15 +10,15 @@ namespace Hotel_Management__Beta_1._0_
     public class Payment
     {
         // Attributes -------------------------
-        public double price { get; set; }
-        public string paymentType { get; set; }
+        public double Price { get; set; }
+        public string PaymentType { get; set; }
         public string Time { get; set; }
 
         // Conctrustors -------------------------------
         public Payment(double price, string paymentType)
         {
-            this.price = price;
-            this.paymentType = paymentType;
+            this.Price = price;
+            this.PaymentType = paymentType;
             this.Time = transactionTime();
         }
 

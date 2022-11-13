@@ -37,26 +37,18 @@ namespace Hotel_Management__Beta_1._0_
         {
             try
             {
-
                 FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
-                if (res.Body.ToString() == "null")
+                Dictionary<string, Guest> data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
+                var roomNumber = Room_Selector.Value.ToString();
+                var firebaseKey = K.FirebaseKey(roomNumber);
+                if (data[firebaseKey].room.Occupied)
                 {
-                    MessageBox.Show("No one is Check-in.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Guest guest = data[firebaseKey];
+                    deleteGuest(guest, firebaseKey, roomNumber);
                 }
                 else
                 {
-                    Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
-                    var roomNumber = Room_Selector.Value.ToString();
-                    var firebaseKey = K.FirebaseKey(roomNumber);
-                    if (data[firebaseKey].Occupied)
-                    {
-                        FlattenGuest guest = data[firebaseKey];
-                        deleteGuest(guest, firebaseKey, roomNumber);
-                    }
-                    else
-                    {
-                        MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
@@ -65,14 +57,14 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
-        private void deleteGuest(FlattenGuest guest, string firebaseKey, string roomNumber)
+        private void deleteGuest(Guest guest, string firebaseKey, string roomNumber)
         {
             // Save to Log File
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
-            File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out| " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.RoomNumber.PadRight(2) + " - " + guest.PaymentType + "\n");
-            
-            FlattenGuest flattenGuest = new FlattenGuest(roomNumber);
-            db.client.Set(K.FirebaseTopFolder+"/" + firebaseKey, flattenGuest);
+            File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out| " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.room.RoomNumber.PadRight(2) + " - " + guest.payment.PaymentType + "\n");
+
+            Guest Emptyguest = new Guest(roomNumber);
+            db.client.Set(K.FirebaseTopFolder+"/" + firebaseKey, Emptyguest);
 
             this.Close();
 
