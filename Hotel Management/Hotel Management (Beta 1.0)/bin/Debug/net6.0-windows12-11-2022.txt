@@ -15,3 +15,9 @@
 15:13:26|Chk-in|  James           h                    18  #30 - Credit/Debit
 15:32:20|Chk-in|  Jame            Lee                  18  #2  - Credit/Debit
 15:32:43|Chk-in|  Ho              Mo                   18  #4  - Credit/Debit
+16:23:36|Chk-in|  Mike            Jame                 18  #1  - Credit/Debit
+16:23:44|Chk-in|  Nick            Lee                  18  #6  - Credit/Debit
+16:23:57|Chk-in|  James           Bond                 18  #17 - Credit/Debit
+16:24:16|Chk-in|  Yo              Wiing                18  #35 - Credit/Debit
+16:43:30|Chk-in|  Spider          Man                  18  #16 - Credit/Debit
+16:43:40|Chk-in|  Super           Man                  18  #23 - Credit/Debit

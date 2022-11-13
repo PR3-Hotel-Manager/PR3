@@ -57,11 +57,25 @@ namespace Hotel_Management__Beta_1._0_
             this.Age = "";
             this.Stay = "";
             this.RoomNumber = roomNumber;
-            this.BedConfiguration = "";
+            this.BedConfiguration = InitBedConfiguration(roomNumber);
             this.Occupied = false;
             this.Price = 0;
             this.PaymentType = "";
             this.Time = "";
+        }
+
+        private string InitBedConfiguration (string roomNumber)
+        {
+            int rNum = Convert.ToInt32(roomNumber);
+            if (rNum <= 15)
+            {
+                return 1.ToString();
+            }
+            else
+            {
+                return 2.ToString();
+
+            }
         }
 
     }

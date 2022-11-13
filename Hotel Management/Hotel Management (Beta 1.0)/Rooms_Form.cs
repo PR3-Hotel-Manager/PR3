@@ -63,16 +63,18 @@ namespace Hotel_Management__Beta_1._0_
                     int progressBarValue = 1;
                     foreach (var room in sortedRooms)
                     {
-                        string roomNumber = room.RoomNumber + "\n";
+                        string roomNumber = room.RoomNumber;
                         if (room.Occupied)
                         {
-                            
-                            Occupied_RichTextBox.Text += roomNumber;
+
+                            string text = ("Room: " + roomNumber + " - Beds: " + room.BedConfiguration + "\n"); 
+                            Occupied_RichTextBox.Text += text;
                             available--;
                         }
                         else
                         {
-                            Empty_richTextBox.Text += roomNumber;
+                            string text = ("Room: " + roomNumber + " - Beds: " + room.BedConfiguration + "\n");
+                            Empty_richTextBox.Text += text;
                         }
                         progressBar1.Value = progressBarValue++;
                         
