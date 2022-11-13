@@ -30,3 +30,7 @@
 22:01:10|Chk-Out| m               m                    18  #1  - Credit/Debit
 22:05:57|Chk-in|  mike            jones                18  #1  - Credit/Debit
 22:06:19|Chk-in|  nik             lee                  18  #2  - Credit/Debit
+22:26:43|Chk-in|  Mike            Jones                18  #1  - Credit/Debit
+22:26:53|Chk-in|  Nick            Lee                  18  #3  - Credit/Debit
+22:27:04|Chk-in|  Ralph           Frem                 18  #5  - Credit/Debit
+22:39:18|Chk-in|  Mike            Lee                  18  #2  - Credit/Debit
