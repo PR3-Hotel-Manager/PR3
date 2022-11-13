@@ -10,7 +10,7 @@ namespace Hotel_Management__Beta_1._0_
     {
         // Attributes -------------------------
         private static readonly int numberOfRooms = 40;
-        private static readonly string firebaseTopFolder = "FlattenGuest";
+        private static readonly string firebaseTopFolder = "Guest";
 
         // Getters -----------------------------
 

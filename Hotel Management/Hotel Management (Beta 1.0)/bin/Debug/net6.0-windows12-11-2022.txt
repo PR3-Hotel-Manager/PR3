@@ -21,3 +21,12 @@
 16:24:16|Chk-in|  Yo              Wiing                18  #35 - Credit/Debit
 16:43:30|Chk-in|  Spider          Man                  18  #16 - Credit/Debit
 16:43:40|Chk-in|  Super           Man                  18  #23 - Credit/Debit
+21:42:02|Chk-in|  m               j                    18  #1  - Credit/Debit
+21:43:46|Chk-in|  m               m                    18  #2  - Credit/Debit
+21:45:31|Chk-in|  m               m                    18  #1  - Credit/Debit
+21:46:35|Chk-in|  k               k                    18  #2  - Credit/Debit
+21:49:13|Chk-in|  t               t                    18  #3  - Credit/Debit
+21:50:20|Chk-in|  jh              jkh                  18  #4  - Credit/Debit
+22:01:10|Chk-Out| m               m                    18  #1  - Credit/Debit
+22:05:57|Chk-in|  mike            jones                18  #1  - Credit/Debit
+22:06:19|Chk-in|  nik             lee                  18  #2  - Credit/Debit

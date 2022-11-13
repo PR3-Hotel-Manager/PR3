@@ -18,13 +18,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using FireSharp;
 using JsonFlatten;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Hotel_Management__Beta_1._0_
 {
     public partial class CheckIn_Form : Form
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
-        private Guest? customer;
+        private Guest? guest;
+        Dictionary<string, Guest> data;
+        Guest[] sortedRooms = new Guest[K.NumberOfRooms];
 
         public CheckIn_Form()
         {
@@ -34,6 +37,7 @@ namespace Hotel_Management__Beta_1._0_
         private void CheckIn_Form_Load(object sender, EventArgs e)
         {
             db.StartFirebase();
+            checkRooms();
         }
 
         private bool verifyInputs()  // returns false if conditions are not met.
@@ -89,51 +93,32 @@ namespace Hotel_Management__Beta_1._0_
 
             // Get Name, Last Name, Age, Bed, Price, Room#, Stay Length
             // Add fields to Database
-            customer = new Guest(
+            guest = new Guest(
                 Name_TextBox.Text,
                 LastName_TextBox.Text,
                 Age_Selector.Value.ToString(),
                 StayLength_Selector.Value.ToString(),
                 new Room(Room_Selector.Value.ToString(), BedConfig_Selector.Value.ToString(), true),
-                new Payment(((int)Price_Selector.Value), pmtMethod));
-
-            //Fatten customer for database
-            FlattenGuest flattenGuest = new FlattenGuest(customer.FirstName,
-                                                customer.LastName,
-                                                customer.Age,
-                                                customer.Stay,
-                                                customer.room.RoomNumber,
-                                                customer.room.BedConfiguration,
-                                                customer.room.Occupied,
-                                                customer.payment.price,
-                                                customer.payment.paymentType,
-                                                customer.payment.Time);           
+                new Payment(((int)CalculatePrice()), pmtMethod));          
 
             // Prepare Confirmation Number
-            string guestDetails = flattenGuest.FirstName + flattenGuest.LastName + flattenGuest.PaymentType;
+            string guestDetails = guest.FirstName + guest.LastName + guest.payment.PaymentType;
             string temp = getHashString(guestDetails);
             string confNumber = temp.Substring(temp.Length - (temp.Length / 4));
 
             try
             {
                 FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
-                if (res.Body.ToString() == "null")
+                data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
+                var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
+                if (data[firebaseKey].room.Occupied)
                 {
-                    insertGuest(flattenGuest, confNumber);
+                    MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
-                    var firebaseKey = K.FirebaseKey(flattenGuest.RoomNumber);
-                    if (data[firebaseKey].Occupied)
-                    {
-                        MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        insertGuest(flattenGuest, confNumber);
+                    insertGuest(guest, confNumber);
 
-                    }
                 }
             }
             catch (Exception)
@@ -142,10 +127,10 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
-        private void insertGuest(FlattenGuest flattenGuest, string confNumber)
+        private void insertGuest(Guest guest, string confNumber)
         {
-            var firebaseKey = K.FirebaseKey(flattenGuest.RoomNumber);
-            db.client.Set(K.FirebaseTopFolder + "/" + firebaseKey, flattenGuest);
+            var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
+            db.client.Set(K.FirebaseTopFolder + "/" + firebaseKey, guest);
             CheckInConfirmation_Form form = new();  // pass confirmation number to the label in #CheckInConfirmation_Form 
             form.changeLabel(confNumber);
             this.Hide();
@@ -154,7 +139,7 @@ namespace Hotel_Management__Beta_1._0_
 
             // Save to Log File
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
-            File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-in|  " + customer.FirstName.PadRight(15, ' ') + " " + customer.LastName.PadRight(20, ' ') + " " + customer.Age.PadLeft(2) + "  #" + customer.room.RoomNumber.PadRight(2) + " - " + customer.payment.paymentType + "\n");
+            File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-in|  " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.room.RoomNumber.PadRight(2) + " - " + guest.payment.PaymentType + "\n");
 
             string filePathRoomList = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "room-list" + ".txt";
             File.AppendAllText(filePathRoomList, Room_Selector.Value.ToString() + "\n");
@@ -182,19 +167,70 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
+        private double CalculatePrice()
+        {
+            var b = Convert.ToInt32(sortedRooms[Convert.ToInt32(Room_Selector.Value)-1].room.BedConfiguration);
+            var s = Convert.ToInt32(StayLength_Selector.Value);
+            return Math.Round(100 + Math.Pow(s*b,2),0);
+        }
+
         private void Room_Selector_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private int CalculateNumOfBeds()
         {
             if (Room_Selector.Value <= 15)
             {
-                BedConfig_Selector.Value = 1;
+                return 1;
             }
-            else 
+            else
             {
-                BedConfig_Selector.Value = 2;
-            
+                return 2;
+
             }
         }
 
+        void checkRooms()
+        {
+
+            try
+            {
+                FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
+                if (res.Body.ToString() == "null")
+                {
+                    MessageBox.Show("No one is Check-in.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
+                    for (var i = 0; i < K.NumberOfRooms; i++)
+                    {
+                        string firebaseKey = K.FirebaseKey((i + 1).ToString());
+                        int index = Convert.ToInt32(data[firebaseKey].room.RoomNumber) - 1;
+                        Guest guest = data[firebaseKey];
+                        sortedRooms[index] = guest;
+                    }
+                    foreach (var g in sortedRooms)
+                    {
+                        string roomNumber = g.room.RoomNumber;
+                        if (!g.room.Occupied)
+                        {
+
+                            string text = ("Room: " + roomNumber + " - Beds: " + g.room.BedConfiguration + "\n");
+                            //AvailiableRooms_TextBox.Text += text;
+                            
+                        }
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Connection Error.");
+            }
+        }
 
     }
 }

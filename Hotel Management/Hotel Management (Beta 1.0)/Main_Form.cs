@@ -82,13 +82,13 @@ namespace Hotel_Management__Beta_1._0_
             FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
             if (res.Body.ToString() == "null")
             {
-                Dictionary<string, FlattenGuest> initGuestData = new Dictionary<string, FlattenGuest>();
+                Dictionary<string, Guest> initGuestData = new Dictionary<string, Guest>();
                 for (var i = 0; i < K.NumberOfRooms; i++)
                 {
                     int roomNumber = i + 1;
-                    FlattenGuest flattenGuest = new FlattenGuest(roomNumber.ToString());
-                    var firebaseKey = K.FirebaseKey(flattenGuest.RoomNumber);
-                    initGuestData.Add(firebaseKey, flattenGuest);
+                    Guest guest = new Guest(roomNumber.ToString());
+                    var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
+                    initGuestData.Add(firebaseKey, guest);
                 }
                 db.client.Set(K.FirebaseTopFolder+"/", initGuestData);
             }
