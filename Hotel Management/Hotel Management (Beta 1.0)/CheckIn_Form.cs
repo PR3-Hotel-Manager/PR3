@@ -104,38 +104,29 @@ namespace Hotel_Management__Beta_1._0_
             string temp = getHashString(guestDetails);
             string confNumber = temp.Substring(temp.Length - (temp.Length / 4));
 
-            try
+            data = db.GetData();
+            if (data == null)
             {
-                FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
-                if (res.Body.ToString() == "null")
+                MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
+                if (data[firebaseKey].room.Occupied)
                 {
-                    MessageBox.Show("No data in Firebase Realtime database.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
-                    var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
-                    if (data[firebaseKey].room.Occupied)
-                    {
-                        MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        insertGuest(guest, confNumber);
+                    db.UpdateRoomStatus(guest);
+                    UpdateLogFile(guest, confNumber);
 
-                    }
                 }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Connection Error.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void insertGuest(Guest guest, string confNumber)
+        private void UpdateLogFile(Guest guest, string confNumber)
         {
-            var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
-            db.client.Set(K.FirebaseTopFolder + "/" + firebaseKey, guest);
             CheckInConfirmation_Form form = new();  // pass confirmation number to the label in #CheckInConfirmation_Form 
             form.changeLabel(confNumber);
             this.Hide();

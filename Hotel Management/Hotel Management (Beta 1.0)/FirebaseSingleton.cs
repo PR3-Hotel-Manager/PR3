@@ -1,5 +1,7 @@
 ﻿using FireSharp.Config;
 using FireSharp.Interfaces;
+using FireSharp.Response;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,5 +67,37 @@ namespace Hotel_Management__Beta_1._0_
             checkConnection();
         }
 
+        public void UpdateRoomStatus(Guest guest)
+        {
+            var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
+            this.client.Set(K.FirebaseTopFolder + "/" + firebaseKey, guest);
+        }
+
+        public Dictionary<string, Guest> GetData ()
+        {
+            Dictionary<string, Guest> data;
+            try
+            {
+                FirebaseResponse res = this.client.Get(@K.FirebaseTopFolder);
+                
+                if (res.Body.ToString() == "null")
+                {
+                    MessageBox.Show("No data in Firebase Realtime database.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    data = null;
+                    return data;
+                }
+                else
+                {
+                    data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
+                    return data;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Connection Error.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                data = null;
+                return data;
+            }
+        }
     }
 }
