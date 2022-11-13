@@ -43,13 +43,13 @@ namespace Hotel_Management__Beta_1._0_
             }
             else
             {
-                Dictionary<string, FlattenGuest> data = JsonConvert.DeserializeObject<Dictionary<string, FlattenGuest>>(res.Body.ToString());
+                Dictionary<string, Guest> data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
                 int progressBarValue = 1;
                 foreach (var guest in data.Values )
                 {
                     if ((guest.FirstName == Name_TextBox.Text && Name_TextBox.Text != "") || (guest.LastName == LastName_TextBox.Text && LastName_TextBox.Text != ""))
                     {
-                        result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.RoomNumber + ", Chk-in time: " + guest.Time + "\n";
+                        result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.room.RoomNumber + ", Chk-in time: " + guest.payment.Time + "\n";
                         match = true;
                     }
 
