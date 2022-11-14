@@ -82,15 +82,15 @@ namespace Hotel_Management__Beta_1._0_
             FirebaseResponse res = db.GetFirebaseResponse();
             if (res.Body.ToString() == "null")
             {
-                Dictionary<string, Guest> initGuestData = new Dictionary<string, Guest>();
+                Dictionary<string, Guest> initGuestDictionary = new Dictionary<string, Guest>();
                 for (var i = 0; i < K.NumberOfRooms; i++)
                 {
                     int roomNumber = i + 1;
                     Guest guest = new Guest(roomNumber.ToString());
                     var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
-                    initGuestData.Add(firebaseKey, guest);
+                    initGuestDictionary.Add(firebaseKey, guest);
                 }
-                db.InitFireBaseWithData(initGuestData);
+                db.InitFireBaseWithData(initGuestDictionary);
             }
             else
             {
