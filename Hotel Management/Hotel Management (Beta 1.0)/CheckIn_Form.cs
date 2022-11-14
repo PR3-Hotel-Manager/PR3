@@ -108,8 +108,8 @@ namespace Hotel_Management__Beta_1._0_
             }
             else
             {
-                string guestKey = K.GuestKey(newGuest.room.RoomNumber);
-                Guest dbGuest = dbGuestDictionary[guestKey];
+                string newGuestKey = K.GuestKey(newGuest.room.RoomNumber);
+                Guest dbGuest = dbGuestDictionary[newGuestKey];
                 if (dbGuest.room.Occupied)
                 {
                     MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);

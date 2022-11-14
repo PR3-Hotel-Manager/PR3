@@ -44,8 +44,8 @@ namespace Hotel_Management__Beta_1._0_
             else
             {
                 string roomNumber = Room_Selector.Value.ToString();
-                string guestKey = K.GuestKey(roomNumber);
-                Guest dbGuest = dbGuestDictionary[guestKey];
+                string dbGuestKey = K.GuestKey(roomNumber);
+                Guest dbGuest = dbGuestDictionary[dbGuestKey];
                 if (dbGuest.room.Occupied)
                 {
                     Guest emptyGuest = new Guest(roomNumber);
