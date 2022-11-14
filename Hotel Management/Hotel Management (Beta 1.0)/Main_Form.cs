@@ -79,7 +79,7 @@ namespace Hotel_Management__Beta_1._0_
 
         private void InitGuestData()
         {
-            FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
+            FirebaseResponse res = db.GetFirebaseResponse();
             if (res.Body.ToString() == "null")
             {
                 Dictionary<string, Guest> initGuestData = new Dictionary<string, Guest>();
@@ -90,7 +90,7 @@ namespace Hotel_Management__Beta_1._0_
                     var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
                     initGuestData.Add(firebaseKey, guest);
                 }
-                db.client.Set(K.FirebaseTopFolder+"/", initGuestData);
+                db.InitFireBaseWithData(initGuestData);
             }
             else
             {
