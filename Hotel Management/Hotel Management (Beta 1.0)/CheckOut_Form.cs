@@ -36,8 +36,6 @@ namespace Hotel_Management__Beta_1._0_
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
-
-
             data = db.GetData();
             if (data == null)
             {
@@ -59,7 +57,6 @@ namespace Hotel_Management__Beta_1._0_
                     MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
         }
 
         private void UpdateLogFile(Guest guest)
