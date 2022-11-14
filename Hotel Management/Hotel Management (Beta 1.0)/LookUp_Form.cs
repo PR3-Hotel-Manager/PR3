@@ -54,9 +54,9 @@ namespace Hotel_Management__Beta_1._0_
                     result_TextBox.Text = "No results found.";
                 }
             }
-            catch (Exception e)
+            catch (Exception error)
             {
-                MessageBox.Show(e.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(error.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Search_button_Click(object sender, EventArgs e)

@@ -101,9 +101,9 @@ namespace Hotel_Management__Beta_1._0_
 
                 }
             }
-            catch (Exception e)
+            catch (Exception error)
             {
-                MessageBox.Show(e.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(error.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
