@@ -79,7 +79,7 @@ namespace Hotel_Management__Beta_1._0_
 
         private void InitGuestData()
         {
-            if (db.GetFirebaseResponse().ToString() == "null")
+            if (db.GetFirebaseResponse().Body.ToString() == "null")
             {
                 Dictionary<string, Guest> initGuestDictionary = new Dictionary<string, Guest>();
                 for (var i = 0; i < K.NumberOfRooms; i++)
