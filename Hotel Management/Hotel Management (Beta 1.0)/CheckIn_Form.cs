@@ -108,7 +108,7 @@ namespace Hotel_Management__Beta_1._0_
             }
             else
             {
-                var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
+                var firebaseKey = K.GuestKey(guest.room.RoomNumber);
                 Guest databaseGuest = guestDictionary[firebaseKey];
                 if (databaseGuest.room.Occupied)
                 {

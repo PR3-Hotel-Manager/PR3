@@ -95,7 +95,7 @@ namespace Hotel_Management__Beta_1._0_
         // Inserts a single guest into a room in the Firebase Realtime database.
         public void InsertGuest(Guest guest)
         {
-            var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
+            var firebaseKey = K.GuestKey(guest.room.RoomNumber);
             this.client.Set(K.FirebaseTopFolder + "/" + firebaseKey, guest);
         }
 
@@ -134,7 +134,7 @@ namespace Hotel_Management__Beta_1._0_
             Guest[] sortedRooms = new Guest[K.NumberOfRooms];
             for (var i = 0; i < K.NumberOfRooms; i++)
             {
-                string firebaseKey = K.FirebaseKey((i + 1).ToString());
+                string firebaseKey = K.GuestKey((i + 1).ToString());
                 int index = Convert.ToInt32(guestDictionary[firebaseKey].room.RoomNumber) - 1;
                 Guest guest = guestDictionary[firebaseKey];
                 sortedRooms[index] = guest;

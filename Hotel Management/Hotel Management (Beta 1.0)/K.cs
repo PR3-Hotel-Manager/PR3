@@ -25,7 +25,7 @@ namespace Hotel_Management__Beta_1._0_
 
         // Methods -----------------------------
         // Returns a key that is used to access a guest in a guestDictionary.
-        public static string FirebaseKey (string roomNumber)
+        public static string GuestKey (string roomNumber)
         {
             return "Room: " + roomNumber;
         }
