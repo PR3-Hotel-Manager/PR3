@@ -51,6 +51,7 @@ namespace Hotel_Management__Beta_1._0_
                     Guest emptyGuest = new Guest(roomNumber);
                     db.InsertGuest(emptyGuest);
                     UpdateLogFile(dbGuest);
+                    MessageBox.Show("Check out successful. Room: " + Room_Selector.Value.ToString() + " is now availabe.", " ", MessageBoxButtons.OK);
                 }
                 else
                 {
@@ -64,10 +65,8 @@ namespace Hotel_Management__Beta_1._0_
             // Save to Log File
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
             File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out| " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.room.RoomNumber.PadRight(2) + " - " + guest.payment.PaymentType + "\n");
-
             this.Close();
 
-            MessageBox.Show("Check out successful. Room: " + Room_Selector.Value.ToString() + " is now availabe.", " ", MessageBoxButtons.OK);
         }
 
 
