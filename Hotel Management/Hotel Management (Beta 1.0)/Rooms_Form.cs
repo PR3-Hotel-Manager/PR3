@@ -15,7 +15,7 @@ namespace Hotel_Management__Beta_1._0_
     public partial class Rooms_Form : Form
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
-        Guest[] sortedRooms;
+        Guest[] sortedGuests;
 
         public Rooms_Form()
         {
@@ -39,11 +39,11 @@ namespace Hotel_Management__Beta_1._0_
         }
         void checkRooms()
         {
-            sortedRooms = db.GetSortedData();
+            sortedGuests = db.GetSortedData();
             var available = K.NumberOfRooms;
             progressBar1.Maximum= available;
             int progressBarValue = 1;
-            foreach (var guest in sortedRooms)
+            foreach (var guest in sortedGuests)
             {
                 string roomNumber = guest.room.RoomNumber;
                 if (guest.room.Occupied)
