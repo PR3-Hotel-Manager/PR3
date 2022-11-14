@@ -19,6 +19,7 @@ namespace Hotel_Management__Beta_1._0_
     public partial class LookUp_Form : Form
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
+        Dictionary<string, Guest> data;
 
         public LookUp_Form()
         {
@@ -33,17 +34,14 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         void performSearch() {
-
-            
             bool match = false;
-            FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
-            if (res.Body.ToString() == "null")
+            data = db.GetData();
+            if (data == null)
             {
-                MessageBox.Show("No data in Firebase Realtime database.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                Dictionary<string, Guest> data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
                 int progressBarValue = 1;
                 foreach (var guest in data.Values )
                 {
@@ -52,7 +50,6 @@ namespace Hotel_Management__Beta_1._0_
                         result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.room.RoomNumber + ", Chk-in time: " + guest.payment.Time + "\n";
                         match = true;
                     }
-
                 }
                 progressBar.Value = progressBarValue++;
             }
@@ -61,8 +58,6 @@ namespace Hotel_Management__Beta_1._0_
             {
                 result_TextBox.Text = "No results found.";
             }
-            
-
         }
         private void Search_button_Click(object sender, EventArgs e)
         {
