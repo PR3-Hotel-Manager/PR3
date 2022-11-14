@@ -83,7 +83,7 @@ namespace Hotel_Management__Beta_1._0_
             this.client.Set(K.FirebaseTopFolder + "/", initGuestData);
         }
 
-        // Retrieves JSON collection from Firebase. Used only in Main-Form and GetFirebaseResponse().
+        // Retrieves JSON collection from Firebase. Used only in GetFirebaseResponse().
         public FirebaseResponse GetFirebaseResponse()
         {
             try
@@ -99,6 +99,7 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
+        // Retrieves JSON collection from Firebase. Used only in Main-Form.
         public FirebaseResponse GetMainFormFirebaseResponse()
         {
             try
@@ -127,10 +128,10 @@ namespace Hotel_Management__Beta_1._0_
         public Dictionary<string, Guest> GetDatabaseGuestDictionary()
         {
             Dictionary<string, Guest> dbGuestDictionary;
+            FirebaseResponse res = GetFirebaseResponse();
             try
             {
-                FirebaseResponse res = GetFirebaseResponse();
-
+                
                 if (res.Body.ToString() == "null")
                 {
                     MessageBox.Show("No data in Firebase Realtime database.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
