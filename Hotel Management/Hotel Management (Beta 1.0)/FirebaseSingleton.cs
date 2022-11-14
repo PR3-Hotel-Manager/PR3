@@ -126,9 +126,9 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // Returns an Array of guests sorted by room number. Zero Based.
-        public Guest[] GetSortedData()
+        public Guest[] GetSortedGuest()
         {
-            Dictionary<string, Guest> data = GetData();
+            Dictionary<string, Guest> data = GetGuestDictionary();
             Guest[] sortedRooms = new Guest[K.NumberOfRooms];
             for (var i = 0; i < K.NumberOfRooms; i++)
             {

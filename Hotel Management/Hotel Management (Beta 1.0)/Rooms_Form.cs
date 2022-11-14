@@ -39,7 +39,7 @@ namespace Hotel_Management__Beta_1._0_
         }
         void checkRooms()
         {
-            sortedGuests = db.GetSortedData();
+            sortedGuests = db.GetSortedGuest();
             var available = K.NumberOfRooms;
             progressBar1.Maximum= available;
             int progressBarValue = 1;
