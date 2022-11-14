@@ -18,7 +18,6 @@ namespace Hotel_Management__Beta_1._0_
         public Payment payment;
 
         // Conctrustors -------------------------------
-
         public Guest()
         {
             this.FirstName = "";
@@ -49,6 +48,7 @@ namespace Hotel_Management__Beta_1._0_
             this.payment = payment;
         }
 
+        // Methods ------------------------------------
         private string InitBedConfiguration(string roomNumber)
         {
             int rNum = Convert.ToInt32(roomNumber);

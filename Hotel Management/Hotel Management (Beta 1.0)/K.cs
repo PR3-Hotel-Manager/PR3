@@ -13,8 +13,6 @@ namespace Hotel_Management__Beta_1._0_
         private static readonly string firebaseTopFolder = "Guest";
 
         // Getters -----------------------------
-
-
         public static int NumberOfRooms
         {
             get { return numberOfRooms; }
@@ -25,6 +23,8 @@ namespace Hotel_Management__Beta_1._0_
             get { return firebaseTopFolder; }
         }
 
+        // Methods -----------------------------
+        // Returns a key that is used to access a guest in a guestDictionary.
         public static string FirebaseKey (string roomNumber)
         {
             return "Room: " + roomNumber;

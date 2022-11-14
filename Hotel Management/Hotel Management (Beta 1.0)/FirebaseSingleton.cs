@@ -52,6 +52,8 @@ namespace Hotel_Management__Beta_1._0_
             BasePath = BasePath
         };
 
+        // Methods ------------------------------------
+
         // Checks Firebase connection
         async private void checkConnection()
         {
