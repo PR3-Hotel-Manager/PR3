@@ -99,7 +99,7 @@ namespace Hotel_Management__Beta_1._0_
             this.client.Set(K.FirebaseTopFolder + "/" + guestKey, guest);
         }
 
-        // Returns a Dictionary of the Firebase JSON collection. Key = string: Room Number, Value = Guest: guest.
+        // Returns a Dictionary of a parsed Firebase JSON collection. Key = string: Room Number, Value = Guest: guest.
         public Dictionary<string, Guest> GetDatabaseGuestDictionary()
         {
             Dictionary<string, Guest> dbGuestDictionary;
