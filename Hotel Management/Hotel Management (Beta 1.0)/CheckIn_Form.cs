@@ -26,7 +26,7 @@ namespace Hotel_Management__Beta_1._0_
     public partial class CheckIn_Form : Form
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
-        private Guest? guest;
+        private Guest? newGuest;
         Dictionary<string, Guest> dbGuestDictionary;
 
         public CheckIn_Form()
@@ -91,7 +91,7 @@ namespace Hotel_Management__Beta_1._0_
 
             // Get Name, Last Name, Age, Bed, Price, Room#, Stay Length
             // Add fields to Database
-            guest = new Guest(
+            newGuest = new Guest(
                 Name_TextBox.Text,
                 LastName_TextBox.Text,
                 Age_Selector.Value.ToString(),
@@ -99,7 +99,7 @@ namespace Hotel_Management__Beta_1._0_
                 new Room(Room_Selector.Value.ToString(), BedConfig_Selector.Value.ToString(), true),
                 new Payment((double)(Price_Selector.Value), pmtMethod));
 
-            string confNumber = PrepareConfirmationNumber(guest);
+            string confNumber = PrepareConfirmationNumber(newGuest);
 
             dbGuestDictionary = db.GetDatabaseGuestDictionary();
             if (dbGuestDictionary == null)
@@ -108,7 +108,7 @@ namespace Hotel_Management__Beta_1._0_
             }
             else
             {
-                string guestKey = K.GuestKey(guest.room.RoomNumber);
+                string guestKey = K.GuestKey(newGuest.room.RoomNumber);
                 Guest dbGuest = dbGuestDictionary[guestKey];
                 if (dbGuest.room.Occupied)
                 {
@@ -116,9 +116,9 @@ namespace Hotel_Management__Beta_1._0_
                 }
                 else
                 {
-                    db.InsertGuest(guest);
+                    db.InsertGuest(newGuest);
                     ShowConfirmationForm(confNumber);
-                    UpdateLogFile(guest);
+                    UpdateLogFile(newGuest);
                 }
             }
         }
