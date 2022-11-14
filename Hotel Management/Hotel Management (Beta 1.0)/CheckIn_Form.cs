@@ -108,8 +108,8 @@ namespace Hotel_Management__Beta_1._0_
             }
             else
             {
-                var firebaseKey = K.GuestKey(guest.room.RoomNumber);
-                Guest databaseGuest = guestDictionary[firebaseKey];
+                string guestKey = K.GuestKey(guest.room.RoomNumber);
+                Guest databaseGuest = guestDictionary[guestKey];
                 if (databaseGuest.room.Occupied)
                 {
                     MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);

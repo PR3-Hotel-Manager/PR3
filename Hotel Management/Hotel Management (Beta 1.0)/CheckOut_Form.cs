@@ -43,9 +43,9 @@ namespace Hotel_Management__Beta_1._0_
             }
             else
             {
-                var roomNumber = Room_Selector.Value.ToString();
-                var firebaseKey = K.GuestKey(roomNumber);
-                Guest guest = guestDictionary[firebaseKey];
+                string roomNumber = Room_Selector.Value.ToString();
+                string guestKey = K.GuestKey(roomNumber);
+                Guest guest = guestDictionary[guestKey];
                 if (guest.room.Occupied)
                 {
                     Guest emptyGuest = new Guest(roomNumber);

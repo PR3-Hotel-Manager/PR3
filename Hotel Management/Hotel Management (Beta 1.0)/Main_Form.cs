@@ -88,8 +88,8 @@ namespace Hotel_Management__Beta_1._0_
                 {
                     int roomNumber = i + 1;
                     Guest guest = new Guest(roomNumber.ToString());
-                    var firebaseKey = K.GuestKey(guest.room.RoomNumber);
-                    initGuestDictionary.Add(firebaseKey, guest);
+                    string guestKey = K.GuestKey(guest.room.RoomNumber);
+                    initGuestDictionary.Add(guestKey, guest);
                 }
                 db.InsertGuestDictionary(initGuestDictionary);
             }
