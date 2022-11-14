@@ -19,7 +19,7 @@ namespace Hotel_Management__Beta_1._0_
     public partial class LookUp_Form : Form
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
-        Dictionary<string, Guest> data;
+        Dictionary<string, Guest> guestDictionary;
 
         public LookUp_Form()
         {
@@ -35,15 +35,15 @@ namespace Hotel_Management__Beta_1._0_
 
         void performSearch() {
             bool match = false;
-            data = db.GetData();
-            if (data == null)
+            guestDictionary = db.GetData();
+            if (guestDictionary == null)
             {
                 MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 int progressBarValue = 1;
-                foreach (var guest in data.Values )
+                foreach (var guest in guestDictionary.Values )
                 {
                     if ((guest.FirstName == Name_TextBox.Text && Name_TextBox.Text != "") || (guest.LastName == LastName_TextBox.Text && LastName_TextBox.Text != ""))
                     {
