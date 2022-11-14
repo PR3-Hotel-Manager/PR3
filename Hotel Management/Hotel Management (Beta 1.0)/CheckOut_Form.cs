@@ -18,7 +18,7 @@ namespace Hotel_Management__Beta_1._0_
     public partial class CheckOut_Form : Form
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
-        Dictionary<string, Guest> guestDictionary;
+        Dictionary<string, Guest> dbGuestDictionary;
 
         public CheckOut_Form()
         {
@@ -36,8 +36,8 @@ namespace Hotel_Management__Beta_1._0_
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
-            guestDictionary = db.GetGuestDictionary();
-            if (guestDictionary == null)
+            dbGuestDictionary = db.GetDatabaseGuestDictionary();
+            if (dbGuestDictionary == null)
             {
                 MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -45,12 +45,12 @@ namespace Hotel_Management__Beta_1._0_
             {
                 string roomNumber = Room_Selector.Value.ToString();
                 string guestKey = K.GuestKey(roomNumber);
-                Guest guest = guestDictionary[guestKey];
-                if (guest.room.Occupied)
+                Guest dbGuest = dbGuestDictionary[guestKey];
+                if (dbGuest.room.Occupied)
                 {
                     Guest emptyGuest = new Guest(roomNumber);
                     db.InsertGuest(emptyGuest);
-                    UpdateLogFile(guest);
+                    UpdateLogFile(dbGuest);
                 }
                 else
                 {

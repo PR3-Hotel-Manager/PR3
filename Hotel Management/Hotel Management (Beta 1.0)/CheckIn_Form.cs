@@ -27,7 +27,7 @@ namespace Hotel_Management__Beta_1._0_
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
         private Guest? guest;
-        Dictionary<string, Guest> guestDictionary;
+        Dictionary<string, Guest> dbGuestDictionary;
 
         public CheckIn_Form()
         {
@@ -101,16 +101,16 @@ namespace Hotel_Management__Beta_1._0_
 
             string confNumber = PrepareConfirmationNumber(guest);
 
-            guestDictionary = db.GetGuestDictionary();
-            if (guestDictionary == null)
+            dbGuestDictionary = db.GetDatabaseGuestDictionary();
+            if (dbGuestDictionary == null)
             {
                 MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 string guestKey = K.GuestKey(guest.room.RoomNumber);
-                Guest databaseGuest = guestDictionary[guestKey];
-                if (databaseGuest.room.Occupied)
+                Guest dbGuest = dbGuestDictionary[guestKey];
+                if (dbGuest.room.Occupied)
                 {
                     MessageBox.Show("This room is already occupied. Please select another room.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

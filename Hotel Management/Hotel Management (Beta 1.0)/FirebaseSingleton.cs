@@ -100,9 +100,9 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // Returns a Dictionary of the Firebase JSON collection. Key = string: Room Number, Value = Guest: guest.
-        public Dictionary<string, Guest> GetGuestDictionary()
+        public Dictionary<string, Guest> GetDatabaseGuestDictionary()
         {
-            Dictionary<string, Guest> guestDictionary;
+            Dictionary<string, Guest> dbGuestDictionary;
             try
             {
                 FirebaseResponse res = GetFirebaseResponse();
@@ -110,33 +110,33 @@ namespace Hotel_Management__Beta_1._0_
                 if (res.Body.ToString() == "null")
                 {
                     MessageBox.Show("No data in Firebase Realtime database.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    guestDictionary = null;
-                    return guestDictionary;
+                    dbGuestDictionary = null;
+                    return dbGuestDictionary;
                 }
                 else
                 {
-                    guestDictionary = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
-                    return guestDictionary;
+                    dbGuestDictionary = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
+                    return dbGuestDictionary;
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Connection Error.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                guestDictionary = null;
-                return guestDictionary;
+                dbGuestDictionary = null;
+                return dbGuestDictionary;
             }
         }
 
         // Returns an Array of guests sorted by room number. Zero Based.
-        public Guest[] GetSortedGuest()
+        public Guest[] GetSortedDatabaseGuests()
         {
-            Dictionary<string, Guest> guestDictionary = GetGuestDictionary();
+            Dictionary<string, Guest> dbGuestDictionary = GetDatabaseGuestDictionary();
             Guest[] sortedRooms = new Guest[K.NumberOfRooms];
             for (var i = 0; i < K.NumberOfRooms; i++)
             {
                 string guestKey = K.GuestKey((i + 1).ToString());
-                int index = Convert.ToInt32(guestDictionary[guestKey].room.RoomNumber) - 1;
-                Guest guest = guestDictionary[guestKey];
+                int index = Convert.ToInt32(dbGuestDictionary[guestKey].room.RoomNumber) - 1;
+                Guest guest = dbGuestDictionary[guestKey];
                 sortedRooms[index] = guest;
             }
             return sortedRooms;
