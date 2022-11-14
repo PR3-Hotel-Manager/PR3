@@ -54,9 +54,9 @@ namespace Hotel_Management__Beta_1._0_
                     MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception e)
+            catch (Exception ee)
             {
-                MessageBox.Show(e.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ee.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
