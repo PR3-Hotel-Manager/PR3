@@ -16,7 +16,7 @@ namespace Hotel_Management__Beta_1._0_
         private static FirebaseSingleton instance = new FirebaseSingleton();
         private static readonly string basePath = "https://pr3-hotel-manager-default-rtdb.firebaseio.com/";
         private static readonly string authSecret = "4LVoVYi4G6e37CW2wquSpciQfTwOOHWmuBotCTkx";
-        public IFirebaseClient client;
+        private IFirebaseClient client;
 
         private static string BasePath
         {
