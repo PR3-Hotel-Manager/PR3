@@ -99,5 +99,19 @@ namespace Hotel_Management__Beta_1._0_
                 return data;
             }
         }
+
+        public Guest[] GetSortedData()
+        {
+            Dictionary<string, Guest> data = GetData();
+            Guest[] sortedRooms = new Guest[K.NumberOfRooms];
+            for (var i = 0; i < K.NumberOfRooms; i++)
+            {
+                string firebaseKey = K.FirebaseKey((i + 1).ToString());
+                int index = Convert.ToInt32(data[firebaseKey].room.RoomNumber) - 1;
+                Guest guest = data[firebaseKey];
+                sortedRooms[index] = guest;
+            }
+            return sortedRooms;
+        }
     }
 }
