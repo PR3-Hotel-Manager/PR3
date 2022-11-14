@@ -36,13 +36,9 @@ namespace Hotel_Management__Beta_1._0_
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
-            dbGuestDictionary = db.GetDatabaseGuestDictionary();
-            if (dbGuestDictionary == null)
+            try
             {
-                MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
+                dbGuestDictionary = db.GetDatabaseGuestDictionary();
                 string roomNumber = Room_Selector.Value.ToString();
                 string dbGuestKey = K.GuestKey(roomNumber);
                 Guest dbGuest = dbGuestDictionary[dbGuestKey];
@@ -58,6 +54,11 @@ namespace Hotel_Management__Beta_1._0_
                     MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void UpdateLogFile(Guest guest)

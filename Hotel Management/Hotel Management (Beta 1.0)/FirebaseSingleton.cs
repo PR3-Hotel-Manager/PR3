@@ -79,13 +79,37 @@ namespace Hotel_Management__Beta_1._0_
         // Used only in Main-Form. Inserts an entire Guest dictionary into the FireBase Realtime database. 
         public void InsertGuestDictionary(Dictionary<string, Guest> initGuestData)
         {
+
             this.client.Set(K.FirebaseTopFolder + "/", initGuestData);
         }
 
         // Retrieves JSON collection from Firebase. Used only in Main-Form and GetFirebaseResponse().
         public FirebaseResponse GetFirebaseResponse()
         {
-            return this.client.Get(@K.FirebaseTopFolder);
+            try
+            {
+                return this.client.Get(@K.FirebaseTopFolder);
+            }
+            catch
+            {
+                MessageBox.Show("Connection Error.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            
+
+        }
+
+        public FirebaseResponse GetMainFormFirebaseResponse()
+        {
+            try
+            {
+                return this.client.Get(@K.FirebaseTopFolder);
+            }
+            catch
+            {
+                MessageBox.Show("Connection Error.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
 
         // =========================================

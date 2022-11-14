@@ -81,22 +81,31 @@ namespace Hotel_Management__Beta_1._0_
         // Number of empty guests is equal to K.NumberOfRooms in K Class
         private void InitGuestData()
         {
-            if (db.GetFirebaseResponse().Body.ToString() == "null")
+            try
             {
-                Dictionary<string, Guest> initialGuestDictionary = new Dictionary<string, Guest>();
-                for (var i = 0; i < K.NumberOfRooms; i++)
+                if (db.GetMainFormFirebaseResponse().Body.ToString() == "null")
                 {
-                    int roomNumber = i + 1;
-                    Guest guest = new Guest(roomNumber.ToString());
-                    string guestKey = K.GuestKey(guest.room.RoomNumber);
-                    initialGuestDictionary.Add(guestKey, guest);
+                    Dictionary<string, Guest> initialGuestDictionary = new Dictionary<string, Guest>();
+                    for (var i = 0; i < K.NumberOfRooms; i++)
+                    {
+                        int roomNumber = i + 1;
+                        Guest guest = new Guest(roomNumber.ToString());
+                        string guestKey = K.GuestKey(guest.room.RoomNumber);
+                        initialGuestDictionary.Add(guestKey, guest);
+                    }
+                    db.InsertGuestDictionary(initialGuestDictionary);
                 }
-                db.InsertGuestDictionary(initialGuestDictionary);
-            }
-            else
-            {
-                MessageBox.Show("Firebase database has been previously initialized with rooms. Press OK to continue.", "Notification:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    MessageBox.Show("Firebase database has been previously initialized with rooms. Press OK to continue.", "Notification:", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Connection Error.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dbGuestDictionary = null;
+                return dbGuestDictionary;
             }
         }
 

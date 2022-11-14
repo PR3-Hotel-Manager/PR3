@@ -100,14 +100,9 @@ namespace Hotel_Management__Beta_1._0_
                 new Payment((double)(Price_Selector.Value), pmtMethod));
 
             string confNumber = PrepareConfirmationNumber(newGuest);
-
-            dbGuestDictionary = db.GetDatabaseGuestDictionary();
-            if (dbGuestDictionary == null)
+            try
             {
-                MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
+                dbGuestDictionary = db.GetDatabaseGuestDictionary();
                 string newGuestKey = K.GuestKey(newGuest.room.RoomNumber);
                 Guest dbGuest = dbGuestDictionary[newGuestKey];
                 if (dbGuest.room.Occupied)
@@ -120,6 +115,10 @@ namespace Hotel_Management__Beta_1._0_
                     ShowConfirmationForm(confNumber);
                     UpdateLogFile(newGuest);
                 }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

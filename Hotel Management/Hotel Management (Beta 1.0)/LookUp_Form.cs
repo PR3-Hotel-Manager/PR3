@@ -35,15 +35,11 @@ namespace Hotel_Management__Beta_1._0_
 
         void performSearch() {
             bool match = false;
-            dbGuestDictionary = db.GetDatabaseGuestDictionary();
-            if (dbGuestDictionary == null)
+            try
             {
-                MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
+                dbGuestDictionary = db.GetDatabaseGuestDictionary();
                 int progressBarValue = 1;
-                foreach (var guest in dbGuestDictionary.Values )
+                foreach (var guest in dbGuestDictionary.Values)
                 {
                     if ((guest.FirstName == Name_TextBox.Text && Name_TextBox.Text != "") || (guest.LastName == LastName_TextBox.Text && LastName_TextBox.Text != ""))
                     {
@@ -52,11 +48,15 @@ namespace Hotel_Management__Beta_1._0_
                     }
                 }
                 progressBar.Value = progressBarValue++;
-            }
 
-            if (match == false)
+                if (match == false)
+                {
+                    result_TextBox.Text = "No results found.";
+                }
+            }
+            catch (Exception e)
             {
-                result_TextBox.Text = "No results found.";
+                MessageBox.Show(e.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Search_button_Click(object sender, EventArgs e)
