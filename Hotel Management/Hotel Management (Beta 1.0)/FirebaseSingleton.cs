@@ -73,6 +73,11 @@ namespace Hotel_Management__Beta_1._0_
             this.client.Set(K.FirebaseTopFolder + "/" + firebaseKey, guest);
         }
 
+        public void InitFireBaseWithData(Dictionary<string, Guest> initGuestData)
+        {
+            this.client.Set(K.FirebaseTopFolder + "/", initGuestData);
+        }
+
         public FirebaseResponse GetFirebaseResponse()
         {
             return this.client.Get(@K.FirebaseTopFolder);
