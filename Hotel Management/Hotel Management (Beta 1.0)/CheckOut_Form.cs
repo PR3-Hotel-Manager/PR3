@@ -48,8 +48,8 @@ namespace Hotel_Management__Beta_1._0_
                 Guest guest = guestDictionary[firebaseKey];
                 if (guest.room.Occupied)
                 {
-                    Guest Emptyguest = new Guest(roomNumber);
-                    db.UpdateRoomStatus(Emptyguest);
+                    Guest emptyGuest = new Guest(roomNumber);
+                    db.InsertGuest(emptyGuest);
                     UpdateLogFile(guest);
                 }
                 else

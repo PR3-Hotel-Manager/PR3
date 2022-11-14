@@ -89,7 +89,7 @@ namespace Hotel_Management__Beta_1._0_
                     var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
                     initGuestDictionary.Add(firebaseKey, guest);
                 }
-                db.InitFireBaseWithData(initGuestDictionary);
+                db.InsertGuestDictionary(initGuestDictionary);
             }
             else
             {

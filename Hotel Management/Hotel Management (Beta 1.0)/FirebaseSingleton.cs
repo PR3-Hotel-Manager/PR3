@@ -75,7 +75,7 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // Used only in Main-Form. Inserts an entire Guest dictionary into the FireBase Realtime database. 
-        public void InitFireBaseWithData(Dictionary<string, Guest> initGuestData)
+        public void InsertGuestDictionary(Dictionary<string, Guest> initGuestData)
         {
             this.client.Set(K.FirebaseTopFolder + "/", initGuestData);
         }
@@ -91,7 +91,7 @@ namespace Hotel_Management__Beta_1._0_
         // =========================================
 
         // Inserts a single guest into a room in the Firebase Realtime database.
-        public void UpdateRoomStatus(Guest guest)
+        public void InsertGuest(Guest guest)
         {
             var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
             this.client.Set(K.FirebaseTopFolder + "/" + firebaseKey, guest);

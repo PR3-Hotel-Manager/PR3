@@ -116,7 +116,7 @@ namespace Hotel_Management__Beta_1._0_
                 }
                 else
                 {
-                    db.UpdateRoomStatus(guest);
+                    db.InsertGuest(guest);
                     ShowConfirmationForm(confNumber);
                     UpdateLogFile(guest);
                 }
