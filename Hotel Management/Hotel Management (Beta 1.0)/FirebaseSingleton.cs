@@ -73,13 +73,18 @@ namespace Hotel_Management__Beta_1._0_
             this.client.Set(K.FirebaseTopFolder + "/" + firebaseKey, guest);
         }
 
+        public FirebaseResponse GetFirebaseResponse()
+        {
+            return this.client.Get(@K.FirebaseTopFolder);
+        }
+
         public Dictionary<string, Guest> GetData ()
         {
             Dictionary<string, Guest> data;
             try
             {
-                FirebaseResponse res = this.client.Get(@K.FirebaseTopFolder);
-                
+                FirebaseResponse res = GetFirebaseResponse();
+
                 if (res.Body.ToString() == "null")
                 {
                     MessageBox.Show("No data in Firebase Realtime database.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
