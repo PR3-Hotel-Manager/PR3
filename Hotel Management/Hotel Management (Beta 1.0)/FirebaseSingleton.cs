@@ -12,6 +12,7 @@ namespace Hotel_Management__Beta_1._0_
 {
     internal class FirebaseSingleton
     {
+        // Class Attributes
         private static FirebaseSingleton instance = new FirebaseSingleton();
         private static readonly string basePath = "https://pr3-hotel-manager-default-rtdb.firebaseio.com/";
         private static readonly string authSecret = "4LVoVYi4G6e37CW2wquSpciQfTwOOHWmuBotCTkx";
@@ -27,8 +28,10 @@ namespace Hotel_Management__Beta_1._0_
             get { return authSecret; }
         }
 
+        // FirebaseSingleton Empty Constructor
         private FirebaseSingleton() { }
 
+        // Singleton Instance
         public static FirebaseSingleton Instance
         {
             get 
@@ -41,12 +44,14 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
+        // Configures Authentication secret and Basepath
         static readonly IFirebaseConfig config = new FirebaseConfig()
         {
             AuthSecret = AuthSecret,
             BasePath = BasePath
         };
 
+        // Checks Firebase connection
         async private void checkConnection()
         {
 
@@ -62,27 +67,35 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
+        // Initiates Firebases Connection
         public void StartFirebase()
         {
             checkConnection();
         }
 
+        // Used only in Main-Form. Inserts an entire Guest dictionary in the FireBase Realtime data. 
+        public void InitFireBaseWithData(Dictionary<string, Guest> initGuestData)
+        {
+            this.client.Set(K.FirebaseTopFolder + "/", initGuestData);
+        }
+
+        // Fecths the Guest dictionary in Firebase as a JSON collection. Used only in Main-Form and GetFirebaseResponse().
+        public FirebaseResponse GetFirebaseResponse()
+        {
+            return this.client.Get(@K.FirebaseTopFolder);
+        }
+
+
+        // Inserts a guest into a room in the Firebase Realtime database.
         public void UpdateRoomStatus(Guest guest)
         {
             var firebaseKey = K.FirebaseKey(guest.room.RoomNumber);
             this.client.Set(K.FirebaseTopFolder + "/" + firebaseKey, guest);
         }
 
-        public void InitFireBaseWithData(Dictionary<string, Guest> initGuestData)
-        {
-            this.client.Set(K.FirebaseTopFolder + "/", initGuestData);
-        }
 
-        public FirebaseResponse GetFirebaseResponse()
-        {
-            return this.client.Get(@K.FirebaseTopFolder);
-        }
 
+        // Returns a Dictionary of the Firebase JSON collection.
         public Dictionary<string, Guest> GetData ()
         {
             Dictionary<string, Guest> data;
@@ -110,6 +123,7 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
+        // Returns an Array of guests sorted by room number. Zero Based.
         public Guest[] GetSortedData()
         {
             Dictionary<string, Guest> data = GetData();
@@ -123,5 +137,7 @@ namespace Hotel_Management__Beta_1._0_
             }
             return sortedRooms;
         }
+
+
     }
 }
