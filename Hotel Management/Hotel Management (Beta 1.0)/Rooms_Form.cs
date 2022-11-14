@@ -39,56 +39,30 @@ namespace Hotel_Management__Beta_1._0_
         }
         void checkRooms()
         {
-
-            try
+            Guest[] sortedRooms = db.GetSortedData();
+            var available = K.NumberOfRooms;
+            progressBar1.Maximum= available;
+            int progressBarValue = 1;
+            foreach (var guest in sortedRooms)
             {
-                FirebaseResponse res = db.client.Get(@K.FirebaseTopFolder);
-                if (res.Body.ToString() == "null")
+                string roomNumber = guest.room.RoomNumber;
+                if (guest.room.Occupied)
                 {
-                    MessageBox.Show("No data in Firebase Realtime database.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    string text = ("Room: " + roomNumber + " - Beds: " + guest.room.BedConfiguration + "\n"); 
+                    Occupied_RichTextBox.Text += text;
+                    available--;
                 }
                 else
                 {
-                    Dictionary<string, Guest> data = JsonConvert.DeserializeObject<Dictionary<string, Guest>>(res.Body.ToString());
-                    Guest[] sortedRooms = new Guest[K.NumberOfRooms];
-                    for (var i = 0; i < K.NumberOfRooms; i++)
-                    {
-                        string firebaseKey = K.FirebaseKey((i+1).ToString());
-                        int index = Convert.ToInt32(data[firebaseKey].room.RoomNumber)-1;
-                        Guest guest = data[firebaseKey];
-                        sortedRooms[index] = guest;
-                    }
-                    var available = K.NumberOfRooms;
-                    progressBar1.Maximum= available;
-                    int progressBarValue = 1;
-                    foreach (var g in sortedRooms)
-                    {
-                        string roomNumber = g.room.RoomNumber;
-                        if (g.room.Occupied)
-                        {
-
-                            string text = ("Room: " + roomNumber + " - Beds: " + g.room.BedConfiguration + "\n"); 
-                            Occupied_RichTextBox.Text += text;
-                            available--;
-                        }
-                        else
-                        {
-                            string text = ("Room: " + roomNumber + " - Beds: " + g.room.BedConfiguration + "\n");
-                            Empty_richTextBox.Text += text;
-                        }
-                        progressBar1.Value = progressBarValue++;
-                        
-                    }
-                    //progressBar1.Visible = false;
-                    AvailableRooms_Label.Text = "Available Rooms: " + available;
+                    string text = ("Room: " + roomNumber + " - Beds: " + guest.room.BedConfiguration + "\n");
+                    Empty_richTextBox.Text += text;
                 }
- 
+                progressBar1.Value = progressBarValue++;
+                        
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Connection Error.");
-            }
+            //progressBar1.Visible = false;
+            AvailableRooms_Label.Text = "Available Rooms: " + available;
         }
-
     }
 }
