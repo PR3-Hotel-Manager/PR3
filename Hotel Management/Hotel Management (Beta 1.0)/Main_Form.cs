@@ -101,11 +101,9 @@ namespace Hotel_Management__Beta_1._0_
 
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show("Connection Error.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dbGuestDictionary = null;
-                return dbGuestDictionary;
+                MessageBox.Show(e.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
