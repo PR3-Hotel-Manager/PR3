@@ -101,7 +101,7 @@ namespace Hotel_Management__Beta_1._0_
 
             string confNumber = PrepareConfirmationNumber(guest);
 
-            guestDictionary = db.GetData();
+            guestDictionary = db.GetGuestDictionary();
             if (guestDictionary == null)
             {
                 MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);

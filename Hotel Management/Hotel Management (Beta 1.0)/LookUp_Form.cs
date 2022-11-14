@@ -35,7 +35,7 @@ namespace Hotel_Management__Beta_1._0_
 
         void performSearch() {
             bool match = false;
-            guestDictionary = db.GetData();
+            guestDictionary = db.GetGuestDictionary();
             if (guestDictionary == null)
             {
                 MessageBox.Show("Data is null.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
