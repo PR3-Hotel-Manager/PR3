@@ -79,8 +79,7 @@ namespace Hotel_Management__Beta_1._0_
 
         private void InitGuestData()
         {
-            FirebaseResponse res = db.GetFirebaseResponse();
-            if (res.Body.ToString() == "null")
+            if (db.GetFirebaseResponse().ToString() == "null")
             {
                 Dictionary<string, Guest> initGuestDictionary = new Dictionary<string, Guest>();
                 for (var i = 0; i < K.NumberOfRooms; i++)
@@ -98,8 +97,6 @@ namespace Hotel_Management__Beta_1._0_
 
             }
         }
-
-
 
         private void CheckIn_Button_Click(object sender, EventArgs e)
         {
