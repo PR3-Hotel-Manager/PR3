@@ -52,6 +52,10 @@
             this.Cash_Icon = new System.Windows.Forms.PictureBox();
             this.StayLength_Label = new System.Windows.Forms.Label();
             this.StayLength_Selector = new System.Windows.Forms.NumericUpDown();
+            this.AvailableRoom_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Guest_Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Age_Selector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BedConfig_Selector)).BeginInit();
@@ -370,11 +374,48 @@
             0,
             0});
             // 
+            // AvailableRoom_richTextBox
+            // 
+            this.AvailableRoom_richTextBox.Location = new System.Drawing.Point(452, 146);
+            this.AvailableRoom_richTextBox.Name = "AvailableRoom_richTextBox";
+            this.AvailableRoom_richTextBox.Size = new System.Drawing.Size(204, 349);
+            this.AvailableRoom_richTextBox.TabIndex = 22;
+            this.AvailableRoom_richTextBox.Text = "";
+            this.AvailableRoom_richTextBox.TextChanged += new System.EventHandler(this.AvailableRoom_richTextBox_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(438, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 15);
+            this.label2.TabIndex = 23;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(452, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 15);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Available Rooms";
+            // 
             // CheckIn_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 507);
+            this.ClientSize = new System.Drawing.Size(674, 507);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.AvailableRoom_richTextBox);
             this.Controls.Add(this.StayLength_Selector);
             this.Controls.Add(this.StayLength_Label);
             this.Controls.Add(this.Cash_RadioButton);
@@ -444,5 +485,9 @@
         private PictureBox Cash_Icon;
         private Label StayLength_Label;
         private NumericUpDown StayLength_Selector;
+        private RichTextBox AvailableRoom_richTextBox;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }
