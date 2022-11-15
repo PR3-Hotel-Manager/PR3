@@ -197,7 +197,7 @@ namespace Hotel_Management__Beta_1._0_
             {
                 if (!guest.room.Occupied)
                 {
-                    AvailableRoom_richTextBox.Text += guest.room.RoomNumber + "\n";
+                    AvailableRoom_richTextBox.Text += "Room: " + guest.room.RoomNumber + " - " + "Beds: " + guest.room.BedConfiguration + "\n";
                 }
             }
         }
