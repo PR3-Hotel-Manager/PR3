@@ -37,6 +37,7 @@ namespace Hotel_Management__Beta_1._0_
         private void CheckIn_Form_Load(object sender, EventArgs e)
         {
             db.StartFirebase();
+            AvailableRooms();
         }
 
         private bool verifyInputs()  // returns false if conditions are not met.
@@ -182,6 +183,23 @@ namespace Hotel_Management__Beta_1._0_
                 BedConfig_Selector.Value = 2;
 
             }
-        } 
+        }
+
+        private void AvailableRoom_richTextBox_TextChanged(object sender, EventArgs e)
+        {
+    
+        }
+
+        public void AvailableRooms ()
+        {
+            Guest[] dbSortedGuests = db.GetSortedDatabaseGuests();
+            foreach (var guest in dbSortedGuests)
+            {
+                if (!guest.room.Occupied)
+                {
+                    AvailableRoom_richTextBox.Text += "Room: " + guest.room.RoomNumber + " - " + "Beds: " + guest.room.BedConfiguration + "\n";
+                }
+            }
+        }
     }
 }
