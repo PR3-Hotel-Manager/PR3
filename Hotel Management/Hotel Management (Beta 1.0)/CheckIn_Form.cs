@@ -38,6 +38,8 @@ namespace Hotel_Management__Beta_1._0_
         {
             db.StartFirebase();
             AvailableRooms();
+            BedConfig_Selector.ReadOnly = true;
+            BedConfig_Selector.Enabled = false;
         }
 
         private bool verifyInputs()  // returns false if conditions are not met.
