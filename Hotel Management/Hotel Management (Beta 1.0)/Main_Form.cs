@@ -11,6 +11,10 @@ namespace Hotel_Management__Beta_1._0_
 {
     public partial class Main_Form : Form
     {
+        private const int WM_NCHITTEST = 0x84;
+        private const int HT_CLIENT = 0x1;
+        private const int HT_CAPTION = 0x2;
+
         FirebaseSingleton db = FirebaseSingleton.Instance;
 
         public Main_Form()
@@ -19,16 +23,13 @@ namespace Hotel_Management__Beta_1._0_
             // Use .ShowDialog() method to only keep the new Form active and prevent interference.
         }
 
+        // Movable Main-Form
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
             if (m.Msg == WM_NCHITTEST)
                 m.Result = (IntPtr)(HT_CAPTION);
         }
-
-        private const int WM_NCHITTEST = 0x84;
-        private const int HT_CLIENT = 0x1;
-        private const int HT_CAPTION = 0x2;
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
