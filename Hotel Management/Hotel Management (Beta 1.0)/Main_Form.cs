@@ -18,6 +18,18 @@ namespace Hotel_Management__Beta_1._0_
             InitializeComponent();
             // Use .ShowDialog() method to only keep the new Form active and prevent interference.
         }
+
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            if (m.Msg == WM_NCHITTEST)
+                m.Result = (IntPtr)(HT_CAPTION);
+        }
+
+        private const int WM_NCHITTEST = 0x84;
+        private const int HT_CLIENT = 0x1;
+        private const int HT_CAPTION = 0x2;
+
         private void Main_Form_Load(object sender, EventArgs e)
         {
             Title_Label.FlatStyle = FlatStyle.Standard;
@@ -98,7 +110,6 @@ namespace Hotel_Management__Beta_1._0_
                 else
                 {
                     MessageBox.Show("Firebase database has been previously initialized with rooms. Press OK to continue.", "Notification:", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 }
             }
             catch (Exception error)
