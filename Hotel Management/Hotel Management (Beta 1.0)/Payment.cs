@@ -15,6 +15,19 @@ namespace Hotel_Management__Beta_1._0_
         public string Time { get; set; }
 
         // Conctrustors -------------------------------
+        public Payment()
+        {
+            this.Price = 0;
+            this.PaymentType = "";
+            this.Time = transactionTime();
+        }
+
+        public Payment(string paymentType)
+        {
+            this.Price = 0;
+            this.PaymentType = paymentType;
+            this.Time = transactionTime();
+        }
         public Payment(double price, string paymentType)
         {
             this.Price = price;
@@ -26,6 +39,13 @@ namespace Hotel_Management__Beta_1._0_
         public string transactionTime()
         {
             return DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
+        }
+
+        public decimal CalculatePrice(decimal bedConfigs, decimal stayLength)
+        {
+            int b = Convert.ToInt32(bedConfigs);
+            int s = Convert.ToInt32(stayLength);
+            return Convert.ToDecimal((100 + Math.Pow(b * s, 2)));
         }
     }
 }

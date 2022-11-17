@@ -373,6 +373,7 @@
             0,
             0,
             0});
+            this.StayLength_Selector.ValueChanged += new System.EventHandler(this.StayLength_Selector_ValueChanged);
             // 
             // AvailableRoom_richTextBox
             // 
