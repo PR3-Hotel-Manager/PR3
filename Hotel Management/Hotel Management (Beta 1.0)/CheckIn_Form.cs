@@ -223,5 +223,6 @@ namespace Hotel_Management__Beta_1._0_
             payment.Price = (double)payment.CalculatePrice(BedConfig_Selector.Value, StayLength_Selector.Value);
             Price_Selector.Value = (decimal)payment.Price;
         }
+        
     }
 }
