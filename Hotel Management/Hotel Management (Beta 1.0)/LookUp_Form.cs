@@ -27,12 +27,14 @@ namespace Hotel_Management__Beta_1._0_
             
         }
 
+        // This method resets the textboxes
         private void Clear_Button_Click(object sender, EventArgs e)
         {
             Name_TextBox.Text = "";
             LastName_TextBox.Text = "";
         }
 
+        // This method searches the database for a guest(given name or last name)
         void performSearch() {
             bool match = false;
             try
