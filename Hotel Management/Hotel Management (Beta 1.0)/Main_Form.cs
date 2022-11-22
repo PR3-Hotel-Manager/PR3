@@ -39,9 +39,9 @@ namespace Hotel_Management__Beta_1._0_
 
             checkConnection();
             InitGuestData();
-
-
         }
+        
+        // This method checks for internet connection status
         async private void checkConnection()
         {
             db.StartFirebase();
