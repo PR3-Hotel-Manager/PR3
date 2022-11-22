@@ -17,18 +17,21 @@ namespace Hotel_Management__Beta_1._0_
         {
             InitializeComponent();
         }
-
+    
+        // This method is unused.
         private void CheckInConfirmation_Form_Load(object sender, EventArgs e)
         {
 
         }
 
+        // This method updates the label, and display Confirmation number 
         public void changeLabel(string Text)
         {
             ConfirmationNumber_Label.Text = Text;
 
         }
-
+        
+        // This method closes the form and resets the label
         private void OK_Button_Click(object sender, EventArgs e)
         {
             ConfirmationNumber_Label.Text = "";
