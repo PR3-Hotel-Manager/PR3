@@ -34,6 +34,7 @@ namespace Hotel_Management__Beta_1._0_
             this.Close();  // Exit CheckOut Form
         }
 
+        // This method performs check-out
         private void OK_Button_Click(object sender, EventArgs e)
         {
             try
@@ -61,6 +62,7 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
+        // This method saves checkout details in a log file
         private void UpdateLogFile(Guest guest)
         {
             // Save to Log File
