@@ -23,6 +23,8 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // Methods ------------------------------------
+        
+        // This method returns the current time for transaction details
         public string transactionTime()
         {
             return DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
