@@ -39,8 +39,9 @@ namespace Hotel_Management__Beta_1._0_
             db.StartFirebase();
             AvailableRooms();
         }
-
-        private bool verifyInputs()  // returns false if conditions are not met.
+        
+        // This method verifies guest details
+        private bool verifyInputs()  
         {
             if (LastName_TextBox.Text == "" || Name_TextBox.Text == "")
             {
@@ -57,14 +58,14 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
-        // Generate Hash 
+        // This method generates a Hash 
         public static byte[] GetHash(string inputString)
         {
             using (HashAlgorithm algorithm = SHA256.Create())
                 return algorithm.ComputeHash(Encoding.UTF8.GetBytes(inputString));
         }
 
-        // Get Hash
+        // This method gets a Hash
         public static string getHashString(string inputString)
         {
             StringBuilder sb = new StringBuilder();
@@ -75,6 +76,7 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
+        // This method gets which radio button is selected for Payment Method
         private string retrievePaymentMethod()
         {
             if (Cash_RadioButton.Checked == true)
@@ -85,6 +87,7 @@ namespace Hotel_Management__Beta_1._0_
                 return "Credit/Debit";
         }
 
+        // This method performs Check-in
         public void performCheckIn()
         {
             // Get Payment Method
@@ -122,7 +125,8 @@ namespace Hotel_Management__Beta_1._0_
                 MessageBox.Show(error.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        
+        // This method prepares the confirmation number
         private string PrepareConfirmationNumber(Guest guest)
         {
             // Prepare Confirmation Number
@@ -132,6 +136,7 @@ namespace Hotel_Management__Beta_1._0_
             return confNumber;
         }
 
+        // This method saves the details of check-in process to a log file
         private void UpdateLogFile(Guest guest)
         {
             // Save to Log File
@@ -142,6 +147,7 @@ namespace Hotel_Management__Beta_1._0_
             File.AppendAllText(filePathRoomList, Room_Selector.Value.ToString() + "\n");
         }
 
+        // This method displays the confirmation page
         private void ShowConfirmationForm(string confNumber)
         {
             CheckInConfirmation_Form form = new();  // pass confirmation number to the label in #CheckInConfirmation_Form 
@@ -160,13 +166,13 @@ namespace Hotel_Management__Beta_1._0_
         private void OK_Button_Click(object sender, EventArgs e)
         {
 
-            if (verifyInputs() == true) // If input fields are verified, perform check-in.
+            if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
             {
                 performCheckIn();
 
             }
 
-            else   // Else; Display Error Message.
+            else // Else; Display Error Message.
             {
                 MessageBox.Show("Input fields are missing or contain numbers. Please try again.", " Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
