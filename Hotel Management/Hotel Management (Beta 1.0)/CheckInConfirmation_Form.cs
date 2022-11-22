@@ -32,10 +32,15 @@ namespace Hotel_Management__Beta_1._0_
         }
         
         // This method closes the form and resets the label
-        private void OK_Button_Click(object sender, EventArgs e)
+        public void Quit()
         {
             ConfirmationNumber_Label.Text = "";
             this.Close();
+        }
+        
+        private void OK_Button_Click(object sender, EventArgs e)
+        {
+            Quit();
         }
     }
 }
