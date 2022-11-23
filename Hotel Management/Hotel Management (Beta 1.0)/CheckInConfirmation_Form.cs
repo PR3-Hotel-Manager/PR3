@@ -24,7 +24,7 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
-        // This method updates the label, and display Confirmation number 
+        // This method updates the label, and displays the Confirmation number 
         public void changeLabel(string Text)
         {
             ConfirmationNumber_Label.Text = Text;
