@@ -209,6 +209,7 @@
             // 
             // BedConfig_Selector
             // 
+            this.BedConfig_Selector.Enabled = false;
             this.BedConfig_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BedConfig_Selector.Location = new System.Drawing.Point(128, 224);
             this.BedConfig_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -235,6 +236,7 @@
             // Price_Selector
             // 
             this.Price_Selector.DecimalPlaces = 2;
+            this.Price_Selector.Enabled = false;
             this.Price_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Price_Selector.Location = new System.Drawing.Point(128, 262);
             this.Price_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -249,6 +251,7 @@
             0,
             0});
             this.Price_Selector.Name = "Price_Selector";
+            this.Price_Selector.ReadOnly = true;
             this.Price_Selector.Size = new System.Drawing.Size(70, 27);
             this.Price_Selector.TabIndex = 4;
             this.Price_Selector.Value = new decimal(new int[] {
@@ -373,6 +376,7 @@
             0,
             0,
             0});
+            this.StayLength_Selector.ValueChanged += new System.EventHandler(this.StayLength_Selector_ValueChanged);
             // 
             // AvailableRoom_richTextBox
             // 

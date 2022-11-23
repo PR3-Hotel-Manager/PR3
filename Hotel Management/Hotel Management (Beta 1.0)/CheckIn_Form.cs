@@ -27,6 +27,7 @@ namespace Hotel_Management__Beta_1._0_
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
         private Guest? newGuest;
+        private Payment payment = new Payment();
         Dictionary<string, Guest> dbGuestDictionary;
 
         public CheckIn_Form()
@@ -38,6 +39,10 @@ namespace Hotel_Management__Beta_1._0_
         {
             db.StartFirebase();
             AvailableRooms();
+            BedConfig_Selector.ReadOnly = true;
+            BedConfig_Selector.Enabled = false;
+            Price_Selector.ReadOnly = true;
+            Price_Selector.Enabled = false;
         }
         
         // This method verifies guest details
@@ -90,8 +95,12 @@ namespace Hotel_Management__Beta_1._0_
         // This method performs Check-in
         public void performCheckIn()
         {
-            // Get Payment Method
+            // Payment
             string pmtMethod = retrievePaymentMethod();
+            payment.PaymentType = pmtMethod;
+
+            // Room
+            Room room = new Room(Room_Selector.Value.ToString(), BedConfig_Selector.Value.ToString(), true);
 
             // Get Name, Last Name, Age, Bed, Price, Room#, Stay Length
             // Add fields to Database
@@ -100,8 +109,8 @@ namespace Hotel_Management__Beta_1._0_
                 LastName_TextBox.Text,
                 Age_Selector.Value.ToString(),
                 StayLength_Selector.Value.ToString(),
-                new Room(Room_Selector.Value.ToString(), BedConfig_Selector.Value.ToString(), true),
-                new Payment((double)(Price_Selector.Value), pmtMethod));
+                room,
+                payment);
 
             string confNumber = PrepareConfirmationNumber(newGuest);
             try
@@ -180,13 +189,20 @@ namespace Hotel_Management__Beta_1._0_
 
         private void Room_Selector_ValueChanged(object sender, EventArgs e)
         {
+            BedConfig_Selector.Value = BedNumber();
+            payment.Price = (double)payment.CalculatePrice(BedConfig_Selector.Value, StayLength_Selector.Value);
+            Price_Selector.Value = (decimal)payment.Price;
+        }
+
+        decimal BedNumber()
+        {
             if (Room_Selector.Value <= 15)
             {
-                BedConfig_Selector.Value = 1;
+                return 1;
             }
             else
             {
-                BedConfig_Selector.Value = 2;
+                return 2;
 
             }
         }
@@ -207,5 +223,12 @@ namespace Hotel_Management__Beta_1._0_
                 }
             }
         }
+
+        private void StayLength_Selector_ValueChanged(object sender, EventArgs e)
+        {
+            payment.Price = (double)payment.CalculatePrice(BedConfig_Selector.Value, StayLength_Selector.Value);
+            Price_Selector.Value = (decimal)payment.Price;
+        }
+        
     }
 }
