@@ -1,0 +1,2 @@
+13:49:48|Chk-in|  mike            jone                 18  #1  - Cash
+13:51:35|Chk-Out| mike            jone                 18  #1  - Cash

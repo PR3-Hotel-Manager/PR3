@@ -39,10 +39,10 @@
             // 
             // OK_Button
             // 
-            this.OK_Button.Location = new System.Drawing.Point(444, 298);
-            this.OK_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OK_Button.Location = new System.Drawing.Point(1078, 815);
+            this.OK_Button.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.OK_Button.Name = "OK_Button";
-            this.OK_Button.Size = new System.Drawing.Size(127, 30);
+            this.OK_Button.Size = new System.Drawing.Size(308, 82);
             this.OK_Button.TabIndex = 0;
             this.OK_Button.Text = "OK";
             this.OK_Button.UseVisualStyleBackColor = true;
@@ -52,19 +52,20 @@
             // 
             this.AvailableRooms_Label.AutoSize = true;
             this.AvailableRooms_Label.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AvailableRooms_Label.Location = new System.Drawing.Point(21, 303);
+            this.AvailableRooms_Label.Location = new System.Drawing.Point(51, 828);
+            this.AvailableRooms_Label.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.AvailableRooms_Label.Name = "AvailableRooms_Label";
-            this.AvailableRooms_Label.Size = new System.Drawing.Size(120, 20);
+            this.AvailableRooms_Label.Size = new System.Drawing.Size(292, 50);
             this.AvailableRooms_Label.TabIndex = 1;
             this.AvailableRooms_Label.Text = "Available rooms:";
             // 
             // Occupied_RichTextBox
             // 
             this.Occupied_RichTextBox.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Occupied_RichTextBox.Location = new System.Drawing.Point(24, 49);
-            this.Occupied_RichTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Occupied_RichTextBox.Location = new System.Drawing.Point(58, 134);
+            this.Occupied_RichTextBox.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.Occupied_RichTextBox.Name = "Occupied_RichTextBox";
-            this.Occupied_RichTextBox.Size = new System.Drawing.Size(247, 222);
+            this.Occupied_RichTextBox.Size = new System.Drawing.Size(594, 600);
             this.Occupied_RichTextBox.TabIndex = 2;
             this.Occupied_RichTextBox.Text = "";
             // 
@@ -72,9 +73,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(24, 20);
+            this.label1.Location = new System.Drawing.Point(58, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 20);
+            this.label1.Size = new System.Drawing.Size(177, 50);
             this.label1.TabIndex = 4;
             this.label1.Text = "Occupied";
             // 
@@ -82,37 +84,38 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(321, 20);
+            this.label2.Location = new System.Drawing.Point(780, 55);
+            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Size = new System.Drawing.Size(134, 50);
             this.label2.TabIndex = 5;
             this.label2.Text = "Empty:";
             // 
             // Empty_richTextBox
             // 
             this.Empty_richTextBox.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Empty_richTextBox.Location = new System.Drawing.Point(321, 49);
-            this.Empty_richTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Empty_richTextBox.Location = new System.Drawing.Point(780, 134);
+            this.Empty_richTextBox.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.Empty_richTextBox.Name = "Empty_richTextBox";
-            this.Empty_richTextBox.Size = new System.Drawing.Size(247, 222);
+            this.Empty_richTextBox.Size = new System.Drawing.Size(594, 600);
             this.Empty_richTextBox.TabIndex = 6;
             this.Empty_richTextBox.Text = "";
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(226, 298);
-            this.progressBar1.Maximum = 40;
+            this.progressBar1.Location = new System.Drawing.Point(549, 815);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(200, 30);
+            this.progressBar1.Size = new System.Drawing.Size(486, 82);
             this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 7;
             this.progressBar1.Visible = false;
             // 
             // Rooms_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 338);
+            this.ClientSize = new System.Drawing.Size(1421, 924);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Empty_richTextBox);
             this.Controls.Add(this.label2);
@@ -121,7 +124,7 @@
             this.Controls.Add(this.AvailableRooms_Label);
             this.Controls.Add(this.OK_Button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Rooms_Form";

@@ -60,7 +60,7 @@ namespace Hotel_Management__Beta_1._0_
                         string text = ("Room: " + roomNumber + " - Beds: " + guest.room.BedConfiguration + "\n");
                         Empty_richTextBox.Text += text;
                     }
-                    progressBar1.Value = progressBarValue++;
+                    progressBar1.Value = (progressBarValue++);
 
                 }
                 //progressBar1.Visible = false;
