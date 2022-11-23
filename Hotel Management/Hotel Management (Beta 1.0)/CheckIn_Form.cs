@@ -67,7 +67,7 @@ namespace Hotel_Management__Beta_1._0_
                 return algorithm.ComputeHash(Encoding.UTF8.GetBytes(inputString));
         }
 
-        // This method gets a Hash
+        // This method gets a Hash String
         public static string getHashString(string inputString)
         {
             StringBuilder sb = new StringBuilder();
@@ -78,7 +78,7 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
-        // This method gets which radio button is selected for Payment Method
+        // This method gets which radio button is selected for determining Payment Method
         private string retrievePaymentMethod()
         {
             if (Cash_RadioButton.Checked == true)
@@ -157,7 +157,7 @@ namespace Hotel_Management__Beta_1._0_
         private void ShowConfirmationForm(string confNumber)
         {
             CheckInConfirmation_Form form = new();  // pass confirmation number to the label in #CheckInConfirmation_Form 
-            form.changeLabel(confNumber);
+            form.changeLabel(confNumber); // update the label
             this.Hide();
             form.ShowDialog(); // Display #CheckInConfirmation_Form
             this.Close();
@@ -183,8 +183,6 @@ namespace Hotel_Management__Beta_1._0_
                 MessageBox.Show("Input fields are missing or contain numbers. Please try again.", " Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
 
         private void AvailableRoom_richTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -224,7 +222,6 @@ namespace Hotel_Management__Beta_1._0_
             else
             {
                 return 2;
-
             }
         }
 
