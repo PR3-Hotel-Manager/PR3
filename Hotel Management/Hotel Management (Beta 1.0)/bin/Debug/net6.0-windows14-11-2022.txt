@@ -1,0 +1,8 @@
+09:28:58|Chk-in|  James           James                18  #1  - Credit/Debit
+09:29:15|Chk-in|  John            Jones                18  #8  - Cash
+09:53:12|Chk-in|  Nick            Jones                18  #18 - Cash
+11:53:16|Chk-in|  Mike            Jones                18  #5  - Cash
+11:53:51|Chk-in|  Mike            John                 18  #22 - Credit/Debit
+11:54:30|Chk-Out| Mike            Jones                18  #5  - Cash
+17:15:26|Chk-in|  Mike            Lee                  18  #1  - Credit/Debit
+17:32:06|Chk-in|  Jones           Joness               18  #10 - Credit/Debit

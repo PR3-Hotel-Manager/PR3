@@ -7,6 +7,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>\\Mac\Home\Documents\CSUN\COMP380L\PR3\tester\test.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

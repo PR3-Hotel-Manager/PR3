@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace Hotel_Management__Beta_1._0_
 {
+    /// <summary>
+    /// 
+    /// </summary>
     internal class FirebaseSingleton
     {
         // Class Attributes

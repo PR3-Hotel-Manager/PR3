@@ -17,14 +17,14 @@ namespace Hotel_Management__Beta_1._0_
         // Conctrustors -------------------------------
         public Payment()
         {
-            this.Price = 0;
+            this.Price = 101;
             this.PaymentType = "";
             this.Time = transactionTime();
         }
 
         public Payment(string paymentType)
         {
-            this.Price = 0;
+            this.Price = 101;
             this.PaymentType = paymentType;
             this.Time = transactionTime();
         }

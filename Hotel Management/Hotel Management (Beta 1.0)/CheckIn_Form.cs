@@ -39,10 +39,7 @@ namespace Hotel_Management__Beta_1._0_
         {
             db.StartFirebase();
             AvailableRooms();
-            BedConfig_Selector.ReadOnly = true;
-            BedConfig_Selector.Enabled = false;
-            Price_Selector.ReadOnly = true;
-            Price_Selector.Enabled = false;
+            Price_Value_Label.Text = "$" + payment.Price.ToString();
         }
         
         // This method verifies guest details
@@ -100,7 +97,7 @@ namespace Hotel_Management__Beta_1._0_
             payment.PaymentType = pmtMethod;
 
             // Room
-            Room room = new Room(Room_Selector.Value.ToString(), BedConfig_Selector.Value.ToString(), true);
+            Room room = new Room(Room_Selector.Value.ToString(), "2", true);
 
             // Get Name, Last Name, Age, Bed, Price, Room#, Stay Length
             // Add fields to Database
@@ -187,25 +184,7 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
-        private void Room_Selector_ValueChanged(object sender, EventArgs e)
-        {
-            BedConfig_Selector.Value = BedNumber();
-            payment.Price = (double)payment.CalculatePrice(BedConfig_Selector.Value, StayLength_Selector.Value);
-            Price_Selector.Value = (decimal)payment.Price;
-        }
 
-        decimal BedNumber()
-        {
-            if (Room_Selector.Value <= 15)
-            {
-                return 1;
-            }
-            else
-            {
-                return 2;
-
-            }
-        }
 
         private void AvailableRoom_richTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -226,9 +205,28 @@ namespace Hotel_Management__Beta_1._0_
 
         private void StayLength_Selector_ValueChanged(object sender, EventArgs e)
         {
-            payment.Price = (double)payment.CalculatePrice(BedConfig_Selector.Value, StayLength_Selector.Value);
-            Price_Selector.Value = (decimal)payment.Price;
+            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), StayLength_Selector.Value);
+            Price_Value_Label.Text = "$"+payment.Price.ToString();
         }
-        
+        private void Room_Selector_ValueChanged(object sender, EventArgs e)
+        {
+            BedConfig_Value_Label.Text = BedNumber().ToString();
+            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), StayLength_Selector.Value);
+            Price_Value_Label.Text = "$"+payment.Price.ToString();
+        }
+
+        decimal BedNumber()
+        {
+            if (Room_Selector.Value <= 15)
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+
+            }
+        }
+
     }
 }

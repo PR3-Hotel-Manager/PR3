@@ -42,8 +42,6 @@
             this.BedConfig_Label = new System.Windows.Forms.Label();
             this.Price_Label = new System.Windows.Forms.Label();
             this.Room_Label = new System.Windows.Forms.Label();
-            this.BedConfig_Selector = new System.Windows.Forms.NumericUpDown();
-            this.Price_Selector = new System.Windows.Forms.NumericUpDown();
             this.Room_Selector = new System.Windows.Forms.NumericUpDown();
             this.Payment_Label = new System.Windows.Forms.Label();
             this.CreditDebit_RadioButton = new System.Windows.Forms.RadioButton();
@@ -56,10 +54,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.BedConfig_Value_Label = new System.Windows.Forms.Label();
+            this.Price_Value_Label = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Guest_Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Age_Selector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BedConfig_Selector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Price_Selector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Room_Selector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreditDebit_Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cash_Icon)).BeginInit();
@@ -79,7 +78,7 @@
             // 
             // OK_Button
             // 
-            this.OK_Button.Location = new System.Drawing.Point(149, 468);
+            this.OK_Button.Location = new System.Drawing.Point(128, 468);
             this.OK_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OK_Button.Name = "OK_Button";
             this.OK_Button.Size = new System.Drawing.Size(135, 30);
@@ -181,7 +180,7 @@
             // 
             this.BedConfig_Label.AutoSize = true;
             this.BedConfig_Label.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BedConfig_Label.Location = new System.Drawing.Point(23, 226);
+            this.BedConfig_Label.Location = new System.Drawing.Point(577, 107);
             this.BedConfig_Label.Name = "BedConfig_Label";
             this.BedConfig_Label.Size = new System.Drawing.Size(54, 20);
             this.BedConfig_Label.TabIndex = 10;
@@ -191,79 +190,26 @@
             // 
             this.Price_Label.AutoSize = true;
             this.Price_Label.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Price_Label.Location = new System.Drawing.Point(23, 264);
+            this.Price_Label.Location = new System.Drawing.Point(452, 107);
             this.Price_Label.Name = "Price_Label";
-            this.Price_Label.Size = new System.Drawing.Size(92, 20);
+            this.Price_Label.Size = new System.Drawing.Size(44, 20);
             this.Price_Label.TabIndex = 11;
-            this.Price_Label.Text = "Price:          $";
+            this.Price_Label.Text = "Price:";
             // 
             // Room_Label
             // 
             this.Room_Label.AutoSize = true;
             this.Room_Label.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Room_Label.Location = new System.Drawing.Point(24, 304);
+            this.Room_Label.Location = new System.Drawing.Point(24, 286);
             this.Room_Label.Name = "Room_Label";
             this.Room_Label.Size = new System.Drawing.Size(65, 20);
             this.Room_Label.TabIndex = 12;
             this.Room_Label.Text = "Room #:";
             // 
-            // BedConfig_Selector
-            // 
-            this.BedConfig_Selector.Enabled = false;
-            this.BedConfig_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BedConfig_Selector.Location = new System.Drawing.Point(128, 224);
-            this.BedConfig_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BedConfig_Selector.Maximum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.BedConfig_Selector.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.BedConfig_Selector.Name = "BedConfig_Selector";
-            this.BedConfig_Selector.ReadOnly = true;
-            this.BedConfig_Selector.Size = new System.Drawing.Size(70, 27);
-            this.BedConfig_Selector.TabIndex = 3;
-            this.BedConfig_Selector.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // Price_Selector
-            // 
-            this.Price_Selector.DecimalPlaces = 2;
-            this.Price_Selector.Enabled = false;
-            this.Price_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Price_Selector.Location = new System.Drawing.Point(128, 262);
-            this.Price_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Price_Selector.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.Price_Selector.Minimum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.Price_Selector.Name = "Price_Selector";
-            this.Price_Selector.ReadOnly = true;
-            this.Price_Selector.Size = new System.Drawing.Size(70, 27);
-            this.Price_Selector.TabIndex = 4;
-            this.Price_Selector.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            // 
             // Room_Selector
             // 
             this.Room_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Room_Selector.Location = new System.Drawing.Point(128, 301);
+            this.Room_Selector.Location = new System.Drawing.Point(128, 283);
             this.Room_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Room_Selector.Maximum = new decimal(new int[] {
             40,
@@ -289,7 +235,7 @@
             // 
             this.Payment_Label.AutoSize = true;
             this.Payment_Label.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Payment_Label.Location = new System.Drawing.Point(24, 387);
+            this.Payment_Label.Location = new System.Drawing.Point(24, 338);
             this.Payment_Label.Name = "Payment_Label";
             this.Payment_Label.Size = new System.Drawing.Size(68, 20);
             this.Payment_Label.TabIndex = 16;
@@ -300,7 +246,7 @@
             this.CreditDebit_RadioButton.AutoSize = true;
             this.CreditDebit_RadioButton.Checked = true;
             this.CreditDebit_RadioButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CreditDebit_RadioButton.Location = new System.Drawing.Point(170, 420);
+            this.CreditDebit_RadioButton.Location = new System.Drawing.Point(109, 426);
             this.CreditDebit_RadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CreditDebit_RadioButton.Name = "CreditDebit_RadioButton";
             this.CreditDebit_RadioButton.Size = new System.Drawing.Size(102, 23);
@@ -313,7 +259,7 @@
             // 
             this.Cash_RadioButton.AutoSize = true;
             this.Cash_RadioButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Cash_RadioButton.Location = new System.Drawing.Point(334, 420);
+            this.Cash_RadioButton.Location = new System.Drawing.Point(300, 423);
             this.Cash_RadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cash_RadioButton.Name = "Cash_RadioButton";
             this.Cash_RadioButton.Size = new System.Drawing.Size(57, 23);
@@ -324,7 +270,7 @@
             // CreditDebit_Icon
             // 
             this.CreditDebit_Icon.Image = ((System.Drawing.Image)(resources.GetObject("CreditDebit_Icon.Image")));
-            this.CreditDebit_Icon.Location = new System.Drawing.Point(189, 357);
+            this.CreditDebit_Icon.Location = new System.Drawing.Point(128, 363);
             this.CreditDebit_Icon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CreditDebit_Icon.Name = "CreditDebit_Icon";
             this.CreditDebit_Icon.Size = new System.Drawing.Size(61, 58);
@@ -335,7 +281,7 @@
             // Cash_Icon
             // 
             this.Cash_Icon.Image = ((System.Drawing.Image)(resources.GetObject("Cash_Icon.Image")));
-            this.Cash_Icon.Location = new System.Drawing.Point(324, 360);
+            this.Cash_Icon.Location = new System.Drawing.Point(290, 363);
             this.Cash_Icon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cash_Icon.Name = "Cash_Icon";
             this.Cash_Icon.Size = new System.Drawing.Size(68, 58);
@@ -347,16 +293,16 @@
             // 
             this.StayLength_Label.AutoSize = true;
             this.StayLength_Label.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.StayLength_Label.Location = new System.Drawing.Point(258, 189);
+            this.StayLength_Label.Location = new System.Drawing.Point(23, 232);
             this.StayLength_Label.Name = "StayLength_Label";
-            this.StayLength_Label.Size = new System.Drawing.Size(166, 20);
+            this.StayLength_Label.Size = new System.Drawing.Size(40, 20);
             this.StayLength_Label.TabIndex = 21;
-            this.StayLength_Label.Text = "Stay:                   night(s)";
+            this.StayLength_Label.Text = "Stay:";
             // 
             // StayLength_Selector
             // 
             this.StayLength_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.StayLength_Selector.Location = new System.Drawing.Point(320, 186);
+            this.StayLength_Selector.Location = new System.Drawing.Point(128, 231);
             this.StayLength_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StayLength_Selector.Maximum = new decimal(new int[] {
             7,
@@ -369,7 +315,7 @@
             0,
             0});
             this.StayLength_Selector.Name = "StayLength_Selector";
-            this.StayLength_Selector.Size = new System.Drawing.Size(39, 27);
+            this.StayLength_Selector.Size = new System.Drawing.Size(70, 27);
             this.StayLength_Selector.TabIndex = 6;
             this.StayLength_Selector.Value = new decimal(new int[] {
             1,
@@ -380,9 +326,9 @@
             // 
             // AvailableRoom_richTextBox
             // 
-            this.AvailableRoom_richTextBox.Location = new System.Drawing.Point(452, 146);
+            this.AvailableRoom_richTextBox.Location = new System.Drawing.Point(452, 211);
             this.AvailableRoom_richTextBox.Name = "AvailableRoom_richTextBox";
-            this.AvailableRoom_richTextBox.Size = new System.Drawing.Size(204, 349);
+            this.AvailableRoom_richTextBox.Size = new System.Drawing.Size(204, 284);
             this.AvailableRoom_richTextBox.TabIndex = 22;
             this.AvailableRoom_richTextBox.Text = "";
             this.AvailableRoom_richTextBox.TextChanged += new System.EventHandler(this.AvailableRoom_richTextBox_TextChanged);
@@ -405,17 +351,50 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(452, 122);
+            this.label3.Location = new System.Drawing.Point(452, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 15);
             this.label3.TabIndex = 24;
             this.label3.Text = "Available Rooms";
             // 
+            // BedConfig_Value_Label
+            // 
+            this.BedConfig_Value_Label.AutoSize = true;
+            this.BedConfig_Value_Label.Font = new System.Drawing.Font("Segoe UI", 27.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BedConfig_Value_Label.Location = new System.Drawing.Point(563, 125);
+            this.BedConfig_Value_Label.Name = "BedConfig_Value_Label";
+            this.BedConfig_Value_Label.Size = new System.Drawing.Size(42, 51);
+            this.BedConfig_Value_Label.TabIndex = 25;
+            this.BedConfig_Value_Label.Text = "1";
+            // 
+            // Price_Value_Label
+            // 
+            this.Price_Value_Label.AutoSize = true;
+            this.Price_Value_Label.Font = new System.Drawing.Font("Segoe UI", 27.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Price_Value_Label.Location = new System.Drawing.Point(452, 125);
+            this.Price_Value_Label.Name = "Price_Value_Label";
+            this.Price_Value_Label.Size = new System.Drawing.Size(82, 51);
+            this.Price_Value_Label.TabIndex = 26;
+            this.Price_Value_Label.Text = "101";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(206, 233);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 20);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Night(s)";
+            // 
             // CheckIn_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 507);
+            this.ClientSize = new System.Drawing.Size(665, 505);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Price_Value_Label);
+            this.Controls.Add(this.BedConfig_Value_Label);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -426,8 +405,6 @@
             this.Controls.Add(this.CreditDebit_RadioButton);
             this.Controls.Add(this.Payment_Label);
             this.Controls.Add(this.Room_Selector);
-            this.Controls.Add(this.Price_Selector);
-            this.Controls.Add(this.BedConfig_Selector);
             this.Controls.Add(this.Room_Label);
             this.Controls.Add(this.Price_Label);
             this.Controls.Add(this.BedConfig_Label);
@@ -453,8 +430,6 @@
             this.Load += new System.EventHandler(this.CheckIn_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Guest_Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Age_Selector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BedConfig_Selector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Price_Selector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Room_Selector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreditDebit_Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cash_Icon)).EndInit();
@@ -479,8 +454,6 @@
         private Label BedConfig_Label;
         private Label Price_Label;
         private Label Room_Label;
-        private NumericUpDown BedConfig_Selector;
-        private NumericUpDown Price_Selector;
         private NumericUpDown Room_Selector;
         private Label Payment_Label;
         private RadioButton CreditDebit_RadioButton;
@@ -493,5 +466,8 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Label BedConfig_Value_Label;
+        private Label Price_Value_Label;
+        private Label label4;
     }
 }

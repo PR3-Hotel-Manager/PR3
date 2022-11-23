@@ -1,0 +1,4 @@
+11:54:59|Chk-in|  Mike            J                    18  #15 - Cash
+11:57:52|Chk-in|  James           Jams                 18  #17 - Credit/Debit
+11:58:37|Chk-in|  James           M                    18  #20 - Credit/Debit
+12:00:58|Chk-in|  Mike            Jones                18  #31 - Credit/Debit
