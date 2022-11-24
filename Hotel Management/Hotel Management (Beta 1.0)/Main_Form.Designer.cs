@@ -41,6 +41,7 @@
             this.connectionStatus_Label = new System.Windows.Forms.Label();
             this.databaseConnectionStatus_Panel = new System.Windows.Forms.Panel();
             this.RetryConnecting_Button = new System.Windows.Forms.Button();
+            this.Estimate_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Title_Holder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.databaseConnectionStatus_Panel.SuspendLayout();
@@ -216,6 +217,22 @@
             this.RetryConnecting_Button.UseVisualStyleBackColor = true;
             this.RetryConnecting_Button.Click += new System.EventHandler(this.RetryConnecting_Button_Click);
             // 
+            // Estimate_Button
+            // 
+            this.Estimate_Button.AutoSize = true;
+            this.Estimate_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Estimate_Button.BackgroundImage")));
+            this.Estimate_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Estimate_Button.Enabled = false;
+            this.Estimate_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Estimate_Button.Location = new System.Drawing.Point(409, 237);
+            this.Estimate_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Estimate_Button.Name = "Estimate_Button";
+            this.Estimate_Button.Size = new System.Drawing.Size(159, 151);
+            this.Estimate_Button.TabIndex = 11;
+            this.Estimate_Button.TabStop = false;
+            this.Estimate_Button.UseVisualStyleBackColor = true;
+            this.Estimate_Button.Click += new System.EventHandler(this.Estimate_Button_Click);
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -231,6 +248,7 @@
             this.Controls.Add(this.CheckIn_Button);
             this.Controls.Add(this.Title_Label);
             this.Controls.Add(this.Title_Holder);
+            this.Controls.Add(this.Estimate_Button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
@@ -259,5 +277,6 @@
         private Label connectionStatus_Label;
         private Panel databaseConnectionStatus_Panel;
         private Button RetryConnecting_Button;
+        private Button Estimate_Button;
     }
 }

@@ -168,5 +168,11 @@ namespace Hotel_Management__Beta_1._0_
         {
 
         }
+
+        private void Estimate_Button_Click(object sender, EventArgs e)
+        {
+            Estimate_Form form_Estimate= new Estimate_Form();
+            form_Estimate.ShowDialog();
+        }
     }
 }
