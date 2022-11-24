@@ -71,6 +71,7 @@ namespace Hotel_Management__Beta_1._0_
                     Capacity_Button.Enabled = true;
                     LookUp_Button.Enabled = true;
                     Report_Button.Enabled = true;
+                    Estimate_Button.Enabled = true;
 
                 }
 

@@ -12,7 +12,8 @@ namespace Hotel_Management__Beta_1._0_
 {
     public partial class Estimate_Form : Form
     {
-        CheckIn_Form checkIn_Form = new CheckIn_Form();
+      
+        Payment payment = new Payment();
 
         public Estimate_Form()
         {
@@ -21,13 +22,26 @@ namespace Hotel_Management__Beta_1._0_
 
         private void StayLength_Selector_Estimate_ValueChanged(object sender, EventArgs e)
         {
-
+            updateLabel();
         }
 
         private void Bed_Selector_ValueChanged(object sender, EventArgs e)
         {
-
+            updateLabel();
         }
 
+        void updateLabel()
+        {
+            Estimate_Price_Placeholder.Text = "$" + payment.CalculatePrice(Bed_Selector.Value, StayLength_Selector_Estimate.Value).ToString() + ".00";
+        }
+        private void OK_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Estimate_Form_Load(object sender, EventArgs e)
+        {
+            updateLabel();
+        }
     }
 }
