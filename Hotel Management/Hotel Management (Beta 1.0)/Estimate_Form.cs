@@ -1,4 +1,17 @@
-﻿using System;
+﻿//--Date--
+//11/23/2022
+//
+//--Programmers Name--
+//Ralph, Michael, Ziv, & Raymond
+//
+//--Brief Descirption of Module--
+//This module is designed to give an estimate for the customer requesting a stay at the hotel
+//
+//--Brief explanation of important functions in each class, including its input values and output values--
+//For this module, we utilzie the payment class and the claculatePrice() method. This method allows for a price...
+//to be calculated. Arguments passed include bed number and stay length.
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
