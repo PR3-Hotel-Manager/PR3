@@ -71,6 +71,7 @@ namespace Hotel_Management__Beta_1._0_
                     Capacity_Button.Enabled = true;
                     LookUp_Button.Enabled = true;
                     Report_Button.Enabled = true;
+                    Estimate_Button.Enabled = true;
 
                 }
 
@@ -167,6 +168,12 @@ namespace Hotel_Management__Beta_1._0_
         private void databaseConnectionStatus_Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Estimate_Button_Click(object sender, EventArgs e)
+        {
+            Estimate_Form form_Estimate= new Estimate_Form();
+            form_Estimate.ShowDialog();
         }
     }
 }
