@@ -33,6 +33,9 @@ namespace Hotel_Management__Beta_1._0_
         public CheckIn_Form()
         {
             InitializeComponent();
+            Age_ComboBox.Text = "18";
+            Available_Rooms_ComboBox.Text = db.GetAvailableRoomsList().ElementAt(0).room.RoomNumber.ToString();
+            StayLength_ComboBox.Text = "1";
         }
 
         private void CheckIn_Form_Load(object sender, EventArgs e)
@@ -193,14 +196,11 @@ namespace Hotel_Management__Beta_1._0_
 
         public void AvailableRooms ()
         {
-            Guest[] dbSortedGuests = db.GetSortedDatabaseGuests();
-            foreach (var guest in dbSortedGuests)
+            List<Guest> availableRoomsList = db.GetAvailableRoomsList();
+            foreach (var guest in availableRoomsList)
             {
-                if (!guest.room.Occupied)
-                {
                     AvailableRoom_richTextBox.Text += "Room: " + guest.room.RoomNumber + " - " + "Beds: " + guest.room.BedConfiguration + "\n";
                     Available_Rooms_ComboBox.Items.Add(guest.room.RoomNumber);
-                }
             }
         }
 
@@ -229,9 +229,11 @@ namespace Hotel_Management__Beta_1._0_
             Price_Value_Label.Text = "$" + payment.Price.ToString();
         }
 
-        private void Age_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void StayLength_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            BedConfig_Value_Label.Text = BedNumber().ToString();
+            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), Convert.ToInt32(StayLength_ComboBox.Text));
+            Price_Value_Label.Text = "$" + payment.Price.ToString();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Hotel_Management__Beta_1._0_
     public partial class Rooms_Form : Form
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
-        Guest[] dbSortedGuests;
+        List<Guest> dbSortedGuests;
 
         public Rooms_Form()
         {

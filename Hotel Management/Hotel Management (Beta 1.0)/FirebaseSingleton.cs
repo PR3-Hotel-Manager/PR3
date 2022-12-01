@@ -156,18 +156,46 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // Returns an Array of guests sorted by room number. Zero Based.
-        public Guest[] GetSortedDatabaseGuests()
+        public List<Guest> GetSortedDatabaseGuests()
         {
             Dictionary<string, Guest> dbGuestDictionary = GetDatabaseGuestDictionary();
-            Guest[] sortedRooms = new Guest[K.NumberOfRooms];
+            List<Guest> sortedRooms = new List<Guest>(K.NumberOfRooms);
             for (var i = 0; i < K.NumberOfRooms; i++)
             {
                 string guestKey = K.GuestKey((i + 1).ToString());
                 int index = Convert.ToInt32(dbGuestDictionary[guestKey].room.RoomNumber) - 1;
                 Guest guest = dbGuestDictionary[guestKey];
-                sortedRooms[index] = guest;
+                sortedRooms.Insert(index, guest);
             }
             return sortedRooms;
+        }
+
+        public List<Guest> GetAvailableRoomsList()
+        {
+            List<Guest> dbSortedGuests = GetSortedDatabaseGuests();
+            List<Guest> availableRoomsList = new List<Guest>();
+            foreach (var guest in dbSortedGuests)
+            {
+                if (!guest.room.Occupied)
+                {
+                    availableRoomsList.Add(guest);
+                }
+            }
+            return availableRoomsList;
+        }
+
+        public List<Guest> GetOccupiedRoomsList()
+        {
+            List<Guest> dbSortedGuests = GetSortedDatabaseGuests();
+            List<Guest> occupiedRoomsList = new List<Guest>();
+            foreach (var guest in dbSortedGuests)
+            {
+                if (guest.room.Occupied)
+                {
+                    occupiedRoomsList.Add(guest);
+                }
+            }
+            return occupiedRoomsList;
         }
 
     }
