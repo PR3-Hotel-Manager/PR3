@@ -24,7 +24,8 @@ namespace Hotel_Management__Beta_1._0_
         public LookUp_Form()
         {
             InitializeComponent();
-            
+            db.StartFirebase();
+
         }
 
         // This method resets the textboxes
@@ -35,23 +36,49 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // This method searches the database for a guest(given name or last name)
-        void performSearch() {
-            bool match = false;
+        int performSearch() {
+            int match = 0;
             try
             {
                 dbGuestDictionary = db.GetDatabaseGuestDictionary();
                 int progressBarValue = 1;
-                foreach (var guest in dbGuestDictionary.Values)
+                if (Name_TextBox.Text == "" && LastName_TextBox.Text == "") 
                 {
-                    if ((guest.FirstName == Name_TextBox.Text && Name_TextBox.Text != "") || (guest.LastName == LastName_TextBox.Text && LastName_TextBox.Text != ""))
+                    result_TextBox.Text = "Enter a name.";
+                }
+                else
+                {
+                    foreach (var guest in dbGuestDictionary.Values)
                     {
-                        result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.room.RoomNumber + ", Chk-in time: " + guest.payment.Time + "\n";
-                        match = true;
+                        if ((guest.FirstName == Name_TextBox.Text) && (guest.LastName == LastName_TextBox.Text))
+                        {
+                            result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.room.RoomNumber + ", Chk-in time: " + guest.payment.Time + "\n";
+                            match = 1;
+                            break;
+                        }
+                    }
+
+                    if (match == 0)
+                    {
+                        foreach (var guest in dbGuestDictionary.Values)
+                        {
+                            if ((guest.FirstName == Name_TextBox.Text && Name_TextBox.Text != "") && LastName_TextBox.Text == "")
+                            {
+                                result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.room.RoomNumber + ", Chk-in time: " + guest.payment.Time + "\n";
+                                match++;
+                            }
+                            else if ((guest.LastName == LastName_TextBox.Text && LastName_TextBox.Text != "") && Name_TextBox.Text == "")
+                            {
+                                result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.room.RoomNumber + ", Chk-in time: " + guest.payment.Time + "\n";
+                                match++;
+                            }
+                        }
                     }
                 }
+                
                 progressBar.Value = progressBarValue++;
 
-                if (match == false)
+                if (match == 0)
                 {
                     result_TextBox.Text = "No results found.";
                 }
@@ -60,13 +87,15 @@ namespace Hotel_Management__Beta_1._0_
             {
                 MessageBox.Show(error.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            return match;
         }
         private void Search_button_Click(object sender, EventArgs e)
         {
             result_TextBox.Text = "";
             progressBar.Visible = true;
 
-            db.StartFirebase();
+            
             performSearch();
 
             progressBar.Visible = false;
