@@ -1,3 +1,7 @@
 14:23:02|Chk-in|  Mike            Jones                18  #1  - Credit/Debit
 14:31:32|Chk-in|  m               w                    18  #5  - Credit/Debit
 14:45:42|Chk-in|  Na              Jui                  29  #23 - Cash
+14:50:29|Chk-in|  Mike            Hones                18  #2  - Credit/Debit
+14:50:41|Chk-in|  Mike            Kones                18  #3  - Credit/Debit
+15:24:26|Chk-in|  Nick            Kones                18  #4  - Credit/Debit
+15:43:07|Chk-in|  Jonn            Kones                28  #11 - Credit/Debit
