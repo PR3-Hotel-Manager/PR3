@@ -37,6 +37,14 @@ namespace Hotel_Management__Beta_1._0_
         // This method performs check-out
         private void OK_Button_Click(object sender, EventArgs e)
         {
+            performCheckout();
+
+        }
+
+        // This method checls out a guest from the database
+        private Boolean performCheckout()
+        {
+            Boolean isCheckedOut = false;
             try
             {
                 dbGuestDictionary = db.GetDatabaseGuestDictionary();
@@ -49,6 +57,7 @@ namespace Hotel_Management__Beta_1._0_
                     db.InsertGuest(emptyGuest);
                     UpdateLogFile(dbGuest);
                     MessageBox.Show("Check out successful. Room: " + Room_Selector.Value.ToString() + " is now availabe.", " ", MessageBoxButtons.OK);
+                    isCheckedOut = true;
                 }
                 else
                 {
@@ -59,7 +68,8 @@ namespace Hotel_Management__Beta_1._0_
             {
                 MessageBox.Show(error.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            
+            return isCheckedOut;
         }
 
         // This method saves checkout details in a log file
