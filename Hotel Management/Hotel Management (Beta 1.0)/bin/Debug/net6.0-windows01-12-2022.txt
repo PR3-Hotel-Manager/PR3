@@ -7,3 +7,8 @@
 09:44:49|Chk-Out| Michael         Granberry            18  #19 - Credit/Debit
 09:45:14|Chk-in|  Mike            G                    18  #1  - Credit/Debit
 09:45:20|Chk-Out| Mike            G                    18  #1  - Credit/Debit
+13:51:31|Chk-in|  Mike            Jones                22  #5  - Credit/Debit
+13:53:23|Chk-Out| MMMike          Jones                18  #4  - Credit/Debit
+13:53:27|Chk-Out| Ne              IJji                 18  #19 - Cash
+13:53:32|Chk-Out| Mike            Jones                22  #5  - Credit/Debit
+13:53:39|Chk-Out| Mike            Jones                18  #37 - Credit/Debit
