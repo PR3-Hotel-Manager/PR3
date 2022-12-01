@@ -33,9 +33,8 @@
             this.OK_Button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Room_Label = new System.Windows.Forms.Label();
-            this.Room_Selector = new System.Windows.Forms.NumericUpDown();
+            this.Occupied_Rooms_ComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Room_Selector)).BeginInit();
             this.SuspendLayout();
             // 
             // Cancel_Button
@@ -81,36 +80,24 @@
             this.Room_Label.TabIndex = 3;
             this.Room_Label.Text = "Room number:";
             // 
-            // Room_Selector
+            // Occupied_Rooms_ComboBox
             // 
-            this.Room_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Room_Selector.Location = new System.Drawing.Point(181, 96);
-            this.Room_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Room_Selector.Maximum = new decimal(new int[] {
-            40,
-            0,
-            0,
-            0});
-            this.Room_Selector.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Room_Selector.Name = "Room_Selector";
-            this.Room_Selector.Size = new System.Drawing.Size(85, 27);
-            this.Room_Selector.TabIndex = 4;
-            this.Room_Selector.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.Occupied_Rooms_ComboBox.DropDownHeight = 100;
+            this.Occupied_Rooms_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Occupied_Rooms_ComboBox.FormattingEnabled = true;
+            this.Occupied_Rooms_ComboBox.IntegralHeight = false;
+            this.Occupied_Rooms_ComboBox.ItemHeight = 15;
+            this.Occupied_Rooms_ComboBox.Location = new System.Drawing.Point(180, 98);
+            this.Occupied_Rooms_ComboBox.Name = "Occupied_Rooms_ComboBox";
+            this.Occupied_Rooms_ComboBox.Size = new System.Drawing.Size(70, 23);
+            this.Occupied_Rooms_ComboBox.TabIndex = 29;
             // 
             // CheckOut_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(319, 181);
-            this.Controls.Add(this.Room_Selector);
+            this.Controls.Add(this.Occupied_Rooms_ComboBox);
             this.Controls.Add(this.Room_Label);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.OK_Button);
@@ -123,7 +110,6 @@
             this.Text = "Check Out";
             this.Load += new System.EventHandler(this.CheckOut_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Room_Selector)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +121,6 @@
         private Button OK_Button;
         private PictureBox pictureBox1;
         private Label Room_Label;
-        private NumericUpDown Room_Selector;
+        private ComboBox Occupied_Rooms_ComboBox;
     }
 }

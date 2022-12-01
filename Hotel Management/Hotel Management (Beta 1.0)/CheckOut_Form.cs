@@ -23,6 +23,7 @@ namespace Hotel_Management__Beta_1._0_
         public CheckOut_Form()
         {
             InitializeComponent();
+            OccupiedeRooms();
         }
         private void CheckOut_Form_Load(object sender, EventArgs e)
         {
@@ -44,19 +45,19 @@ namespace Hotel_Management__Beta_1._0_
         // This method checls out a guest from the database
         private Boolean performCheckout()
         {
+            string occupiedRoomNumber = Occupied_Rooms_ComboBox.Text;
             Boolean isCheckedOut = false;
             try
             {
                 dbGuestDictionary = db.GetDatabaseGuestDictionary();
-                string roomNumber = Room_Selector.Value.ToString();
-                string dbGuestKey = K.GuestKey(roomNumber);
+                string dbGuestKey = K.GuestKey(occupiedRoomNumber);
                 Guest dbGuest = dbGuestDictionary[dbGuestKey];
                 if (dbGuest.room.Occupied)
                 {
-                    Guest emptyGuest = new Guest(roomNumber);
+                    Guest emptyGuest = new Guest(occupiedRoomNumber);
                     db.InsertGuest(emptyGuest);
                     UpdateLogFile(dbGuest);
-                    MessageBox.Show("Check out successful. Room: " + Room_Selector.Value.ToString() + " is now availabe.", " ", MessageBoxButtons.OK);
+                    MessageBox.Show("Check out successful. Room: " + occupiedRoomNumber + " is now availabe.", " ", MessageBoxButtons.OK);
                     isCheckedOut = true;
                 }
                 else
@@ -81,7 +82,17 @@ namespace Hotel_Management__Beta_1._0_
             this.Close();
 
         }
-
+        public void OccupiedeRooms()
+        {
+            Guest[] dbSortedGuests = db.GetSortedDatabaseGuests();
+            foreach (var guest in dbSortedGuests)
+            {
+                if (guest.room.Occupied)
+                {
+                    Occupied_Rooms_ComboBox.Items.Add(guest.room.RoomNumber);
+                }
+            }
+        }
 
     }
 }
