@@ -57,7 +57,6 @@ namespace Hotel_Management__Beta_1._0_
             if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
             {
                 performCheckIn();
-
             }
 
             else // Else; Display Error Message.
@@ -83,7 +82,6 @@ namespace Hotel_Management__Beta_1._0_
 
             else
                 return true;
-
         }
 
         // This method generates a Hash 
@@ -101,10 +99,9 @@ namespace Hotel_Management__Beta_1._0_
                 sb.Append(b.ToString("X2"));
 
             return sb.ToString();
-
         }
 
-        // This method gets which radio button is selected for determining Payment Method
+        // This method determines which radio button is selected for Payment Method
         private string retrievePaymentMethod()
         {
             if (Cash_RadioButton.Checked == true)
@@ -160,7 +157,7 @@ namespace Hotel_Management__Beta_1._0_
             {
                 MessageBox.Show(error.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return isCheckedIn;
+            return isCheckedIn; 
         }
         
         // This method prepares the confirmation number
@@ -188,10 +185,10 @@ namespace Hotel_Management__Beta_1._0_
         private void ShowConfirmationForm(string confNumber)
         {
             CheckInConfirmation_Form form = new();  // pass confirmation number to the label in #CheckInConfirmation_Form 
-            form.changeLabel(confNumber); // update the label
-            this.Hide();
-            form.ShowDialog(); // Display #CheckInConfirmation_Form
-            this.Close();
+            form.changeLabel(confNumber);           // update the label
+            this.Hide();                            // Hide current form   
+            form.ShowDialog();                      // Display #CheckInConfirmation_Form
+            this.Close(); 
         }
 
         public void AvailableRooms ()
