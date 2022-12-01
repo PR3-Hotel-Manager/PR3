@@ -42,7 +42,6 @@
             this.BedConfig_Label = new System.Windows.Forms.Label();
             this.Price_Label = new System.Windows.Forms.Label();
             this.Room_Label = new System.Windows.Forms.Label();
-            this.Room_Selector = new System.Windows.Forms.NumericUpDown();
             this.Payment_Label = new System.Windows.Forms.Label();
             this.CreditDebit_RadioButton = new System.Windows.Forms.RadioButton();
             this.Cash_RadioButton = new System.Windows.Forms.RadioButton();
@@ -57,9 +56,9 @@
             this.BedConfig_Value_Label = new System.Windows.Forms.Label();
             this.Price_Value_Label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Available_Rooms_ComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Guest_Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Age_Selector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Room_Selector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreditDebit_Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cash_Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StayLength_Selector)).BeginInit();
@@ -78,7 +77,7 @@
             // 
             // OK_Button
             // 
-            this.OK_Button.Location = new System.Drawing.Point(128, 468);
+            this.OK_Button.Location = new System.Drawing.Point(114, 468);
             this.OK_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OK_Button.Name = "OK_Button";
             this.OK_Button.Size = new System.Drawing.Size(135, 30);
@@ -205,31 +204,6 @@
             this.Room_Label.Size = new System.Drawing.Size(65, 20);
             this.Room_Label.TabIndex = 12;
             this.Room_Label.Text = "Room #:";
-            // 
-            // Room_Selector
-            // 
-            this.Room_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Room_Selector.Location = new System.Drawing.Point(128, 283);
-            this.Room_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Room_Selector.Maximum = new decimal(new int[] {
-            40,
-            0,
-            0,
-            0});
-            this.Room_Selector.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Room_Selector.Name = "Room_Selector";
-            this.Room_Selector.Size = new System.Drawing.Size(70, 27);
-            this.Room_Selector.TabIndex = 5;
-            this.Room_Selector.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Room_Selector.ValueChanged += new System.EventHandler(this.Room_Selector_ValueChanged);
             // 
             // Payment_Label
             // 
@@ -386,11 +360,25 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Night(s)";
             // 
+            // Available_Rooms_ComboBox
+            // 
+            this.Available_Rooms_ComboBox.DropDownHeight = 100;
+            this.Available_Rooms_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Available_Rooms_ComboBox.FormattingEnabled = true;
+            this.Available_Rooms_ComboBox.IntegralHeight = false;
+            this.Available_Rooms_ComboBox.ItemHeight = 15;
+            this.Available_Rooms_ComboBox.Location = new System.Drawing.Point(128, 287);
+            this.Available_Rooms_ComboBox.Name = "Available_Rooms_ComboBox";
+            this.Available_Rooms_ComboBox.Size = new System.Drawing.Size(121, 23);
+            this.Available_Rooms_ComboBox.TabIndex = 28;
+            this.Available_Rooms_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Available_Rooms_ComboBox_SelectedIndexChanged);
+            // 
             // CheckIn_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 505);
+            this.Controls.Add(this.Available_Rooms_ComboBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Price_Value_Label);
             this.Controls.Add(this.BedConfig_Value_Label);
@@ -403,7 +391,6 @@
             this.Controls.Add(this.Cash_RadioButton);
             this.Controls.Add(this.CreditDebit_RadioButton);
             this.Controls.Add(this.Payment_Label);
-            this.Controls.Add(this.Room_Selector);
             this.Controls.Add(this.Room_Label);
             this.Controls.Add(this.Price_Label);
             this.Controls.Add(this.BedConfig_Label);
@@ -429,7 +416,6 @@
             this.Load += new System.EventHandler(this.CheckIn_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Guest_Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Age_Selector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Room_Selector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreditDebit_Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cash_Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StayLength_Selector)).EndInit();
@@ -453,7 +439,6 @@
         private Label BedConfig_Label;
         private Label Price_Label;
         private Label Room_Label;
-        private NumericUpDown Room_Selector;
         private Label Payment_Label;
         private RadioButton CreditDebit_RadioButton;
         private RadioButton Cash_RadioButton;
@@ -468,5 +453,6 @@
         private Label BedConfig_Value_Label;
         private Label Price_Value_Label;
         private Label label4;
+        private ComboBox Available_Rooms_ComboBox;
     }
 }

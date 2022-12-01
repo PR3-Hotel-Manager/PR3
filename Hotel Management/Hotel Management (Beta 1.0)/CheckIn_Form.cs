@@ -33,6 +33,7 @@ namespace Hotel_Management__Beta_1._0_
         public CheckIn_Form()
         {
             InitializeComponent();
+            Available_Rooms_ComboBox.Text = db.GetSortedDatabaseGuests()[0].room.RoomNumber;
         }
 
         private void CheckIn_Form_Load(object sender, EventArgs e)
@@ -117,10 +118,15 @@ namespace Hotel_Management__Beta_1._0_
         {
             // Check-in boolean
             Boolean isCheckedIn = false;
+
+            // Room number
+            var roomNumber = Available_Rooms_ComboBox.Text;
+
+            // Try to check-in
             try
             {
                 dbGuestDictionary = db.GetDatabaseGuestDictionary();
-                string newGuestKey = K.GuestKey(Room_Selector.Value.ToString());
+                string newGuestKey = K.GuestKey(roomNumber);
                 Guest dbGuest = dbGuestDictionary[newGuestKey];
                 if (dbGuest.room.Occupied)
                 {
@@ -133,7 +139,7 @@ namespace Hotel_Management__Beta_1._0_
                     // Payment
                     string pmtMethod = retrievePaymentMethod();
                     payment.PaymentType = pmtMethod;
-                    Room room = new Room(Room_Selector.Value.ToString(), BedConfig_Value_Label.Text, true);
+                    Room room = new Room(roomNumber, BedConfig_Value_Label.Text, true);
                     newGuest = new Guest(
                         Name_TextBox.Text,
                         LastName_TextBox.Text,
@@ -173,7 +179,7 @@ namespace Hotel_Management__Beta_1._0_
             File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-in|  " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.room.RoomNumber.PadRight(2) + " - " + guest.payment.PaymentType + "\n");
 
             string filePathRoomList = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "room-list" + ".txt";
-            File.AppendAllText(filePathRoomList, Room_Selector.Value.ToString() + "\n");
+            File.AppendAllText(filePathRoomList, guest.room.RoomNumber + "\n");
         }
 
         // This method displays the confirmation page
@@ -194,6 +200,7 @@ namespace Hotel_Management__Beta_1._0_
                 if (!guest.room.Occupied)
                 {
                     AvailableRoom_richTextBox.Text += "Room: " + guest.room.RoomNumber + " - " + "Beds: " + guest.room.BedConfiguration + "\n";
+                    Available_Rooms_ComboBox.Items.Add(guest.room.RoomNumber);
                 }
             }
         }
@@ -203,16 +210,10 @@ namespace Hotel_Management__Beta_1._0_
             payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), StayLength_Selector.Value);
             Price_Value_Label.Text = "$"+payment.Price.ToString();
         }
-        private void Room_Selector_ValueChanged(object sender, EventArgs e)
-        {
-            BedConfig_Value_Label.Text = BedNumber().ToString();
-            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), StayLength_Selector.Value);
-            Price_Value_Label.Text = "$"+payment.Price.ToString();
-        }
 
         decimal BedNumber()
         {
-            if (Room_Selector.Value <= 15)
+            if (Convert.ToInt32(Available_Rooms_ComboBox.Text) <= 15)
             {
                 return 1;
             }
@@ -222,5 +223,11 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
+        private void Available_Rooms_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BedConfig_Value_Label.Text = BedNumber().ToString();
+            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), StayLength_Selector.Value);
+            Price_Value_Label.Text = "$" + payment.Price.ToString();
+        }
     }
 }
