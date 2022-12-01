@@ -39,7 +39,6 @@ namespace Hotel_Management__Beta_1._0_
         private void OK_Button_Click(object sender, EventArgs e)
         {
             performCheckout();
-
         }
 
         // This method checls out a guest from the database
@@ -80,8 +79,8 @@ namespace Hotel_Management__Beta_1._0_
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
             File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-Out| " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.room.RoomNumber.PadRight(2) + " - " + guest.payment.PaymentType + "\n");
             this.Close();
-
         }
+        
         public void OccupiedeRooms()
         {
             List<Guest> occupiedRoomsList = db.GetOccupiedRoomsList();
