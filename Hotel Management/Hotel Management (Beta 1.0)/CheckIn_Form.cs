@@ -90,30 +90,14 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // This method performs Check-in
-        public void performCheckIn()
+        public Boolean performCheckIn()
         {
-            // Payment
-            string pmtMethod = retrievePaymentMethod();
-            payment.PaymentType = pmtMethod;
-
-            // Room
-            Room room = new Room(Room_Selector.Value.ToString(), "2", true);
-
-            // Get Name, Last Name, Age, Bed, Price, Room#, Stay Length
-            // Add fields to Database
-            newGuest = new Guest(
-                Name_TextBox.Text,
-                LastName_TextBox.Text,
-                Age_Selector.Value.ToString(),
-                StayLength_Selector.Value.ToString(),
-                room,
-                payment);
-
-            string confNumber = PrepareConfirmationNumber(newGuest);
+            // Check-in boolean
+            Boolean isCheckedIn = false;
             try
             {
                 dbGuestDictionary = db.GetDatabaseGuestDictionary();
-                string newGuestKey = K.GuestKey(newGuest.room.RoomNumber);
+                string newGuestKey = K.GuestKey(Room_Selector.Value.ToString());
                 Guest dbGuest = dbGuestDictionary[newGuestKey];
                 if (dbGuest.room.Occupied)
                 {
@@ -121,15 +105,31 @@ namespace Hotel_Management__Beta_1._0_
                 }
                 else
                 {
+                    // Get Name, Last Name, Age, Bed, Price, Room#, Stay Length
+                    // Add fields to Database
+                    // Payment
+                    string pmtMethod = retrievePaymentMethod();
+                    payment.PaymentType = pmtMethod;
+                    Room room = new Room(Room_Selector.Value.ToString(), BedConfig_Value_Label.Text, true);
+                    newGuest = new Guest(
+                        Name_TextBox.Text,
+                        LastName_TextBox.Text,
+                        Age_Selector.Value.ToString(),
+                        StayLength_Selector.Value.ToString(),
+                        room,
+                        payment);
+                    string confNumber = PrepareConfirmationNumber(newGuest);
                     db.InsertGuest(newGuest);
                     ShowConfirmationForm(confNumber);
                     UpdateLogFile(newGuest);
+                    isCheckedIn= true;
                 }
             }
             catch (Exception error)
             {
                 MessageBox.Show(error.Message, "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return isCheckedIn;
         }
         
         // This method prepares the confirmation number
