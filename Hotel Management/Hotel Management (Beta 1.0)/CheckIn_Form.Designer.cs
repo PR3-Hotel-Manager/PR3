@@ -37,7 +37,6 @@
             this.Name_Label = new System.Windows.Forms.Label();
             this.LastName_Label = new System.Windows.Forms.Label();
             this.LastName_TextBox = new System.Windows.Forms.TextBox();
-            this.Age_Selector = new System.Windows.Forms.NumericUpDown();
             this.Age_Label = new System.Windows.Forms.Label();
             this.BedConfig_Label = new System.Windows.Forms.Label();
             this.Price_Label = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@
             this.CreditDebit_Icon = new System.Windows.Forms.PictureBox();
             this.Cash_Icon = new System.Windows.Forms.PictureBox();
             this.StayLength_Label = new System.Windows.Forms.Label();
-            this.StayLength_Selector = new System.Windows.Forms.NumericUpDown();
             this.AvailableRoom_richTextBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,11 +55,11 @@
             this.Price_Value_Label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Available_Rooms_ComboBox = new System.Windows.Forms.ComboBox();
+            this.StayLength_ComboBox = new System.Windows.Forms.ComboBox();
+            this.Age_ComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Guest_Icon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Age_Selector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreditDebit_Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cash_Icon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StayLength_Selector)).BeginInit();
             this.SuspendLayout();
             // 
             // Cancel_Button
@@ -145,25 +143,6 @@
             this.LastName_TextBox.Name = "LastName_TextBox";
             this.LastName_TextBox.Size = new System.Drawing.Size(293, 27);
             this.LastName_TextBox.TabIndex = 1;
-            // 
-            // Age_Selector
-            // 
-            this.Age_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Age_Selector.Location = new System.Drawing.Point(128, 184);
-            this.Age_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Age_Selector.Minimum = new decimal(new int[] {
-            18,
-            0,
-            0,
-            0});
-            this.Age_Selector.Name = "Age_Selector";
-            this.Age_Selector.Size = new System.Drawing.Size(70, 27);
-            this.Age_Selector.TabIndex = 2;
-            this.Age_Selector.Value = new decimal(new int[] {
-            18,
-            0,
-            0,
-            0});
             // 
             // Age_Label
             // 
@@ -273,31 +252,6 @@
             this.StayLength_Label.TabIndex = 21;
             this.StayLength_Label.Text = "Stay:";
             // 
-            // StayLength_Selector
-            // 
-            this.StayLength_Selector.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.StayLength_Selector.Location = new System.Drawing.Point(128, 231);
-            this.StayLength_Selector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.StayLength_Selector.Maximum = new decimal(new int[] {
-            7,
-            0,
-            0,
-            0});
-            this.StayLength_Selector.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.StayLength_Selector.Name = "StayLength_Selector";
-            this.StayLength_Selector.Size = new System.Drawing.Size(70, 27);
-            this.StayLength_Selector.TabIndex = 6;
-            this.StayLength_Selector.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.StayLength_Selector.ValueChanged += new System.EventHandler(this.StayLength_Selector_ValueChanged);
-            // 
             // AvailableRoom_richTextBox
             // 
             this.AvailableRoom_richTextBox.Location = new System.Drawing.Point(452, 211);
@@ -369,15 +323,132 @@
             this.Available_Rooms_ComboBox.ItemHeight = 15;
             this.Available_Rooms_ComboBox.Location = new System.Drawing.Point(128, 287);
             this.Available_Rooms_ComboBox.Name = "Available_Rooms_ComboBox";
-            this.Available_Rooms_ComboBox.Size = new System.Drawing.Size(121, 23);
+            this.Available_Rooms_ComboBox.Size = new System.Drawing.Size(70, 23);
             this.Available_Rooms_ComboBox.TabIndex = 28;
             this.Available_Rooms_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Available_Rooms_ComboBox_SelectedIndexChanged);
+            // 
+            // StayLength_ComboBox
+            // 
+            this.StayLength_ComboBox.DropDownHeight = 100;
+            this.StayLength_ComboBox.FormattingEnabled = true;
+            this.StayLength_ComboBox.IntegralHeight = false;
+            this.StayLength_ComboBox.ItemHeight = 15;
+            this.StayLength_ComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.StayLength_ComboBox.Location = new System.Drawing.Point(128, 234);
+            this.StayLength_ComboBox.Name = "StayLength_ComboBox";
+            this.StayLength_ComboBox.Size = new System.Drawing.Size(70, 23);
+            this.StayLength_ComboBox.TabIndex = 29;
+            // 
+            // Age_ComboBox
+            // 
+            this.Age_ComboBox.DropDownHeight = 100;
+            this.Age_ComboBox.FormattingEnabled = true;
+            this.Age_ComboBox.IntegralHeight = false;
+            this.Age_ComboBox.ItemHeight = 15;
+            this.Age_ComboBox.Items.AddRange(new object[] {
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100"});
+            this.Age_ComboBox.Location = new System.Drawing.Point(128, 187);
+            this.Age_ComboBox.Name = "Age_ComboBox";
+            this.Age_ComboBox.Size = new System.Drawing.Size(70, 23);
+            this.Age_ComboBox.TabIndex = 30;
+            this.Age_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Age_ComboBox_SelectedIndexChanged);
             // 
             // CheckIn_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 505);
+            this.Controls.Add(this.Age_ComboBox);
+            this.Controls.Add(this.StayLength_ComboBox);
             this.Controls.Add(this.Available_Rooms_ComboBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Price_Value_Label);
@@ -386,7 +457,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AvailableRoom_richTextBox);
-            this.Controls.Add(this.StayLength_Selector);
             this.Controls.Add(this.StayLength_Label);
             this.Controls.Add(this.Cash_RadioButton);
             this.Controls.Add(this.CreditDebit_RadioButton);
@@ -395,7 +465,6 @@
             this.Controls.Add(this.Price_Label);
             this.Controls.Add(this.BedConfig_Label);
             this.Controls.Add(this.Age_Label);
-            this.Controls.Add(this.Age_Selector);
             this.Controls.Add(this.LastName_TextBox);
             this.Controls.Add(this.LastName_Label);
             this.Controls.Add(this.Name_Label);
@@ -415,10 +484,8 @@
             this.Text = "Check In";
             this.Load += new System.EventHandler(this.CheckIn_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Guest_Icon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Age_Selector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreditDebit_Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cash_Icon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StayLength_Selector)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,7 +501,6 @@
         private Label Name_Label;
         private Label LastName_Label;
         private TextBox LastName_TextBox;
-        private NumericUpDown Age_Selector;
         private Label Age_Label;
         private Label BedConfig_Label;
         private Label Price_Label;
@@ -445,7 +511,6 @@
         private PictureBox CreditDebit_Icon;
         private PictureBox Cash_Icon;
         private Label StayLength_Label;
-        private NumericUpDown StayLength_Selector;
         private RichTextBox AvailableRoom_richTextBox;
         private Label label1;
         private Label label2;
@@ -454,5 +519,7 @@
         private Label Price_Value_Label;
         private Label label4;
         private ComboBox Available_Rooms_ComboBox;
+        private ComboBox StayLength_ComboBox;
+        private ComboBox Age_ComboBox;
     }
 }

@@ -33,7 +33,6 @@ namespace Hotel_Management__Beta_1._0_
         public CheckIn_Form()
         {
             InitializeComponent();
-            Available_Rooms_ComboBox.Text = db.GetSortedDatabaseGuests()[0].room.RoomNumber;
         }
 
         private void CheckIn_Form_Load(object sender, EventArgs e)
@@ -143,8 +142,8 @@ namespace Hotel_Management__Beta_1._0_
                     newGuest = new Guest(
                         Name_TextBox.Text,
                         LastName_TextBox.Text,
-                        Age_Selector.Value.ToString(),
-                        StayLength_Selector.Value.ToString(),
+                        Age_ComboBox.Text,
+                        StayLength_ComboBox.Text,
                         room,
                         payment);
                     string confNumber = PrepareConfirmationNumber(newGuest);
@@ -207,7 +206,7 @@ namespace Hotel_Management__Beta_1._0_
 
         private void StayLength_Selector_ValueChanged(object sender, EventArgs e)
         {
-            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), StayLength_Selector.Value);
+            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), Convert.ToInt32(StayLength_ComboBox.Text));
             Price_Value_Label.Text = "$"+payment.Price.ToString();
         }
 
@@ -226,8 +225,13 @@ namespace Hotel_Management__Beta_1._0_
         private void Available_Rooms_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             BedConfig_Value_Label.Text = BedNumber().ToString();
-            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), StayLength_Selector.Value);
+            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), Convert.ToInt32(StayLength_ComboBox.Text));
             Price_Value_Label.Text = "$" + payment.Price.ToString();
+        }
+
+        private void Age_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
