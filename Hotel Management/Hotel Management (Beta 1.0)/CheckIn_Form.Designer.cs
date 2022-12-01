@@ -331,7 +331,6 @@
             this.AvailableRoom_richTextBox.Size = new System.Drawing.Size(204, 284);
             this.AvailableRoom_richTextBox.TabIndex = 22;
             this.AvailableRoom_richTextBox.Text = "";
-            this.AvailableRoom_richTextBox.TextChanged += new System.EventHandler(this.AvailableRoom_richTextBox_TextChanged);
             // 
             // label1
             // 

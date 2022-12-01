@@ -41,7 +41,30 @@ namespace Hotel_Management__Beta_1._0_
             AvailableRooms();
             Price_Value_Label.Text = "$" + payment.Price.ToString();
         }
-        
+
+        // Buttons -------------------
+        private void Cancel_Button_Click(object sender, EventArgs e)
+        {
+            this.Close(); // Cancel & Exit CheckIn Form
+        }
+
+        private void OK_Button_Click(object sender, EventArgs e)
+        {
+
+            if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
+            {
+                performCheckIn();
+
+            }
+
+            else // Else; Display Error Message.
+            {
+                MessageBox.Show("Input fields are missing or contain numbers. Please try again.", " Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Auxiliary Methods -----------------------
+
         // This method verifies guest details
         private bool verifyInputs()  
         {
@@ -161,32 +184,6 @@ namespace Hotel_Management__Beta_1._0_
             this.Hide();
             form.ShowDialog(); // Display #CheckInConfirmation_Form
             this.Close();
-        }
-
-        // Buttons -------------------
-        private void Cancel_Button_Click(object sender, EventArgs e)
-        {
-            this.Close(); // Cancel & Exit CheckIn Form
-        }
-
-        private void OK_Button_Click(object sender, EventArgs e)
-        {
-
-            if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
-            {
-                performCheckIn();
-
-            }
-
-            else // Else; Display Error Message.
-            {
-                MessageBox.Show("Input fields are missing or contain numbers. Please try again.", " Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void AvailableRoom_richTextBox_TextChanged(object sender, EventArgs e)
-        {
-    
         }
 
         public void AvailableRooms ()
