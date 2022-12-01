@@ -317,7 +317,6 @@
             // Available_Rooms_ComboBox
             // 
             this.Available_Rooms_ComboBox.DropDownHeight = 100;
-            this.Available_Rooms_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Available_Rooms_ComboBox.FormattingEnabled = true;
             this.Available_Rooms_ComboBox.IntegralHeight = false;
             this.Available_Rooms_ComboBox.ItemHeight = 15;
@@ -345,6 +344,7 @@
             this.StayLength_ComboBox.Name = "StayLength_ComboBox";
             this.StayLength_ComboBox.Size = new System.Drawing.Size(70, 23);
             this.StayLength_ComboBox.TabIndex = 29;
+            this.StayLength_ComboBox.SelectedIndexChanged += new System.EventHandler(this.StayLength_ComboBox_SelectedIndexChanged);
             // 
             // Age_ComboBox
             // 
@@ -440,7 +440,6 @@
             this.Age_ComboBox.Name = "Age_ComboBox";
             this.Age_ComboBox.Size = new System.Drawing.Size(70, 23);
             this.Age_ComboBox.TabIndex = 30;
-            this.Age_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Age_ComboBox_SelectedIndexChanged);
             // 
             // CheckIn_Form
             // 

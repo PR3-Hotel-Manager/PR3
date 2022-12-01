@@ -1,14 +1,2 @@
-09:32:01|Chk-in|  H               H                    22  #3  - Credit/Debit
-09:33:53|Chk-in|  Mike            Gran                 23  #1  - Cash
-09:34:37|Chk-in|  Ncik            Lee                  40  #18 - Cash
-09:34:52|Chk-Out| Mike            Gran                 23  #1  - Cash
-09:35:00|Chk-Out| Ncik            Lee                  40  #18 - Cash
-09:44:20|Chk-in|  Michael         Granberry            18  #19 - Credit/Debit
-09:44:49|Chk-Out| Michael         Granberry            18  #19 - Credit/Debit
-09:45:14|Chk-in|  Mike            G                    18  #1  - Credit/Debit
-09:45:20|Chk-Out| Mike            G                    18  #1  - Credit/Debit
-13:51:31|Chk-in|  Mike            Jones                22  #5  - Credit/Debit
-13:53:23|Chk-Out| MMMike          Jones                18  #4  - Credit/Debit
-13:53:27|Chk-Out| Ne              IJji                 18  #19 - Cash
-13:53:32|Chk-Out| Mike            Jones                22  #5  - Credit/Debit
-13:53:39|Chk-Out| Mike            Jones                18  #37 - Credit/Debit
+14:23:02|Chk-in|  Mike            Jones                18  #1  - Credit/Debit
+14:31:32|Chk-in|  m               w                    18  #5  - Credit/Debit

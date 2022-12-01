@@ -84,13 +84,10 @@ namespace Hotel_Management__Beta_1._0_
         }
         public void OccupiedeRooms()
         {
-            Guest[] dbSortedGuests = db.GetSortedDatabaseGuests();
-            foreach (var guest in dbSortedGuests)
+            List<Guest> occupiedRoomsList = db.GetOccupiedRoomsList();
+            foreach (var guest in occupiedRoomsList)
             {
-                if (guest.room.Occupied)
-                {
                     Occupied_Rooms_ComboBox.Items.Add(guest.room.RoomNumber);
-                }
             }
         }
 
