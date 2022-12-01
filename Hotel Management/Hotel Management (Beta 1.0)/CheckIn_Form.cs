@@ -41,7 +41,30 @@ namespace Hotel_Management__Beta_1._0_
             AvailableRooms();
             Price_Value_Label.Text = "$" + payment.Price.ToString();
         }
-        
+
+        // Buttons -------------------
+        private void Cancel_Button_Click(object sender, EventArgs e)
+        {
+            this.Close(); // Cancel & Exit CheckIn Form
+        }
+
+        private void OK_Button_Click(object sender, EventArgs e)
+        {
+
+            if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
+            {
+                performCheckIn();
+
+            }
+
+            else // Else; Display Error Message.
+            {
+                MessageBox.Show("Input fields are missing or contain numbers. Please try again.", " Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Auxiliary Methods -----------------------
+
         // This method verifies guest details
         private bool verifyInputs()  
         {
@@ -94,10 +117,15 @@ namespace Hotel_Management__Beta_1._0_
         {
             // Check-in boolean
             Boolean isCheckedIn = false;
+
+            // Room number
+            var roomNumber = Available_Rooms_ComboBox.Text;
+
+            // Try to check-in
             try
             {
                 dbGuestDictionary = db.GetDatabaseGuestDictionary();
-                string newGuestKey = K.GuestKey(Room_Selector.Value.ToString());
+                string newGuestKey = K.GuestKey(roomNumber);
                 Guest dbGuest = dbGuestDictionary[newGuestKey];
                 if (dbGuest.room.Occupied)
                 {
@@ -110,12 +138,12 @@ namespace Hotel_Management__Beta_1._0_
                     // Payment
                     string pmtMethod = retrievePaymentMethod();
                     payment.PaymentType = pmtMethod;
-                    Room room = new Room(Room_Selector.Value.ToString(), BedConfig_Value_Label.Text, true);
+                    Room room = new Room(roomNumber, BedConfig_Value_Label.Text, true);
                     newGuest = new Guest(
                         Name_TextBox.Text,
                         LastName_TextBox.Text,
-                        Age_Selector.Value.ToString(),
-                        StayLength_Selector.Value.ToString(),
+                        Age_ComboBox.Text,
+                        StayLength_ComboBox.Text,
                         room,
                         payment);
                     string confNumber = PrepareConfirmationNumber(newGuest);
@@ -150,7 +178,7 @@ namespace Hotel_Management__Beta_1._0_
             File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-in|  " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.room.RoomNumber.PadRight(2) + " - " + guest.payment.PaymentType + "\n");
 
             string filePathRoomList = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "room-list" + ".txt";
-            File.AppendAllText(filePathRoomList, Room_Selector.Value.ToString() + "\n");
+            File.AppendAllText(filePathRoomList, guest.room.RoomNumber + "\n");
         }
 
         // This method displays the confirmation page
@@ -163,32 +191,6 @@ namespace Hotel_Management__Beta_1._0_
             this.Close();
         }
 
-        // Buttons -------------------
-        private void Cancel_Button_Click(object sender, EventArgs e)
-        {
-            this.Close(); // Cancel & Exit CheckIn Form
-        }
-
-        private void OK_Button_Click(object sender, EventArgs e)
-        {
-
-            if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
-            {
-                performCheckIn();
-
-            }
-
-            else // Else; Display Error Message.
-            {
-                MessageBox.Show("Input fields are missing or contain numbers. Please try again.", " Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void AvailableRoom_richTextBox_TextChanged(object sender, EventArgs e)
-        {
-    
-        }
-
         public void AvailableRooms ()
         {
             Guest[] dbSortedGuests = db.GetSortedDatabaseGuests();
@@ -197,25 +199,20 @@ namespace Hotel_Management__Beta_1._0_
                 if (!guest.room.Occupied)
                 {
                     AvailableRoom_richTextBox.Text += "Room: " + guest.room.RoomNumber + " - " + "Beds: " + guest.room.BedConfiguration + "\n";
+                    Available_Rooms_ComboBox.Items.Add(guest.room.RoomNumber);
                 }
             }
         }
 
         private void StayLength_Selector_ValueChanged(object sender, EventArgs e)
         {
-            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), StayLength_Selector.Value);
-            Price_Value_Label.Text = "$"+payment.Price.ToString();
-        }
-        private void Room_Selector_ValueChanged(object sender, EventArgs e)
-        {
-            BedConfig_Value_Label.Text = BedNumber().ToString();
-            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), StayLength_Selector.Value);
+            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), Convert.ToInt32(StayLength_ComboBox.Text));
             Price_Value_Label.Text = "$"+payment.Price.ToString();
         }
 
         decimal BedNumber()
         {
-            if (Room_Selector.Value <= 15)
+            if (Convert.ToInt32(Available_Rooms_ComboBox.Text) <= 15)
             {
                 return 1;
             }
@@ -225,5 +222,16 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
+        private void Available_Rooms_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BedConfig_Value_Label.Text = BedNumber().ToString();
+            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), Convert.ToInt32(StayLength_ComboBox.Text));
+            Price_Value_Label.Text = "$" + payment.Price.ToString();
+        }
+
+        private void Age_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

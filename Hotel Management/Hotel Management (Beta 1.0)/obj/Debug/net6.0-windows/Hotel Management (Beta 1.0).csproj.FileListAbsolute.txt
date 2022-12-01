@@ -246,7 +246,6 @@ C:\Users\aniks\OneDrive\Desktop\Fixed Version\Hotel Management\Hotel Management 
 \\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).runtimeconfig.json
 \\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).dll
 \\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).pdb
-\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\test.xml
 \\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\FireSharp.dll
 \\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\JsonFlatten.dll
 \\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.Extensions.Desktop.dll
@@ -275,3 +274,4 @@ C:\Users\aniks\OneDrive\Desktop\Fixed Version\Hotel Management\Hotel Management 
 \\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).pdb
 \\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel Management (Beta 1.0).genruntimeconfig.cache
 \\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\ref\Hotel Management (Beta 1.0).dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\Hotel Management (Beta 1.0)\obj\Debug\net6.0-windows\Hotel_Management__Beta_1._0_.Estimate_Form.resources
