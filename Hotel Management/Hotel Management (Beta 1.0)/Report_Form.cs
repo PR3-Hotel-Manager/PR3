@@ -26,14 +26,12 @@ namespace Hotel_Management__Beta_1._0_
             db.StartFirebase();
             dateTimePicker1.MaxDate = DateTime.Now;
             dateTimePicker1.MinDate = DateTime.Now.AddDays(-4);
-
         }
 
         private void View_Button_Click(object sender, EventArgs e)
         {
          
             string fileDate = dateTimePicker1.Value.ToString("dd-MM-yyyy");
-
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + fileDate + ".txt";
 
             if (File.Exists(filePath))
@@ -73,13 +71,15 @@ namespace Hotel_Management__Beta_1._0_
 
         }
 
-        private void DeleteLog_button_Click(object sender, EventArgs e)
+        private void DeleteLog(string Date)
         {
-            string fileDate = dateTimePicker1.Value.ToString("dd-MM-yyyy");
-
-            string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + fileDate + ".txt";
-
-            File.Delete(filePath);
+           string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + Date + ".txt";
+           File.Delete(filePath);
+        }
+        
+        private void DeleteLog_button_Click(object sender, EventArgs e)
+        {      
+            DeleteLog(dateTimePicker1.Value.ToString("dd-MM-yyyy");)
         }
     }
 }
