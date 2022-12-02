@@ -36,7 +36,7 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // This method searches the database for a guest(given name or last name)
-        int performSearch(string firstName, string lastName) {
+        public int performSearch(string firstName, string lastName) {
             int match = 0;
             try
             {

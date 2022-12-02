@@ -20,18 +20,60 @@ namespace PR3_MS_Test
         }
 
         [TestMethod]
-        public void LookUp_Form_TestTrue()
+        public void PerformSearch_ResultOneMatch_ReturnsOne()
         {
+            db.StartFirebase();
+            setupDB();
+            CheckIn_Form checkIn_Form = new CheckIn_Form();
+            Payment payment = new Payment();
             LookUp_Form lookUp_Form = new LookUp_Form(); //New instance
 
             // Arrange 
-
             string firstName = "Ralph";
             string lastName = "Frem";
+            string age = "32";
+            string stayLength = "6";
+            string roomNumber = "1";
+            string bedConfig = "1";
+            string price = payment.CalculatePrice(Convert.ToDecimal(bedConfig), Convert.ToDecimal(stayLength)).ToString();
+            string paymentType = "Cash";
+            Guest guest = new Guest();
 
-            //
+            checkIn_Form.performCheckIn(guest,
+                                                    firstName,
+                                                    lastName,
+                                                    age,
+                                                    stayLength,
+                                                    roomNumber,
+                                                    bedConfig,
+                                                    price,
+                                                    paymentType);
 
-            //
+            string firstNameTest = "Ralph";
+            string lastNameTest = "Frem";
+            var testVar = 1;
+
+            //Act 
+            var result = lookUp_Form.performSearch(firstNameTest, lastNameTest);
+
+            //Assert
+            Assert.AreEqual(testVar, result);
+        }
+
+        [TestMethod]
+        public void PerformSearch_NoMatch_ReturnsZero()
+        {
+            LookUp_Form lookUp_Form = new LookUp_Form(); //New instance
+
+            string firstNameTest = "Tyler";
+            string lastNameTest = "Hampsten";
+            var testVar = 0;
+
+            //Act 
+            var result = lookUp_Form.performSearch(firstNameTest, lastNameTest);
+
+            //Assert
+            Assert.AreEqual(testVar, result);
 
         }
     }

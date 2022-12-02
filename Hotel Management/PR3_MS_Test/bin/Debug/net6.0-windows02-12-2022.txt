@@ -1,2 +1,10 @@
 12:50:01|Chk-in|  Michael         Granberry            32  #1  - Cash
 12:53:11|Chk-in|  Michael         Granberry            32  #1  - Cash
+15:35:13|Chk-in|  Michael         Granberry            32  #1  - Cash
+15:35:18|Chk-in|  Ralph           Frem                 32  #1  - Cash
+15:35:50|Chk-in|  Michael         Granberry            32  #1  - Cash
+15:35:53|Chk-in|  Ralph           Frem                 32  #1  - Cash
+15:41:38|Chk-in|  Michael         Granberry            32  #1  - Cash
+15:41:41|Chk-in|  Ralph           Frem                 32  #1  - Cash
+15:42:24|Chk-in|  Michael         Granberry            32  #1  - Cash
+15:42:27|Chk-in|  Ralph           Frem                 32  #1  - Cash
