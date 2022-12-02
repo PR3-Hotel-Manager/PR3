@@ -184,7 +184,7 @@ namespace Hotel_Management__Beta_1._0_
             this.Close(); 
         }
 
-        public void AvailableRooms ()
+        public void AvailableRooms()
         {
             List<Guest> availableRoomsList = db.GetAvailableRoomsList();
             foreach (var guest in availableRoomsList)
