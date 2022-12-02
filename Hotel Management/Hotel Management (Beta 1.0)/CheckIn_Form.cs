@@ -53,7 +53,6 @@ namespace Hotel_Management__Beta_1._0_
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
-
             if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
             {
                 performCheckIn();
@@ -114,13 +113,9 @@ namespace Hotel_Management__Beta_1._0_
 
         // This method performs Check-in
         public Boolean performCheckIn()
-        {
-            // Check-in boolean
-            Boolean isCheckedIn = false;
-
-            // Room number
-            var roomNumber = Available_Rooms_ComboBox.Text;
-
+        {    
+            Boolean isCheckedIn = false;    // Check-in boolean    
+            var roomNumber = Available_Rooms_ComboBox.Text; // Room number to be checked in
             // Try to check-in
             try
             {
@@ -150,7 +145,7 @@ namespace Hotel_Management__Beta_1._0_
                     db.InsertGuest(newGuest);
                     ShowConfirmationForm(confNumber);
                     UpdateLogFile(newGuest);
-                    isCheckedIn= true;
+                    isCheckedIn= true; 
                 }
             }
             catch (Exception error)
@@ -162,8 +157,7 @@ namespace Hotel_Management__Beta_1._0_
         
         // This method prepares the confirmation number
         private string PrepareConfirmationNumber(Guest guest)
-        {
-            // Prepare Confirmation Number
+        {  
             string guestDetails = guest.FirstName + guest.LastName + guest.payment.PaymentType;
             string temp = getHashString(guestDetails);
             string confNumber = temp.Substring(temp.Length - (temp.Length / 4));
@@ -172,8 +166,7 @@ namespace Hotel_Management__Beta_1._0_
 
         // This method saves the details of check-in process to a log file
         private void UpdateLogFile(Guest guest)
-        {
-            // Save to Log File
+        {  
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
             File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-in|  " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.room.RoomNumber.PadRight(2) + " - " + guest.payment.PaymentType + "\n");
 
