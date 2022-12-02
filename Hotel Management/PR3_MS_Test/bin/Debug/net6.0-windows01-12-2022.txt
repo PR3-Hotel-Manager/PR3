@@ -7,3 +7,4 @@
 19:40:17|Chk-in|                                       18  #18 - Credit/Debit
 19:53:41|Chk-in|                                       18  #15 - Credit/Debit
 20:07:28|Chk-in|                                       18  #15 - Credit/Debit
+21:00:05|Chk-in|  Michael         Granberry            32  #1  - Cash

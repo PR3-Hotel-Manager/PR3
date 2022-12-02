@@ -7,7 +7,6 @@ namespace PR3_MS_Test
     public class CheckIn_FormsTest
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
-
        
 
         void setupDB()
@@ -25,18 +24,32 @@ namespace PR3_MS_Test
             db.StartFirebase();
             setupDB();
             CheckIn_Form checkIn_Form = new CheckIn_Form();
+            Payment payment = new Payment();
 
             // Arrange
-            string roomNumber1 = "15";
-            Payment payment1 = new Payment(101, "Cash");
-            Room room1 = new Room(roomNumber1, "1", true);
-            Guest guest1 = new Guest("Michael", "Granberry", "32", "6", room1, payment1);
+            string firstName = "Michael";
+            string lastName = "Granberry";
+            string age = "32";
+            string stayLength = "6";
+            string roomNumber = "1";
+            string bedConfig = "1";
+            string price = payment.CalculatePrice(Convert.ToDecimal(bedConfig), Convert.ToDecimal(stayLength)).ToString();
+            string paymentType = "Cash";
+            Guest guest = new Guest();
 
             // Act
-            var result1 = checkIn_Form.performCheckIn(guest1, roomNumber1);
+            var result = checkIn_Form.performCheckIn(guest, 
+                                                      firstName, 
+                                                      lastName, 
+                                                      age, 
+                                                      stayLength, 
+                                                      roomNumber, 
+                                                      bedConfig,
+                                                      price,
+                                                      paymentType);
 
             // Assert
-            Assert.IsTrue(result1);
+            Assert.IsTrue(result);
         }
 
 
@@ -45,18 +58,32 @@ namespace PR3_MS_Test
         {
             db.StartFirebase();
             CheckIn_Form checkIn_Form = new CheckIn_Form();
+            Payment payment = new Payment();
 
             // Arrange
-            string roomNumber2 = "15";
-            Payment payment2 = new Payment(140, "Cash");
-            Room room2 = new Room(roomNumber2, "1", true);
-            Guest guest2 = new Guest("Raymond", "B", "26", "3", room2, payment2);
+            string firstName = "Raymond";
+            string lastName = "B";
+            string age = "26";
+            string stayLength = "4";
+            string roomNumber = "1";
+            string bedConfig = "1";
+            string price = payment.CalculatePrice(Convert.ToDecimal(bedConfig), Convert.ToDecimal(stayLength)).ToString();
+            string paymentType = "Cash";
+            Guest guest = new Guest();
 
             // Act
-            var result2 = checkIn_Form.performCheckIn(guest2, roomNumber2);
+            var result = checkIn_Form.performCheckIn(guest,
+                                                      firstName,
+                                                      lastName,
+                                                      age,
+                                                      stayLength,
+                                                      roomNumber,
+                                                      bedConfig,
+                                                      price,
+                                                      paymentType);
 
             // Assert
-            Assert.IsFalse(result2);
+            Assert.IsFalse(result);
         }
     }
 }
