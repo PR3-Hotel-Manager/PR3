@@ -369,7 +369,8 @@
             // 
             // Age_ComboBox
             // 
-            this.Age_ComboBox.DropDownHeight = 100;
+            this.Age_ComboBox.DropDownHeight = 200;
+            this.Age_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Age_ComboBox.FormattingEnabled = true;
             this.Age_ComboBox.IntegralHeight = false;
             this.Age_ComboBox.ItemHeight = 41;
