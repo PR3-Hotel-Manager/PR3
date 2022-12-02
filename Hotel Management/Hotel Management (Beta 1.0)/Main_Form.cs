@@ -93,7 +93,7 @@ namespace Hotel_Management__Beta_1._0_
 
         // Populates Firebase Realtime database with empty guests objects if dataabase is empty
         // Number of empty guests is equal to K.NumberOfRooms in K Class
-        private void InitGuestData()
+        public void InitGuestData()
         {
             try
             {

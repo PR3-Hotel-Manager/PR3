@@ -13,7 +13,7 @@ namespace Hotel_Management__Beta_1._0_
     /// <summary>
     /// 
     /// </summary>
-    internal class FirebaseSingleton
+    public class FirebaseSingleton
     {
         // Class Attributes
         private static FirebaseSingleton instance = new FirebaseSingleton();
@@ -86,6 +86,11 @@ namespace Hotel_Management__Beta_1._0_
             this.client.Set(K.FirebaseTopFolder + "/", initGuestData);
         }
 
+        public void DeleteGuestDictionary()
+        {
+            this.client.Delete(K.FirebaseTopFolder);
+        }
+
         // Retrieves JSON collection from Firebase. Used only in GetFirebaseResponse().
         public FirebaseResponse GetFirebaseResponse()
         {
@@ -115,6 +120,8 @@ namespace Hotel_Management__Beta_1._0_
                 return null;
             }
         }
+
+
 
         // =========================================
         // Use these functions 

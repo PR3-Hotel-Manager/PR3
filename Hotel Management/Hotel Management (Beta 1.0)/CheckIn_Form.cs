@@ -56,7 +56,7 @@ namespace Hotel_Management__Beta_1._0_
 
             if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
             {
-                performCheckIn();
+                performCheckIn(newGuest, Available_Rooms_ComboBox.Text);
             }
 
             else // Else; Display Error Message.
@@ -113,13 +113,10 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // This method performs Check-in
-        public Boolean performCheckIn()
+        public Boolean performCheckIn(Guest guest, string roomNumber)
         {
             // Check-in boolean
             Boolean isCheckedIn = false;
-
-            // Room number
-            var roomNumber = Available_Rooms_ComboBox.Text;
 
             // Try to check-in
             try
@@ -139,17 +136,17 @@ namespace Hotel_Management__Beta_1._0_
                     string pmtMethod = retrievePaymentMethod();
                     payment.PaymentType = pmtMethod;
                     Room room = new Room(roomNumber, BedConfig_Value_Label.Text, true);
-                    newGuest = new Guest(
+                    guest = new Guest(
                         Name_TextBox.Text,
                         LastName_TextBox.Text,
                         Age_ComboBox.Text,
                         StayLength_ComboBox.Text,
                         room,
                         payment);
-                    string confNumber = PrepareConfirmationNumber(newGuest);
-                    db.InsertGuest(newGuest);
+                    string confNumber = PrepareConfirmationNumber(guest);
+                    db.InsertGuest(guest);
                     ShowConfirmationForm(confNumber);
-                    UpdateLogFile(newGuest);
+                    UpdateLogFile(guest);
                     isCheckedIn= true;
                 }
             }

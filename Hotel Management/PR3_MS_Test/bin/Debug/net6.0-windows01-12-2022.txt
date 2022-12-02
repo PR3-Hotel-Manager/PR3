@@ -1,0 +1,9 @@
+19:25:02|Chk-in|                                       18  #8  - Credit/Debit
+19:25:25|Chk-in|                                       18  #9  - Credit/Debit
+19:28:08|Chk-in|                                       18  #12 - Credit/Debit
+19:29:38|Chk-in|                                       18  #13 - Credit/Debit
+19:38:48|Chk-in|                                       18  #16 - Credit/Debit
+19:39:39|Chk-in|                                       18  #17 - Credit/Debit
+19:40:17|Chk-in|                                       18  #18 - Credit/Debit
+19:53:41|Chk-in|                                       18  #15 - Credit/Debit
+20:07:28|Chk-in|                                       18  #15 - Credit/Debit
