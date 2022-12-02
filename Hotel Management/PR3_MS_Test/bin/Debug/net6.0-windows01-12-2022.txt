@@ -11,3 +11,4 @@
 21:15:18|Chk-in|  Michael         Granberry            32  #1  - Cash
 21:22:29|Chk-in|  Michael         Granberry            32  #1  - Cash
 21:22:34|Chk-in|  Michael         Granberry            32  #1  - Cash
+21:27:44|Chk-in|  Michael         Granberry            32  #1  - Cash
