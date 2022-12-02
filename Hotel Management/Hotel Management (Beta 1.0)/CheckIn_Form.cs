@@ -53,7 +53,7 @@ namespace Hotel_Management__Beta_1._0_
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
-            if (verifyInputs(Name_Textbox.Text, Name_Textbox.Text) == true) // If input fields are verified, call performCheckIn().
+            if (verifyInputs(Name_TextBox.Text, Name_TextBox.Text) == true) // If input fields are verified, call performCheckIn().
             {
                 performCheckIn();
             }
