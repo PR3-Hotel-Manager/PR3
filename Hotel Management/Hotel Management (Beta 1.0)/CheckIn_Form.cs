@@ -56,7 +56,15 @@ namespace Hotel_Management__Beta_1._0_
 
             if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
             {
-                performCheckIn(newGuest, Available_Rooms_ComboBox.Text);
+                performCheckIn(newGuest, 
+                    Name_TextBox.Text, 
+                    LastName_TextBox.Text, 
+                    Age_ComboBox.Text, 
+                    StayLength_ComboBox.Text, 
+                    Available_Rooms_ComboBox.Text, 
+                    BedConfig_Value_Label.Text,
+                    Price_Value_Label.Text,
+                    retrievePaymentMethod());
             }
 
             else // Else; Display Error Message.
@@ -113,7 +121,15 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // This method performs Check-in
-        public Boolean performCheckIn(Guest guest, string roomNumber)
+        public Boolean performCheckIn(Guest guest, 
+            string firstName, 
+            string lastName, 
+            string age, 
+            string stayLength, 
+            string roomNumber, 
+            string bedConfig,
+            string price,
+            string paymentType)
         {
             // Check-in boolean
             Boolean isCheckedIn = false;
@@ -133,14 +149,13 @@ namespace Hotel_Management__Beta_1._0_
                     // Get Name, Last Name, Age, Bed, Price, Room#, Stay Length
                     // Add fields to Database
                     // Payment
-                    string pmtMethod = retrievePaymentMethod();
-                    payment.PaymentType = pmtMethod;
-                    Room room = new Room(roomNumber, BedConfig_Value_Label.Text, true);
+                    payment.PaymentType = paymentType;
+                    Room room = new Room(roomNumber, bedConfig, true);
                     guest = new Guest(
-                        Name_TextBox.Text,
-                        LastName_TextBox.Text,
-                        Age_ComboBox.Text,
-                        StayLength_ComboBox.Text,
+                        firstName,
+                        lastName,
+                        age,
+                        stayLength,
                         room,
                         payment);
                     string confNumber = PrepareConfirmationNumber(guest);
