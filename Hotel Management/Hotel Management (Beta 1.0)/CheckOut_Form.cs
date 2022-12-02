@@ -41,7 +41,7 @@ namespace Hotel_Management__Beta_1._0_
             performCheckout();
         }
 
-        // This method checls out a guest from the database
+        // This method checks out a guest from the database
         private Boolean performCheckout()
         {
             string occupiedRoomNumber = Occupied_Rooms_ComboBox.Text;
@@ -59,7 +59,7 @@ namespace Hotel_Management__Beta_1._0_
                     MessageBox.Show("Check out successful. Room: " + occupiedRoomNumber + " is now availabe.", " ", MessageBoxButtons.OK);
                     isCheckedOut = true;
                 }
-                else
+                else // If room is not occcupied, display error message
                 {
                     MessageBox.Show("This room is not occupied.", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -72,7 +72,7 @@ namespace Hotel_Management__Beta_1._0_
             return isCheckedOut;
         }
 
-        // This method saves checkout details in a log file
+        // This method saves checkout details in a local log file
         private void UpdateLogFile(Guest guest)
         {
             // Save to Log File
