@@ -53,7 +53,7 @@ namespace Hotel_Management__Beta_1._0_
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
-            if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
+            if (verifyInputs(Name_Textbox.Text, Name_Textbox.Text) == true) // If input fields are verified, call performCheckIn().
             {
                 performCheckIn();
             }
@@ -67,16 +67,16 @@ namespace Hotel_Management__Beta_1._0_
         // Auxiliary Methods -----------------------
 
         // This method verifies guest details
-        private bool verifyInputs()  
+        private bool verifyInputs(string Name, string LastName)  
         {
-            if (LastName_TextBox.Text == "" || Name_TextBox.Text == "")
+            if (LastName == "" || Name == "")
             {
-                return false;  // Check if TextBoxes are empty.
+                return false;  // Check if inputs are empty.
             }
 
-            if (Name_TextBox.Text.All(Char.IsLetter) == false || LastName_TextBox.Text.All(Char.IsLetter) == false)
+            if (Name.All(Char.IsLetter) == false || LastName.All(Char.IsLetter) == false)
             {
-                return false;   // Check if TextBoxes contain only letters.
+                return false;   // Check if inputs contain only letters.
             }
 
             else
