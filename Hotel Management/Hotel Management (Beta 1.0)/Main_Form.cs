@@ -120,33 +120,74 @@ namespace Hotel_Management__Beta_1._0_
             }
         }
 
-        private void CheckIn_Button_Click(object sender, EventArgs e)
+        private void CheckIn_Button_MouseDown(object sender, MouseEventArgs e)
+        {
+            CheckIn_Button.BackgroundImage = Properties.Resources.Check_In_Click;
+        }
+
+        private void CheckIn_Button_MouseUp(object sender, MouseEventArgs e)
         {
             CheckIn_Form form_CheckIn = new CheckIn_Form();
+            CheckIn_Button.BackgroundImage = Properties.Resources.Check_In;
             form_CheckIn.ShowDialog();
         }
 
-        private void CheckOut_Button_Click(object sender, EventArgs e)
+        private void CheckOut_Button_MouseDown(object sender, MouseEventArgs e)
+        {
+            CheckOut_Button.BackgroundImage = Properties.Resources.Check_Out_Click;
+        }
+
+        private void CheckOut_Button_MouseUp(object sender, MouseEventArgs e)
         {
             CheckOut_Form form_CheckOut = new CheckOut_Form();
+            CheckOut_Button.BackgroundImage = Properties.Resources.Check_Out;
             form_CheckOut.ShowDialog();
         }
 
-        private void Capacity_Button_Click(object sender, EventArgs e)
+        private void Capacity_Button_MouseDown(object sender, MouseEventArgs e)
+        {
+            Capacity_Button.BackgroundImage = Properties.Resources.Capacity_Click;
+        }
+
+        private void Capacity_Button_MouseUp(object sender, MouseEventArgs e)
         {
             Rooms_Form form_Capacity = new Rooms_Form();
+            Capacity_Button.BackgroundImage = Properties.Resources.Capacity;
             form_Capacity.ShowDialog();
         }
 
-        private void LookUp_Button_Click(object sender, EventArgs e)
+        private void LookUp_Button_MouseDown(object sender, MouseEventArgs e)
         {
-            LookUp_Form form_LookUp = new LookUp_Form();
-            form_LookUp.ShowDialog();
+            LookUp_Button.BackgroundImage = Properties.Resources.Look_Up_Click;
         }
 
-        private void Report_Button_Click(object sender, EventArgs e)
+        private void LookUp_Button_MouseUp(object sender, MouseEventArgs e)
+        {
+            LookUp_Form form_Lookup = new LookUp_Form();
+            LookUp_Button.BackgroundImage = Properties.Resources.Look_Up;
+            form_Lookup.ShowDialog();
+        }
+
+        private void Report_Button_MouseDown(object sender, MouseEventArgs e)
+        {
+            Report_Button.BackgroundImage = Properties.Resources.Report_Click;
+        }
+
+        private void Report_Button_MouseUp(object sender, MouseEventArgs e)
         {
             Report_Form form_Report = new Report_Form();
+            Report_Button.BackgroundImage = Properties.Resources.Report;
+            form_Report.ShowDialog();
+        }
+        private void Estimate_Button_MouseDown(object sender, MouseEventArgs e)
+        {
+            Estimate_Button.BackgroundImage = Properties.Resources.Estimate_Click;
+        }
+
+        private void Estimate_Button_MouseUp(object sender, MouseEventArgs e)
+        {
+            Estimate_Form form_Report = new Estimate_Form();
+            Estimate_Button.BackgroundImage = Properties.Resources.Estimate;
             form_Report.ShowDialog();
         }
 
@@ -168,12 +209,6 @@ namespace Hotel_Management__Beta_1._0_
         private void databaseConnectionStatus_Panel_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void Estimate_Button_Click(object sender, EventArgs e)
-        {
-            Estimate_Form form_Estimate= new Estimate_Form();
-            form_Estimate.ShowDialog();
         }
     }
 }
