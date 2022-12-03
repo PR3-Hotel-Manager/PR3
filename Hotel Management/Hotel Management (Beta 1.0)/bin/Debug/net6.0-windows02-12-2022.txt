@@ -1,1 +1,2 @@
-17:42:02|Chk-Out| Ralph           Frem                 18  #1  - Credit/Debit
+18:17:30|Chk-in|  Bill            Clinton              69  #10 - Cash
+18:18:28|Chk-Out| Bill            Clinton              69  #10 - Cash
