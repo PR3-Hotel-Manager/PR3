@@ -86,12 +86,12 @@
             // 
             // Guest_Icon
             // 
-            this.Guest_Icon.Image = ((System.Drawing.Image)(resources.GetObject("Guest_Icon.Image")));
-            this.Guest_Icon.Location = new System.Drawing.Point(96, 12);
+            this.Guest_Icon.Image = global::Hotel_Management__Beta_1._0_.Properties.Resources.User;
+            this.Guest_Icon.Location = new System.Drawing.Point(102, 11);
             this.Guest_Icon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Guest_Icon.Name = "Guest_Icon";
             this.Guest_Icon.Size = new System.Drawing.Size(102, 76);
-            this.Guest_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Guest_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Guest_Icon.TabIndex = 2;
             this.Guest_Icon.TabStop = false;
             // 

@@ -87,12 +87,13 @@
             this.CheckIn_Button.TabIndex = 2;
             this.CheckIn_Button.TabStop = false;
             this.CheckIn_Button.UseVisualStyleBackColor = false;
-            this.CheckIn_Button.Click += new System.EventHandler(this.CheckIn_Button_Click);
+            this.CheckIn_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CheckIn_Button_MouseDown);
+            this.CheckIn_Button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CheckIn_Button_MouseUp);
             // 
             // CheckOut_Button
             // 
             this.CheckOut_Button.AutoSize = true;
-            this.CheckOut_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckOut_Button.BackgroundImage")));
+            this.CheckOut_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Check_Out;
             this.CheckOut_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.CheckOut_Button.Enabled = false;
             this.CheckOut_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -103,12 +104,13 @@
             this.CheckOut_Button.TabIndex = 3;
             this.CheckOut_Button.TabStop = false;
             this.CheckOut_Button.UseVisualStyleBackColor = true;
-            this.CheckOut_Button.Click += new System.EventHandler(this.CheckOut_Button_Click);
+            this.CheckOut_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CheckOut_Button_MouseDown);
+            this.CheckOut_Button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CheckOut_Button_MouseUp);
             // 
             // Capacity_Button
             // 
             this.Capacity_Button.AutoSize = true;
-            this.Capacity_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Capacity_Button.BackgroundImage")));
+            this.Capacity_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Capacity;
             this.Capacity_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Capacity_Button.Enabled = false;
             this.Capacity_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -119,12 +121,13 @@
             this.Capacity_Button.TabIndex = 4;
             this.Capacity_Button.TabStop = false;
             this.Capacity_Button.UseVisualStyleBackColor = true;
-            this.Capacity_Button.Click += new System.EventHandler(this.Capacity_Button_Click);
+            this.Capacity_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Capacity_Button_MouseDown);
+            this.Capacity_Button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Capacity_Button_MouseUp);
             // 
             // LookUp_Button
             // 
             this.LookUp_Button.AutoSize = true;
-            this.LookUp_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LookUp_Button.BackgroundImage")));
+            this.LookUp_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Look_Up;
             this.LookUp_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.LookUp_Button.Enabled = false;
             this.LookUp_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -135,12 +138,13 @@
             this.LookUp_Button.TabIndex = 5;
             this.LookUp_Button.TabStop = false;
             this.LookUp_Button.UseVisualStyleBackColor = true;
-            this.LookUp_Button.Click += new System.EventHandler(this.LookUp_Button_Click);
+            this.LookUp_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LookUp_Button_MouseDown);
+            this.LookUp_Button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LookUp_Button_MouseUp);
             // 
             // Report_Button
             // 
             this.Report_Button.AutoSize = true;
-            this.Report_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Report_Button.BackgroundImage")));
+            this.Report_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Report;
             this.Report_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Report_Button.Enabled = false;
             this.Report_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -151,7 +155,8 @@
             this.Report_Button.TabIndex = 6;
             this.Report_Button.TabStop = false;
             this.Report_Button.UseVisualStyleBackColor = true;
-            this.Report_Button.Click += new System.EventHandler(this.Report_Button_Click);
+            this.Report_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Report_Button_MouseDown);
+            this.Report_Button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Report_Button_MouseUp);
             // 
             // Quit_Button
             // 
@@ -171,7 +176,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Database;
             this.pictureBox1.Location = new System.Drawing.Point(26, 29);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -220,7 +225,7 @@
             // Estimate_Button
             // 
             this.Estimate_Button.AutoSize = true;
-            this.Estimate_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Estimate_Button.BackgroundImage")));
+            this.Estimate_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Estimate;
             this.Estimate_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Estimate_Button.Enabled = false;
             this.Estimate_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -231,7 +236,8 @@
             this.Estimate_Button.TabIndex = 11;
             this.Estimate_Button.TabStop = false;
             this.Estimate_Button.UseVisualStyleBackColor = true;
-            this.Estimate_Button.Click += new System.EventHandler(this.Estimate_Button_Click);
+            this.Estimate_Button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Estimate_Button_MouseDown);
+            this.Estimate_Button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Estimate_Button_MouseUp);
             // 
             // Main_Form
             // 
