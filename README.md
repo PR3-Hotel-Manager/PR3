@@ -52,4 +52,6 @@ The guest check-out page will allow the front desk staff to perform checking out
 ![](images/checkOutList.png) <br />
 * Check-Out Confirmation <br />
 ![](images/checkOutConfirmation.png) <br />
+* Cleared Guest in Firebase Realtime Database <br />
+![](images/firebaseCheckOut.png) <br />
 
