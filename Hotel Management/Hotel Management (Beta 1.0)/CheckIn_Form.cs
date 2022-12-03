@@ -59,8 +59,7 @@ namespace Hotel_Management__Beta_1._0_
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
-
-            if (verifyInputs() == true) // If input fields are verified, call performCheckIn().
+            if (verifyInputs(Name_TextBox.Text, Name_TextBox.Text) == true) // If input fields are verified, call performCheckIn().
             {
                 performCheckIn(newGuest, 
                     Name_TextBox.Text, 
@@ -82,16 +81,16 @@ namespace Hotel_Management__Beta_1._0_
         // Auxiliary Methods -----------------------
 
         // This method verifies guest details
-        private bool verifyInputs()  
+        private bool verifyInputs(string Name, string LastName)  
         {
-            if (LastName_TextBox.Text == "" || Name_TextBox.Text == "")
+            if (LastName == "" || Name == "")
             {
-                return false;  // Check if TextBoxes are empty.
+                return false;  // Check if inputs are empty.
             }
 
-            if (Name_TextBox.Text.All(Char.IsLetter) == false || LastName_TextBox.Text.All(Char.IsLetter) == false)
+            if (Name.All(Char.IsLetter) == false || LastName.All(Char.IsLetter) == false)
             {
-                return false;   // Check if TextBoxes contain only letters.
+                return false;   // Check if inputs contain only letters.
             }
 
             else
@@ -127,6 +126,7 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // This method performs Check-in
+
         public Boolean performCheckIn(Guest guest, 
             string firstName, 
             string lastName, 
@@ -139,7 +139,6 @@ namespace Hotel_Management__Beta_1._0_
         {
             // Check-in boolean
             Boolean isCheckedIn = false;
-
             // Try to check-in
             try
             {
@@ -180,8 +179,7 @@ namespace Hotel_Management__Beta_1._0_
         
         // This method prepares the confirmation number
         private string PrepareConfirmationNumber(Guest guest)
-        {
-            // Prepare Confirmation Number
+        {  
             string guestDetails = guest.FirstName + guest.LastName + guest.payment.PaymentType;
             string temp = getHashString(guestDetails);
             string confNumber = temp.Substring(temp.Length - (temp.Length / 4));
@@ -190,8 +188,7 @@ namespace Hotel_Management__Beta_1._0_
 
         // This method saves the details of check-in process to a log file
         private void UpdateLogFile(Guest guest)
-        {
-            // Save to Log File
+        {  
             string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
             File.AppendAllText(filePath, DateTime.Now.ToString("HH:mm:ss") + "|Chk-in|  " + guest.FirstName.PadRight(15, ' ') + " " + guest.LastName.PadRight(20, ' ') + " " + guest.Age.PadLeft(2) + "  #" + guest.room.RoomNumber.PadRight(2) + " - " + guest.payment.PaymentType + "\n");
 
@@ -209,7 +206,7 @@ namespace Hotel_Management__Beta_1._0_
             this.Close(); 
         }
 
-        public void AvailableRooms ()
+        public void AvailableRooms()
         {
             List<Guest> availableRoomsList = db.GetAvailableRoomsList();
             foreach (var guest in availableRoomsList)

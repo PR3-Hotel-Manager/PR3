@@ -28,7 +28,6 @@ namespace Hotel_Management__Beta_1._0_
         public void changeLabel(string Text)
         {
             ConfirmationNumber_Label.Text = Text;
-
         }
         
         // This method closes the form and resets the label
@@ -40,7 +39,7 @@ namespace Hotel_Management__Beta_1._0_
         
         private void OK_Button_Click(object sender, EventArgs e)
         {
-            Quit();
+            Quit(); // Close the confirmation page
         }
     }
 }
