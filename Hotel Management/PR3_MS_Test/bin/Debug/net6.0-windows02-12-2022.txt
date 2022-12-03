@@ -32,3 +32,11 @@
 17:44:18|Chk-in|  Ralph           Granberry            33  #2  - Cash
 17:44:19|Chk-in|  John            Frem                 34  #3  - Cash
 17:44:20|Chk-in|  Joe             Frem                 32  #4  - Cash
+18:03:45|Chk-in|  Michael         Granberry            32  #1  - Cash
+18:03:50|Chk-in|  Michael         Granberry            32  #5  - Cash
+18:03:54|Chk-in|  Michael         Granberry            32  #5  - Cash
+18:03:55|Chk-Out| Michael         Granberry            32  #5  - Cash
+18:03:59|Chk-in|  Ralph           Frem                 32  #1  - Cash
+18:04:00|Chk-in|  Ralph           Granberry            33  #2  - Cash
+18:04:01|Chk-in|  John            Frem                 34  #3  - Cash
+18:04:02|Chk-in|  Joe             Frem                 32  #4  - Cash

@@ -79,7 +79,7 @@ namespace Hotel_Management__Beta_1._0_
         
         private void DeleteLog_button_Click(object sender, EventArgs e)
         {      
-            DeleteLog(dateTimePicker1.Value.ToString("dd-MM-yyyy");)
+            DeleteLog(dateTimePicker1.Value.ToString("dd-MM-yyyy"));
         }
     }
 }
