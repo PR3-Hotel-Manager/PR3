@@ -6,3 +6,4 @@
 10:14:56|Chk-in|  Nick            Lee                  24  #34 - Credit/Debit
 10:15:12|Chk-in|  Eric            Lee                  18  #15 - Cash
 10:19:35|Chk-in|  Carl            Sagan                47  #22 - Credit/Debit
+10:42:24|Chk-Out| Carl            Sagan                47  #22 - Credit/Debit
