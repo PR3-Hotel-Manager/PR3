@@ -13,7 +13,7 @@ Our project will allow the front desk employee to perform necessary operations s
 
 ### Check-In Form <br />
 
-* The guest check in page should allow for the end user to input guest information to check in the guest efficiently. This page should include the guest first name, last name, email address, phone number, number of beds, room #, length of stay, price, accommodations, and payment method to be entered. This section should also allow for a unique confirmation code that can be linked with their hotel key card. <br />
+The guest check in page should allow for the end user to input guest information to check in the guest efficiently. This page should include the guest first name, last name, email address, phone number, number of beds, room #, length of stay, price, accommodations, and payment method to be entered. This section should also allow for a unique confirmation code that can be linked with their hotel key card. <br />
 
 ![](images/checkInForm.png) <br />
 
@@ -25,4 +25,22 @@ Our project will allow the front desk employee to perform necessary operations s
 
 ### Capacity Form <br />
 
+The Room Capacity page will allow the front desk staff to see the number of rooms available, as well as which rooms are occupied and which ones are available. <br />
+
 ![](images/roomCapForm.png) <br />
+
+### Look-Up Form <br />
+
+![](images/lookUpForm2.png) <br />
+
+### ReportForm <br />
+![](images/reportForm.png) <br />
+![](images/reportForm2.png) <br />
+
+### Room Estimation Form
+![](images/estimateForm2.png) <br />
+
+### Check-Out Form
+![](images/checkOutList.png) <br />
+![](images/checkOutConfirmation.png) <br />
+
