@@ -1,0 +1,7 @@
+10:13:08|Chk-in|  James           Bond                 23  #16 - Credit/Debit
+10:13:28|Chk-in|  Sam             Fisher               24  #38 - Cash
+10:13:42|Chk-in|  Don             Jones                22  #10 - Credit/Debit
+10:13:52|Chk-in|  Nick            Fisher               18  #5  - Credit/Debit
+10:14:15|Chk-in|  Daniel          Jones                96  #32 - Cash
+10:14:56|Chk-in|  Nick            Lee                  24  #34 - Credit/Debit
+10:15:12|Chk-in|  Eric            Lee                  18  #15 - Cash
