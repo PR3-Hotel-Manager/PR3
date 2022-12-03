@@ -1,6 +1,1 @@
-09:11:33|Chk-in|  mim             hgvg                 18  #2  - Credit/Debit
-12:41:28|Chk-in|  hk              kjhk                 18  #3  - Credit/Debit
-16:48:00|Chk-in|  sadasd          sdasd                18  #1  - Credit/Debit
-16:48:03|Chk-Out| sadasd          sdasd                18  #1  - Credit/Debit
-16:51:37|Chk-in|  cxvhgfgh        fghfghfg             18  #1  - Credit/Debit
-16:51:40|Chk-Out| cxvhgfgh        fghfghfg             18  #1  - Credit/Debit
+17:42:02|Chk-Out| Ralph           Frem                 18  #1  - Credit/Debit
