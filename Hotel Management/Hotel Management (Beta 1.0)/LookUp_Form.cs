@@ -62,7 +62,7 @@ namespace Hotel_Management__Beta_1._0_
                     {
                         foreach (var guest in dbGuestDictionary.Values)
                         {
-                            if ((guest.FirstName == firstName && lastName != "") && lastName == "")//
+                            if ((guest.FirstName == firstName && firstName != "") && lastName == "")//
                             {
                                 result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.room.RoomNumber + ", Chk-in time: " + guest.payment.Time + "\n";
                                 match++;
