@@ -7,7 +7,7 @@ namespace PR3_MS_Test
     public class CheckIn_FormsTest
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
-       
+
 
         void setupDB()
         {
@@ -38,12 +38,12 @@ namespace PR3_MS_Test
             Guest guest = new Guest();
 
             // Act
-            var result = checkIn_Form.performCheckIn(guest, 
-                                                      firstName, 
-                                                      lastName, 
-                                                      age, 
-                                                      stayLength, 
-                                                      roomNumber, 
+            var result = checkIn_Form.performCheckIn(guest,
+                                                      firstName,
+                                                      lastName,
+                                                      age,
+                                                      stayLength,
+                                                      roomNumber,
                                                       bedConfig,
                                                       price,
                                                       paymentType);
@@ -114,6 +114,51 @@ namespace PR3_MS_Test
                                                       bedConfig,
                                                       price,
                                                       paymentType);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void VerifyInputs_ValidInput_ReturnsTrue()
+        {
+            CheckIn_Form checkIn_Form = new CheckIn_Form();
+            // Arrange
+            string firstName = "Raymond";
+            string lastName = "B";
+
+            // Act
+            var result = checkIn_Form.verifyInputs(firstName, lastName);
+
+            // Assert
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void VerifyInputs_InvalidInput_ReturnsFalse()
+        {
+            CheckIn_Form checkIn_Form = new CheckIn_Form();
+            // Arrange
+            string firstName = "Raymond";
+            string lastName = "";
+
+            // Act
+            var result = checkIn_Form.verifyInputs(firstName, lastName);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void VerifyInputs_NoInput_ReturnsFalse()
+        {
+            CheckIn_Form checkIn_Form = new CheckIn_Form();
+            // Arrange
+            string firstName = "";
+            string lastName = "";
+
+            // Act
+            var result = checkIn_Form.verifyInputs(firstName, lastName);
 
             // Assert
             Assert.IsFalse(result);
