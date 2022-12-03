@@ -5,3 +5,4 @@
 14:50:41|Chk-in|  Mike            Kones                18  #3  - Credit/Debit
 15:24:26|Chk-in|  Nick            Kones                18  #4  - Credit/Debit
 15:43:07|Chk-in|  Jonn            Kones                28  #11 - Credit/Debit
+19:18:57|Chk-in|  Nox             Box                  18  #6  - Credit/Debit

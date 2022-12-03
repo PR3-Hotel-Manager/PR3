@@ -38,13 +38,12 @@ namespace Hotel_Management__Beta_1._0_
         // This method performs check-out
         private void OK_Button_Click(object sender, EventArgs e)
         {
-            performCheckout();
+            performCheckout(Occupied_Rooms_ComboBox.Text);
         }
 
         // This method checks out a guest from the database
-        private Boolean performCheckout()
+        public Boolean performCheckout(string occupiedRoomNumber)
         {
-            string occupiedRoomNumber = Occupied_Rooms_ComboBox.Text;
             Boolean isCheckedOut = false;
             try
             {

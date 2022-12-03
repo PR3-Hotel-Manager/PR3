@@ -36,13 +36,14 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // This method searches the database for a guest(given name or last name)
-        int performSearch() {
+        public int performSearch(string firstName, string lastName)
+        {
             int match = 0;
             try
             {
                 dbGuestDictionary = db.GetDatabaseGuestDictionary();
                 int progressBarValue = 1;
-                if (Name_TextBox.Text == "" && LastName_TextBox.Text == "") 
+                if (firstName == "" && lastName == "") //
                 {
                     result_TextBox.Text = "Enter a name.";
                 }
@@ -50,7 +51,7 @@ namespace Hotel_Management__Beta_1._0_
                 {
                     foreach (var guest in dbGuestDictionary.Values)
                     {
-                        if ((guest.FirstName == Name_TextBox.Text) && (guest.LastName == LastName_TextBox.Text))
+                        if ((guest.FirstName == firstName) && (guest.LastName == lastName))//
                         {
                             result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.room.RoomNumber + ", Chk-in time: " + guest.payment.Time + "\n";
                             match = 1;
@@ -62,12 +63,12 @@ namespace Hotel_Management__Beta_1._0_
                     {
                         foreach (var guest in dbGuestDictionary.Values)
                         {
-                            if ((guest.FirstName == Name_TextBox.Text && Name_TextBox.Text != "") && LastName_TextBox.Text == "")
+                            if ((guest.FirstName == firstName && firstName != "") && lastName == "")//
                             {
                                 result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.room.RoomNumber + ", Chk-in time: " + guest.payment.Time + "\n";
                                 match++;
                             }
-                            else if ((guest.LastName == LastName_TextBox.Text && LastName_TextBox.Text != "") && Name_TextBox.Text == "")
+                            else if ((guest.LastName == lastName && lastName != "") && firstName == "")//
                             {
                                 result_TextBox.Text += guest.FirstName + ", " + guest.LastName + ", #" + guest.room.RoomNumber + ", Chk-in time: " + guest.payment.Time + "\n";
                                 match++;
@@ -75,7 +76,7 @@ namespace Hotel_Management__Beta_1._0_
                         }
                     }
                 }
-                
+
                 progressBar.Value = progressBarValue++;
 
                 if (match == 0)
@@ -95,8 +96,8 @@ namespace Hotel_Management__Beta_1._0_
             result_TextBox.Text = "";
             progressBar.Visible = true;
 
-            
-            performSearch();
+
+            performSearch(Name_TextBox.Text, LastName_TextBox.Text);
 
             progressBar.Visible = false;
             progressBar.Value = 0;

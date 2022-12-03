@@ -33,16 +33,22 @@ namespace Hotel_Management__Beta_1._0_
         public CheckIn_Form()
         {
             InitializeComponent();
-            Age_ComboBox.Text = "18";
-            Available_Rooms_ComboBox.Text = db.GetAvailableRoomsList().ElementAt(0).room.RoomNumber.ToString();
-            StayLength_ComboBox.Text = "1";
+ 
         }
 
         private void CheckIn_Form_Load(object sender, EventArgs e)
         {
+            //StayLength_ComboBox.Items.AddRange(new string[] { "1", "2", "3", "4", "5", "6", "7" });
+            
+
             db.StartFirebase();
             AvailableRooms();
             Price_Value_Label.Text = "$" + payment.Price.ToString();
+            Age_ComboBox.Text = "18";
+            StayLength_ComboBox.Text = StayLength_ComboBox.Items[0].ToString();
+            Available_Rooms_ComboBox.SelectedItem = db.GetAvailableRoomsList().ElementAt(0).room.RoomNumber.ToString();
+
+
         }
 
         // Buttons -------------------
@@ -55,7 +61,15 @@ namespace Hotel_Management__Beta_1._0_
         {
             if (verifyInputs(Name_TextBox.Text, Name_TextBox.Text) == true) // If input fields are verified, call performCheckIn().
             {
-                performCheckIn();
+                performCheckIn(newGuest, 
+                    Name_TextBox.Text, 
+                    LastName_TextBox.Text, 
+                    Age_ComboBox.Text, 
+                    StayLength_ComboBox.Text, 
+                    Available_Rooms_ComboBox.Text, 
+                    BedConfig_Value_Label.Text,
+                    Price_Value_Label.Text,
+                    retrievePaymentMethod());
             }
 
             else // Else; Display Error Message.
@@ -112,10 +126,19 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         // This method performs Check-in
-        public Boolean performCheckIn()
-        {    
-            Boolean isCheckedIn = false;    // Check-in boolean    
-            var roomNumber = Available_Rooms_ComboBox.Text; // Room number to be checked in
+
+        public Boolean performCheckIn(Guest guest, 
+            string firstName, 
+            string lastName, 
+            string age, 
+            string stayLength, 
+            string roomNumber, 
+            string bedConfig,
+            string price,
+            string paymentType)
+        {
+            // Check-in boolean
+            Boolean isCheckedIn = false;
             // Try to check-in
             try
             {
@@ -131,21 +154,20 @@ namespace Hotel_Management__Beta_1._0_
                     // Get Name, Last Name, Age, Bed, Price, Room#, Stay Length
                     // Add fields to Database
                     // Payment
-                    string pmtMethod = retrievePaymentMethod();
-                    payment.PaymentType = pmtMethod;
-                    Room room = new Room(roomNumber, BedConfig_Value_Label.Text, true);
-                    newGuest = new Guest(
-                        Name_TextBox.Text,
-                        LastName_TextBox.Text,
-                        Age_ComboBox.Text,
-                        StayLength_ComboBox.Text,
+                    payment.PaymentType = paymentType;
+                    Room room = new Room(roomNumber, bedConfig, true);
+                    guest = new Guest(
+                        firstName,
+                        lastName,
+                        age,
+                        stayLength,
                         room,
                         payment);
-                    string confNumber = PrepareConfirmationNumber(newGuest);
-                    db.InsertGuest(newGuest);
+                    string confNumber = PrepareConfirmationNumber(guest);
+                    db.InsertGuest(guest);
                     ShowConfirmationForm(confNumber);
-                    UpdateLogFile(newGuest);
-                    isCheckedIn= true; 
+                    UpdateLogFile(guest);
+                    isCheckedIn= true;
                 }
             }
             catch (Exception error)
@@ -192,6 +214,7 @@ namespace Hotel_Management__Beta_1._0_
                     AvailableRoom_richTextBox.Text += "Room: " + guest.room.RoomNumber + " - " + "Beds: " + guest.room.BedConfiguration + "\n";
                     Available_Rooms_ComboBox.Items.Add(guest.room.RoomNumber);
             }
+            Available_Rooms_ComboBox.Text = availableRoomsList[0].room.RoomNumber;
         }
 
         private void StayLength_Selector_ValueChanged(object sender, EventArgs e)
@@ -214,9 +237,7 @@ namespace Hotel_Management__Beta_1._0_
 
         private void Available_Rooms_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BedConfig_Value_Label.Text = BedNumber().ToString();
-            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), Convert.ToInt32(StayLength_ComboBox.Text));
-            Price_Value_Label.Text = "$" + payment.Price.ToString();
+
         }
 
         private void StayLength_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -225,5 +246,13 @@ namespace Hotel_Management__Beta_1._0_
             payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), Convert.ToInt32(StayLength_ComboBox.Text));
             Price_Value_Label.Text = "$" + payment.Price.ToString();
         }
+
+        private void Available_Rooms_ComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            BedConfig_Value_Label.Text = BedNumber().ToString();
+            payment.Price = (double)payment.CalculatePrice(Convert.ToDecimal(BedConfig_Value_Label.Text), Convert.ToInt32(StayLength_ComboBox.Text));
+            Price_Value_Label.Text = "$" + payment.Price.ToString();
+        }
+
     }
 }

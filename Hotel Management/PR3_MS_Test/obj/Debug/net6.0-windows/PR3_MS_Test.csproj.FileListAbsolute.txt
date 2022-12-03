@@ -1,0 +1,336 @@
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\CoverletSourceRootsMapping
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\testhost.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).deps.json
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).runtimeconfig.json
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).exe
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\testhost.exe
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.AdapterUtilities.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.deps.json
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.runtimeconfig.json
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.pdb
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\FireSharp.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\JsonFlatten.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.Extensions.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\System.Net.Http.Extensions.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\System.Net.Http.Primitives.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.CoreUtilities.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.PlatformAbstractions.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.CommunicationUtilities.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.CrossPlatEngine.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.Utilities.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.Common.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\NuGet.Frameworks.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).pdb
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.csproj.AssemblyReference.cache
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.GeneratedMSBuildEditorConfig.editorconfig
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.AssemblyInfoInputs.cache
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.AssemblyInfo.cs
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.csproj.CopyComplete
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\refint\PR3_MS_Test.dll
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.pdb
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.genruntimeconfig.cache
+\\Mac\Home\Documents\CSUN\COMP380L\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\ref\PR3_MS_Test.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\CoverletSourceRootsMapping
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\testhost.exe
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\testhost.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).deps.json
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).runtimeconfig.json
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).exe
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.deps.json
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.runtimeconfig.json
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.pdb
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\FireSharp.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\JsonFlatten.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\System.Net.Http.Extensions.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\System.Net.Http.Primitives.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.CoreUtilities.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.PlatformAbstractions.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.CommunicationUtilities.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.CrossPlatEngine.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.Utilities.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.Common.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\NuGet.Frameworks.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).pdb
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.csproj.AssemblyReference.cache
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.AssemblyInfoInputs.cache
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.AssemblyInfo.cs
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.csproj.CoreCompileInputs.cache
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.csproj.CopyComplete
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\refint\PR3_MS_Test.dll
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.pdb
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.genruntimeconfig.cache
+C:\Users\zivth\OneDrive\Desktop\School\COMP 380\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\ref\PR3_MS_Test.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\CoverletSourceRootsMapping
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\testhost.exe
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\testhost.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).deps.json
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).runtimeconfig.json
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).exe
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.deps.json
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.runtimeconfig.json
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\PR3_MS_Test.pdb
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\FireSharp.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\JsonFlatten.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.Threading.Tasks.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\System.Net.Http.Extensions.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\System.Net.Http.Primitives.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.CoreUtilities.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.PlatformAbstractions.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.CommunicationUtilities.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.CrossPlatEngine.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.TestPlatform.Utilities.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.Common.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\NuGet.Frameworks.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Hotel Management (Beta 1.0).pdb
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\bin\Debug\net6.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.csproj.AssemblyReference.cache
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.AssemblyInfoInputs.cache
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.AssemblyInfo.cs
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.csproj.CoreCompileInputs.cache
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.csproj.CopyComplete
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\refint\PR3_MS_Test.dll
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.pdb
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\PR3_MS_Test.genruntimeconfig.cache
+C:\Users\ralph\Documents\GitHub\PR3\Hotel Management\PR3_MS_Test\obj\Debug\net6.0-windows\ref\PR3_MS_Test.dll
