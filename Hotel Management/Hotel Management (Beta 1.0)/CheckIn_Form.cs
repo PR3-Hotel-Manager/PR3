@@ -81,7 +81,7 @@ namespace Hotel_Management__Beta_1._0_
         // Auxiliary Methods -----------------------
 
         // This method verifies guest details
-        private bool verifyInputs(string Name, string LastName)  
+        public bool verifyInputs(string Name, string LastName)  
         {
             if (LastName == "" || Name == "")
             {
