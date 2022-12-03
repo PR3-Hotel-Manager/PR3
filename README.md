@@ -10,3 +10,19 @@ Our project will allow the front desk employee to perform necessary operations s
 ### Main Form
 
 ![](images/mainForm.png)
+
+### Check-In Form
+
+* The guest check in page should allow for the end user to input guest information to check in the guest efficiently. This page should include the guest first name, last name, email address, phone number, number of beds, room #, length of stay, price, accommodations, and payment method to be entered. This section should also allow for a unique confirmation code that can be linked with their hotel key card.
+
+![](images/checkInForm.png)
+
+* Confirmation Number
+![](images/CheckInConfirmation.png)
+
+* Guest Inserted Into Firebase Realtime Database
+![](images/firebaseCheckIn.png)
+
+### Capacity Form
+
+![](images/roomCapForm2.png)
