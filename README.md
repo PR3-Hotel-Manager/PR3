@@ -15,10 +15,10 @@ The guest check in page should allow for the end user to input guest information
 
 ![](images/checkInForm.png) <br />
 
-* Confirmation Number <br />
+Confirmation Number <br />
 ![](images/CheckInConfirmation.png) <br />
 
-* Guest Inserted Into Firebase Realtime Database <br />
+Guest Inserted Into Firebase Realtime Database <br />
 ![](images/firebaseCheckIn.png) <br />
 
 ### Capacity Form <br />
@@ -30,19 +30,19 @@ The Room Capacity page will allow the front desk staff to see the number of room
 ## Look-Up Form <br />
 
 The guest look up page will allow the front desk staff to search the guest list based on name/last name. <br />
-* Search By First and Last Name <br />
+Search By First and Last Name <br />
 ![](images/lookUpForm2.png) <br />
 
-* Search By Last Name <br />
+Search By Last Name <br />
 ![](images/lookUpForm.png) <br />
 
 ## ReportForm <br />
 
 The guest activity/report page will show a log of guests that have checked in and out, along with the time, their room#, payment method, etc. This graphical user interface should be clear and clean to the end user allowing for a seamless experience. Look up feature for the report will also be implemented. <br />
 
-* Guest Log <br />
+Guest Log <br />
 ![](images/reportForm.png) <br />
-* Search Log File <br />
+Search Log File <br />
 ![](images/reportForm2.png) <br />
 
 ## Room Estimation Form
@@ -53,10 +53,10 @@ The guest estimation page will allow the front desk staff to provide an estimate
 ## Check-Out Form
 
 The guest check-out page will allow the front desk staff to perform checking out of a guest. On this page after selecting a room number, the guest is checked out. <br />
-* Only Shows Occupied Rooms to be Checked-Out <br />
+Only Shows Occupied Rooms to be Checked-Out <br />
 ![](images/checkOutList.png) <br />
-* Check-Out Confirmation <br />
+Check-Out Confirmation <br />
 ![](images/checkOutConfirmation.png) <br />
-* Cleared Guest in Firebase Realtime Database <br />
+Cleared Guest in Firebase Realtime Database <br />
 ![](images/firebaseCheckOut.png) <br />
 
