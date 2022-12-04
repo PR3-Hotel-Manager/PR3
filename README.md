@@ -2,7 +2,6 @@
 
 Software Engineers: Michael Granberry, Raymond Babayans, Ralph Frem, Ziv Gabay <br />
 
-
 This project allows the front desk employee to perform necessary operations such as check-in/check-out of a guest, view a report of available/occupied rooms, and look up the name of a particular guest along with their room number. In terms of limitations, the hotel’s capacity is only 40 rooms, and it accepts guests who are 18 years or older. All the required information will be stored in a local and in Google's FireBase Realtime Database. <br />
 
 ## Main Form <br />
@@ -30,6 +29,7 @@ The Room Capacity page will allow the front desk staff to see the number of room
 ## Look-Up Form <br />
 
 The guest look up page will allow the front desk staff to search the guest list based on name/last name. <br />
+
 Search By First and Last Name <br />
 ![](images/lookUpForm2.png) <br />
 
@@ -42,6 +42,7 @@ The guest activity/report page will show a log of guests that have checked in an
 
 Guest Log <br />
 ![](images/reportForm.png) <br />
+
 Search Log File <br />
 ![](images/reportForm2.png) <br />
 
@@ -55,8 +56,10 @@ The guest estimation page will allow the front desk staff to provide an estimate
 The guest check-out page will allow the front desk staff to perform checking out of a guest. On this page after selecting a room number, the guest is checked out. <br />
 Only Shows Occupied Rooms to be Checked-Out <br />
 ![](images/checkOutList.png) <br />
+
 Check-Out Confirmation <br />
 ![](images/checkOutConfirmation.png) <br />
+
 Cleared Guest in Firebase Realtime Database <br />
 ![](images/firebaseCheckOut.png) <br />
 
