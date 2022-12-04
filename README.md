@@ -21,7 +21,7 @@ Confirmation Number <br />
 Guest Inserted Into Firebase Realtime Database <br />
 ![](images/firebaseCheckIn.png) <br />
 
-### Capacity Form <br />
+## Capacity Form <br />
 
 The Room Capacity page will allow the front desk staff to see the number of rooms available, as well as which rooms are occupied and which ones are available. <br />
 
