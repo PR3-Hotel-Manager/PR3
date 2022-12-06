@@ -74,13 +74,12 @@
             // 
             // CheckIn_Button
             // 
-            this.CheckIn_Button.AutoSize = true;
             this.CheckIn_Button.BackColor = System.Drawing.Color.LightGray;
             this.CheckIn_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckIn_Button.BackgroundImage")));
-            this.CheckIn_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CheckIn_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CheckIn_Button.Enabled = false;
             this.CheckIn_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CheckIn_Button.Location = new System.Drawing.Point(28, 68);
+            this.CheckIn_Button.Location = new System.Drawing.Point(28, 67);
             this.CheckIn_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CheckIn_Button.Name = "CheckIn_Button";
             this.CheckIn_Button.Size = new System.Drawing.Size(159, 151);
@@ -92,12 +91,11 @@
             // 
             // CheckOut_Button
             // 
-            this.CheckOut_Button.AutoSize = true;
             this.CheckOut_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Check_Out;
-            this.CheckOut_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CheckOut_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CheckOut_Button.Enabled = false;
             this.CheckOut_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CheckOut_Button.Location = new System.Drawing.Point(220, 69);
+            this.CheckOut_Button.Location = new System.Drawing.Point(219, 68);
             this.CheckOut_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CheckOut_Button.Name = "CheckOut_Button";
             this.CheckOut_Button.Size = new System.Drawing.Size(159, 151);
@@ -109,12 +107,11 @@
             // 
             // Capacity_Button
             // 
-            this.Capacity_Button.AutoSize = true;
             this.Capacity_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Capacity;
-            this.Capacity_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Capacity_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Capacity_Button.Enabled = false;
             this.Capacity_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Capacity_Button.Location = new System.Drawing.Point(409, 69);
+            this.Capacity_Button.Location = new System.Drawing.Point(408, 68);
             this.Capacity_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Capacity_Button.Name = "Capacity_Button";
             this.Capacity_Button.Size = new System.Drawing.Size(159, 151);
@@ -126,12 +123,11 @@
             // 
             // LookUp_Button
             // 
-            this.LookUp_Button.AutoSize = true;
             this.LookUp_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Look_Up;
-            this.LookUp_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LookUp_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LookUp_Button.Enabled = false;
             this.LookUp_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LookUp_Button.Location = new System.Drawing.Point(28, 239);
+            this.LookUp_Button.Location = new System.Drawing.Point(28, 238);
             this.LookUp_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LookUp_Button.Name = "LookUp_Button";
             this.LookUp_Button.Size = new System.Drawing.Size(159, 151);
@@ -143,12 +139,11 @@
             // 
             // Report_Button
             // 
-            this.Report_Button.AutoSize = true;
             this.Report_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Report;
-            this.Report_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Report_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Report_Button.Enabled = false;
             this.Report_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Report_Button.Location = new System.Drawing.Point(220, 239);
+            this.Report_Button.Location = new System.Drawing.Point(219, 238);
             this.Report_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Report_Button.Name = "Report_Button";
             this.Report_Button.Size = new System.Drawing.Size(159, 151);
@@ -177,6 +172,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Database;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(26, 29);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -224,12 +220,11 @@
             // 
             // Estimate_Button
             // 
-            this.Estimate_Button.AutoSize = true;
             this.Estimate_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Estimate;
-            this.Estimate_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Estimate_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Estimate_Button.Enabled = false;
             this.Estimate_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Estimate_Button.Location = new System.Drawing.Point(409, 237);
+            this.Estimate_Button.Location = new System.Drawing.Point(408, 238);
             this.Estimate_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Estimate_Button.Name = "Estimate_Button";
             this.Estimate_Button.Size = new System.Drawing.Size(159, 151);
