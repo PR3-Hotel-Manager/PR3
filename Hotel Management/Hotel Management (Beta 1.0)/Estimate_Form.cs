@@ -56,5 +56,6 @@ namespace Hotel_Management__Beta_1._0_
         {
             updateLabel();
         }
+
     }
 }
