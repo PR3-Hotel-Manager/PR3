@@ -52,9 +52,9 @@
             this.Title_Holder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Title_Holder.Image = ((System.Drawing.Image)(resources.GetObject("Title_Holder.Image")));
             this.Title_Holder.Location = new System.Drawing.Point(0, 0);
-            this.Title_Holder.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Title_Holder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Title_Holder.Name = "Title_Holder";
-            this.Title_Holder.Size = new System.Drawing.Size(1292, 111);
+            this.Title_Holder.Size = new System.Drawing.Size(604, 46);
             this.Title_Holder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Title_Holder.TabIndex = 0;
             this.Title_Holder.TabStop = false;
@@ -66,25 +66,23 @@
             this.Title_Label.BackColor = System.Drawing.Color.Azure;
             this.Title_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Title_Label.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Title_Label.Location = new System.Drawing.Point(34, 27);
-            this.Title_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Title_Label.Location = new System.Drawing.Point(16, 11);
             this.Title_Label.Name = "Title_Label";
-            this.Title_Label.Size = new System.Drawing.Size(327, 48);
+            this.Title_Label.Size = new System.Drawing.Size(143, 21);
             this.Title_Label.TabIndex = 1;
             this.Title_Label.Text = "Hotel Management";
             // 
             // CheckIn_Button
             // 
-            this.CheckIn_Button.AutoSize = true;
             this.CheckIn_Button.BackColor = System.Drawing.Color.LightGray;
             this.CheckIn_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CheckIn_Button.BackgroundImage")));
             this.CheckIn_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CheckIn_Button.Enabled = false;
             this.CheckIn_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CheckIn_Button.Location = new System.Drawing.Point(44, 168);
-            this.CheckIn_Button.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.CheckIn_Button.Location = new System.Drawing.Point(28, 67);
+            this.CheckIn_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CheckIn_Button.Name = "CheckIn_Button";
-            this.CheckIn_Button.Size = new System.Drawing.Size(372, 372);
+            this.CheckIn_Button.Size = new System.Drawing.Size(159, 151);
             this.CheckIn_Button.TabIndex = 2;
             this.CheckIn_Button.TabStop = false;
             this.CheckIn_Button.UseVisualStyleBackColor = false;
@@ -93,15 +91,14 @@
             // 
             // CheckOut_Button
             // 
-            this.CheckOut_Button.AutoSize = true;
             this.CheckOut_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Check_Out;
             this.CheckOut_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CheckOut_Button.Enabled = false;
             this.CheckOut_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CheckOut_Button.Location = new System.Drawing.Point(455, 170);
-            this.CheckOut_Button.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.CheckOut_Button.Location = new System.Drawing.Point(219, 68);
+            this.CheckOut_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CheckOut_Button.Name = "CheckOut_Button";
-            this.CheckOut_Button.Size = new System.Drawing.Size(372, 372);
+            this.CheckOut_Button.Size = new System.Drawing.Size(159, 151);
             this.CheckOut_Button.TabIndex = 3;
             this.CheckOut_Button.TabStop = false;
             this.CheckOut_Button.UseVisualStyleBackColor = true;
@@ -110,15 +107,14 @@
             // 
             // Capacity_Button
             // 
-            this.Capacity_Button.AutoSize = true;
             this.Capacity_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Capacity;
             this.Capacity_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Capacity_Button.Enabled = false;
             this.Capacity_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Capacity_Button.Location = new System.Drawing.Point(860, 170);
-            this.Capacity_Button.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Capacity_Button.Location = new System.Drawing.Point(408, 68);
+            this.Capacity_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Capacity_Button.Name = "Capacity_Button";
-            this.Capacity_Button.Size = new System.Drawing.Size(372, 372);
+            this.Capacity_Button.Size = new System.Drawing.Size(159, 151);
             this.Capacity_Button.TabIndex = 4;
             this.Capacity_Button.TabStop = false;
             this.Capacity_Button.UseVisualStyleBackColor = true;
@@ -127,15 +123,14 @@
             // 
             // LookUp_Button
             // 
-            this.LookUp_Button.AutoSize = true;
             this.LookUp_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Look_Up;
             this.LookUp_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LookUp_Button.Enabled = false;
             this.LookUp_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LookUp_Button.Location = new System.Drawing.Point(44, 590);
-            this.LookUp_Button.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.LookUp_Button.Location = new System.Drawing.Point(28, 238);
+            this.LookUp_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LookUp_Button.Name = "LookUp_Button";
-            this.LookUp_Button.Size = new System.Drawing.Size(372, 372);
+            this.LookUp_Button.Size = new System.Drawing.Size(159, 151);
             this.LookUp_Button.TabIndex = 5;
             this.LookUp_Button.TabStop = false;
             this.LookUp_Button.UseVisualStyleBackColor = true;
@@ -144,15 +139,14 @@
             // 
             // Report_Button
             // 
-            this.Report_Button.AutoSize = true;
             this.Report_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Report;
             this.Report_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Report_Button.Enabled = false;
             this.Report_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Report_Button.Location = new System.Drawing.Point(455, 590);
-            this.Report_Button.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Report_Button.Location = new System.Drawing.Point(219, 238);
+            this.Report_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Report_Button.Name = "Report_Button";
-            this.Report_Button.Size = new System.Drawing.Size(372, 372);
+            this.Report_Button.Size = new System.Drawing.Size(159, 151);
             this.Report_Button.TabIndex = 6;
             this.Report_Button.TabStop = false;
             this.Report_Button.UseVisualStyleBackColor = true;
@@ -165,10 +159,10 @@
             this.Quit_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Quit_Button.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Quit_Button.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Quit_Button.Location = new System.Drawing.Point(1183, 27);
-            this.Quit_Button.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Quit_Button.Location = new System.Drawing.Point(552, 11);
+            this.Quit_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Quit_Button.Name = "Quit_Button";
-            this.Quit_Button.Size = new System.Drawing.Size(69, 54);
+            this.Quit_Button.Size = new System.Drawing.Size(32, 22);
             this.Quit_Button.TabIndex = 7;
             this.Quit_Button.TabStop = false;
             this.Quit_Button.Text = "X";
@@ -179,10 +173,10 @@
             // 
             this.pictureBox1.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Database;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 72);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 29);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 224);
+            this.pictureBox1.Size = new System.Drawing.Size(82, 91);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -190,10 +184,9 @@
             // connectionStatus_Label
             // 
             this.connectionStatus_Label.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.connectionStatus_Label.Location = new System.Drawing.Point(268, 158);
-            this.connectionStatus_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.connectionStatus_Label.Location = new System.Drawing.Point(125, 64);
             this.connectionStatus_Label.Name = "connectionStatus_Label";
-            this.connectionStatus_Label.Size = new System.Drawing.Size(396, 47);
+            this.connectionStatus_Label.Size = new System.Drawing.Size(185, 19);
             this.connectionStatus_Label.TabIndex = 9;
             this.connectionStatus_Label.Text = "Connecting to Database";
             this.connectionStatus_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -205,10 +198,10 @@
             this.databaseConnectionStatus_Panel.Controls.Add(this.RetryConnecting_Button);
             this.databaseConnectionStatus_Panel.Controls.Add(this.pictureBox1);
             this.databaseConnectionStatus_Panel.Controls.Add(this.connectionStatus_Label);
-            this.databaseConnectionStatus_Panel.Location = new System.Drawing.Point(-4, 666);
-            this.databaseConnectionStatus_Panel.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.databaseConnectionStatus_Panel.Location = new System.Drawing.Point(-2, 270);
+            this.databaseConnectionStatus_Panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.databaseConnectionStatus_Panel.Name = "databaseConnectionStatus_Panel";
-            this.databaseConnectionStatus_Panel.Size = new System.Drawing.Size(1279, 362);
+            this.databaseConnectionStatus_Panel.Size = new System.Drawing.Size(598, 148);
             this.databaseConnectionStatus_Panel.TabIndex = 10;
             this.databaseConnectionStatus_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.databaseConnectionStatus_Panel_Paint);
             // 
@@ -216,10 +209,10 @@
             // 
             this.RetryConnecting_Button.Enabled = false;
             this.RetryConnecting_Button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RetryConnecting_Button.Location = new System.Drawing.Point(797, 141);
-            this.RetryConnecting_Button.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.RetryConnecting_Button.Location = new System.Drawing.Point(372, 57);
+            this.RetryConnecting_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RetryConnecting_Button.Name = "RetryConnecting_Button";
-            this.RetryConnecting_Button.Size = new System.Drawing.Size(384, 89);
+            this.RetryConnecting_Button.Size = new System.Drawing.Size(179, 36);
             this.RetryConnecting_Button.TabIndex = 10;
             this.RetryConnecting_Button.Text = "Retry";
             this.RetryConnecting_Button.UseVisualStyleBackColor = true;
@@ -227,15 +220,14 @@
             // 
             // Estimate_Button
             // 
-            this.Estimate_Button.AutoSize = true;
             this.Estimate_Button.BackgroundImage = global::Hotel_Management__Beta_1._0_.Properties.Resources.Estimate;
             this.Estimate_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Estimate_Button.Enabled = false;
             this.Estimate_Button.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Estimate_Button.Location = new System.Drawing.Point(860, 590);
-            this.Estimate_Button.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Estimate_Button.Location = new System.Drawing.Point(408, 238);
+            this.Estimate_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Estimate_Button.Name = "Estimate_Button";
-            this.Estimate_Button.Size = new System.Drawing.Size(372, 372);
+            this.Estimate_Button.Size = new System.Drawing.Size(159, 151);
             this.Estimate_Button.TabIndex = 11;
             this.Estimate_Button.TabStop = false;
             this.Estimate_Button.UseVisualStyleBackColor = true;
@@ -244,10 +236,10 @@
             // 
             // Main_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1275, 1029);
+            this.ClientSize = new System.Drawing.Size(595, 417);
             this.Controls.Add(this.databaseConnectionStatus_Panel);
             this.Controls.Add(this.Quit_Button);
             this.Controls.Add(this.Report_Button);
@@ -259,7 +251,7 @@
             this.Controls.Add(this.Title_Holder);
             this.Controls.Add(this.Estimate_Button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

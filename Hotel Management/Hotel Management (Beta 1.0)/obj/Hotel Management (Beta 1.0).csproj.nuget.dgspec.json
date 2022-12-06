@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ralph\\Documents\\GitHub\\PR3\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj": {}
+    "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj": {}
   },
   "projects": {
-    "C:\\Users\\ralph\\Documents\\GitHub\\PR3\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj": {
+    "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ralph\\Documents\\GitHub\\PR3\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj",
+        "projectUniqueName": "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj",
         "projectName": "Hotel Management (Beta 1.0)",
-        "projectPath": "C:\\Users\\ralph\\Documents\\GitHub\\PR3\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj",
-        "packagesPath": "C:\\Users\\ralph\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ralph\\Documents\\GitHub\\PR3\\Hotel Management\\Hotel Management (Beta 1.0)\\obj\\",
+        "projectPath": "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Hotel Management\\Hotel Management (Beta 1.0)\\Hotel Management (Beta 1.0).csproj",
+        "packagesPath": "C:\\Users\\michaelgranberryii\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\Documents\\CSUN\\COMP380L\\PR3\\Hotel Management\\Hotel Management (Beta 1.0)\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ralph\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\michaelgranberryii\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
