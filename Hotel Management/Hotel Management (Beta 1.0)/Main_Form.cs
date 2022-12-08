@@ -31,8 +31,24 @@ namespace Hotel_Management__Beta_1._0_
                 m.Result = (IntPtr)(HT_CAPTION);
         }
 
+        void removeLogFiles() 
+        {         
+            string directoryPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location).ToString(); // log directory path
+
+            foreach (string filePath in Directory.GetCreationTime(directoryPath))
+            {
+                 TimeSpan fileAge = File.GetLastWriteTime(filePath) - DateTime.Now;
+                  if (fileAge.Days > 30)
+                  {
+                        File.Delete(filePath);
+                  }
+            }      
+        }
+        
         private void Main_Form_Load(object sender, EventArgs e)
         {
+            removeLogFiles();
+            
             Title_Label.FlatStyle = FlatStyle.Standard;
             Title_Label.Parent = Title_Holder;
             Title_Label.BackColor = Color.Transparent;
