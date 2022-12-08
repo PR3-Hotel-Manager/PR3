@@ -32,17 +32,10 @@ namespace Hotel_Management__Beta_1._0_
         }
 
         void removeLogFiles() 
-        {         
-            string directoryPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location).ToString(); // log directory path
-
-            foreach (string filePath in Directory.GetCreationTime(directoryPath))
-            {
-                 TimeSpan fileAge = File.GetLastWriteTime(filePath) - DateTime.Now;
-                  if (fileAge.Days > 30)
-                  {
-                        File.Delete(filePath);
-                  }
-            }      
+        {       
+                 DirectoryInfo d = new DirectoryInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+                 if (d.CreationTime < DateTime.Now.AddDays(-7))
+                 d.Delete();
         }
         
         private void Main_Form_Load(object sender, EventArgs e)
