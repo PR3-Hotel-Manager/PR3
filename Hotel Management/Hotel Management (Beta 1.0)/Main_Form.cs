@@ -30,18 +30,9 @@ namespace Hotel_Management__Beta_1._0_
             if (m.Msg == WM_NCHITTEST)
                 m.Result = (IntPtr)(HT_CAPTION);
         }
-
-        void removeLogFiles() 
-        {       
-                 DirectoryInfo d = new DirectoryInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-                 if (d.CreationTime < DateTime.Now.AddDays(-7))
-                 d.Delete();
-        }
         
         private void Main_Form_Load(object sender, EventArgs e)
-        {
-            removeLogFiles();
-            
+        {   
             Title_Label.FlatStyle = FlatStyle.Standard;
             Title_Label.Parent = Title_Holder;
             Title_Label.BackColor = Color.Transparent;
