@@ -18,6 +18,7 @@ namespace Hotel_Management__Beta_1._0_
     public partial class CheckOut_Form : Form
     {
         FirebaseSingleton db = FirebaseSingleton.Instance;
+        Guest dbGuest;
         Dictionary<string, Guest> dbGuestDictionary;
 
         public CheckOut_Form()
@@ -49,7 +50,7 @@ namespace Hotel_Management__Beta_1._0_
             {
                 dbGuestDictionary = db.GetDatabaseGuestDictionary();
                 string dbGuestKey = K.GuestKey(occupiedRoomNumber);
-                Guest dbGuest = dbGuestDictionary[dbGuestKey];
+                dbGuest = dbGuestDictionary[dbGuestKey];
                 if (dbGuest.room.Occupied)
                 {
                     Guest emptyGuest = new Guest(occupiedRoomNumber);
